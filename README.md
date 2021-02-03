@@ -25,7 +25,7 @@ The theme is written in Less and supports both light and dark mode! You can also
 ## Screenshots
 
 <p align="center">
-    <img alt="screenshot of main text area" width="768" src="https://i.imgur.com/6FJT3EZ.png"><br />
+    <img alt="screenshot of main text area" width="768" src="https://i.imgur.com/8RDVBpS.png"><br />
     <img alt="screenshot of profile modal" width="768" src="https://i.imgur.com/HR6B8uZ.png"><br />
     <img alt="screenshot of guild explorer" width="768" src="https://i.imgur.com/ymGaAz2.png"><br />
     <img alt="screenshot of playing profile modal" width="768" src="https://i.imgur.com/TVLrSo9.png"><br />
