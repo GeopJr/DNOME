@@ -1,0 +1,65 @@
+.theme-dark,
+.theme-light {
+  div[class*="autocomplete-"],
+  div[class*="tierHeaderLocked-"] {
+    background-color: var(--dnome-dark-fill);
+  }
+  div[class*="selectable-"],
+  div[class*="perksModal"] {
+    background-color: var(--dnome-base);
+  }
+  div[class*="selected-"]:not([class*="tabBarItem"]),
+  div[class*="tierBody"],
+  ul[class*="perks"] > li[class*="perk-"] {
+    background-color: var(--dnome-bg);
+  }
+  div[class*="uploadModal"] {
+    background-color: var(--background-primary);
+    > div[class*="footer"] {
+      background-color: var(--background-tertiary);
+    }
+  }
+  div[class*="peopleColumn-"] {
+    background-color: var(--background-primary);
+  }
+}
+
+div[class*="colorDefault"] {
+  &:hover,
+  &[class*="focused"] {
+    background-color: var(--dnome-accent);
+  }
+  &:active {
+    background-color: var(--dnome-darker-accent) !important;
+  }
+}
+
+div[class*="wrapper"][class*="selected"],
+div[class*="wrapper"]:hover {
+  > div[class*="childWrapper"] {
+    background-color: var(--dnome-accent) !important;
+  }
+}
+
+div[class*="folder-"],
+span[class*="expandedFolderBackground"] {
+  background-color: var(--background-primary);
+}
+
+div[class*="itemCard-"] {
+  > div > div[class*="body"] {
+    background-color: var(--dnome-bg);
+  }
+  &:hover {
+    background-color: var(--dnome-darker-base) !important;
+  }
+}
+
+div[style*="background-color: rgb(67, 181, 129)"] {
+  background-color: var(--dnome-accent) !important;
+}
+
+div[class*="selectedCategoryItem"][class*="categoryItem"]
+  > div[class*="itemInner"] {
+  background-color: var(--dnome-accent);
+}

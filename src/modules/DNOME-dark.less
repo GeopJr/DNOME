@@ -1,0 +1,63 @@
+@base: lighten(desaturate(#241f31, 100%), 2%);
+@text_color: #ffffff;
+@bg: darken(desaturate(#3d3846, 100%), 4%);
+@fg: #eeeeec;
+
+@accent: darken(#3584e4, 10%);
+@border: darken(@bg, 10%);
+@link_color: lighten(@accent, 20%);
+@dark_fill: mix(@border, @bg, 50%);
+
+@scroll_bg: mix(@base, @bg, 50%);
+@scrollbar_slider_color: mix(@fg, @bg, 60%);
+@warning: #f57900;
+
+@sidebar: mix(@bg, @base, 50%);
+
+@darker_base: darken(@base, 5%);
+@darker_accent: darken(@accent, 10%);
+
+.theme-dark {
+  --text-normal: @text_color;
+  --background-primary: @bg;
+  --background-secondary: @base;
+  --background-secondary-alt: @sidebar;
+  --background-tertiary: @dark_fill;
+  --background-accent: @accent;
+  --background-floating: @dark_fill;
+  --background-mobile-primary: @bg;
+  --background-mobile-secondary: @base;
+  --background-modifier-selected: @bg;
+  --background-modifier-accent: @dark_fill;
+  --background-mentioned: fade(@warning, 5%);
+  --background-mentioned-hover: fade(@warning, 8%);
+  --background-message-hover: fade(@dark_fill, 30%);
+  --background-help-warning: fade(@warning, 10%);
+  --background-help-info: fade(@accent, 10%);
+  --scrollbar-thin-thumb: @scrollbar_slider_color;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: @scrollbar_slider_color;
+  --scrollbar-auto-track: @scroll_bg;
+  --scrollbar-auto-scrollbar-color-thumb: @scrollbar_slider_color;
+  --scrollbar-auto-scrollbar-color-track: @base;
+  --channeltextarea-background: @base;
+  --logo-primary: @accent;
+  --focus-primary: @accent;
+  --activity-card-background: @dark_fill;
+  --textbox-markdown-syntax: @accent;
+
+  --dnome-base: @base;
+  --dnome-bg: @bg;
+  --dnome-sidebar: @sidebar;
+  --dnome-border: @border;
+  --dnome-dark-fill: @dark_fill;
+  --dnome-scroll-bg: @scroll_bg;
+  --dnome-fg: @fg;
+  --dnome-scrollbar-slider-color: @scrollbar_slider_color;
+  --dnome-accent: @accent;
+  --dnome-link-color: @link_color;
+  --dnome-text-color: @text_color;
+  --dnome-warning: @warning;
+  --dnome-darker-base: @darker_base;
+  --dnome-darker-accent: @darker_accent;
+}

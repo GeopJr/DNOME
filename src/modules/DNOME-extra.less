@@ -1,0 +1,60 @@
+div[class*="mentioned-"]::before {
+  background-color: var(--dnome-warning);
+}
+
+[class*="lookFilled"][class*="color"]:not([class*="colorPrimary"]) {
+  background-color: var(--dnome-accent) !important;
+}
+
+div[class*="control"] > div[style*="background-color: rgb(67, 181, 129)"] {
+  background-color: var(--dnome-accent) !important;
+}
+
+circle[class*="radioIconForeground"] {
+  color: var(--dnome-accent);
+}
+
+div[class*="checkbox"] {
+  &[class*="checked"] {
+    border-color: var(--dnome-accent) !important;
+    > svg > path {
+      fill: var(--dnome-accent);
+    }
+    &[style*="background-color: rgb(114, 137, 218)"] {
+      background-color: var(--dnome-accent) !important;
+      > svg > path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+div[class*="newMessagesBar"],
+div[class*="topSectionPlaying"] {
+  background-color: var(--dnome-accent);
+}
+
+svg[class*="premiumIcon"] {
+  color: var(--dnome-accent);
+}
+
+span[class*="botTag"] {
+  background-color: var(--dnome-accent);
+}
+
+span[class*="wrapper-"][class*="mention"][class*="interactive"] {
+  color: var(--dnome-link-color);
+  background-color: var(--background-help-info);
+}
+
+div[class*="warning"] {
+  border-color: var(--dnome-warning);
+}
+
+div[class*="barFill"] {
+  background-color: var(--dnome-accent);
+}
+
+div[class*="progressContainer"] > div > div[class*="progressBar"] {
+  background-color: var(--dnome-accent) !important;
+}

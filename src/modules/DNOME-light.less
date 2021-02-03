@@ -1,0 +1,63 @@
+@base-light: #ffffff;
+@text_color-light: #000000;
+@bg-light: #f6f5f4;
+@fg-light: #2e3436;
+
+@accent-light: #3584e4;
+@border-light: darken(@bg-light, 18%);
+@link_color-light: lighten(@accent-light, 10%);
+@dark_fill-light: mix(@border, @bg-light, 10%);
+
+@scroll_bg-light: mix(@bg-light, @fg-light, 80%);
+@scrollbar_slider_color-light: mix(@fg-light, @bg-light, 60%);
+@warning-light: #f57900;
+
+@sidebar-light: mix(@bg-light, @base-light, 50%);
+
+@darker_base-light: darken(@base-light, 5%);
+@darker_accent-light: darken(@accent-light, 10%);
+
+.theme-light {
+  --text-normal: @text_color-light;
+  --background-primary: @bg-light;
+  --background-secondary: @base-light;
+  --background-secondary-alt: @sidebar-light;
+  --background-tertiary: @dark_fill-light;
+  --background-accent: @accent-light;
+  --background-floating: @dark_fill-light;
+  --background-mobile-primary: @bg-light;
+  --background-mobile-secondary: @base-light;
+  --background-modifier-selected: @bg-light;
+  --background-modifier-accent: @dark_fill-light;
+  --background-mentioned: fade(@warning-light, 5%);
+  --background-mentioned-hover: fade(@warning-light, 8%);
+  --background-message-hover: fade(@dark_fill-light, 30%);
+  --background-help-warning: fade(@warning-light, 10%);
+  --background-help-info: fade(@accent-light, 10%);
+  --scrollbar-thin-thumb: @scrollbar_slider_color-light;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: @scrollbar_slider_color-light;
+  --scrollbar-auto-track: @scroll_bg-light;
+  --scrollbar-auto-scrollbar-color-thumb: @scrollbar_slider_color-light;
+  --scrollbar-auto-scrollbar-color-track: @base-light;
+  --channeltextarea-background: @base-light;
+  --logo-primary: @accent-light;
+  --focus-primary: @accent-light;
+  --activity-card-background: @dark_fill-light;
+  --textbox-markdown-syntax: @accent-light;
+
+  --dnome-base: @base-light;
+  --dnome-bg: @bg-light;
+  --dnome-sidebar: @sidebar-light;
+  --dnome-border: @border-light;
+  --dnome-dark-fill: @dark_fill-light;
+  --dnome-scroll-bg: @scroll_bg-light;
+  --dnome-fg: @fg-light;
+  --dnome-scrollbar-slider-color: @scrollbar_slider_color-light;
+  --dnome-accent: @accent-light;
+  --dnome-link-color: @link_color-light;
+  --dnome-text-color: @text_color-light;
+  --dnome-warning: @warning-light;
+  --dnome-darker-base: @darker_base-light;
+  --dnome-darker-accent: @darker_accent-light;
+}

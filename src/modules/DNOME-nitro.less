@@ -1,0 +1,17 @@
+// Dear Discord, the Nitro tab should be the same color as the rest
+// Shady capitalism tactics <3
+
+// Includes both the settings button and the server boosts one
+div[aria-controls="Discord Nitro-tab"],
+div[aria-controls="GUILD_PREMIUM-tab"] {
+  &[aria-selected="false"] {
+    color: var(--interactive-normal) !important;
+    &[style*="background-color"] {
+      background-color: var(--background-modifier-hover) !important;
+    }
+  }
+  &[aria-selected="true"] {
+    color: var(--interactive-active) !important;
+    background-color: var(--background-modifier-selected) !important;
+  }
+}
