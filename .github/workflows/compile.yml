@@ -1,0 +1,33 @@
+name: Compile & Push
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  compile:
+    runs-on: ubuntu-18.04
+    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install
+        run: npm install -g less
+      - name: Compile Less
+        run: lessc ./src/DNOME.less ./dist/DNOME.css
+      - name: Commit files
+        run: |
+          git add .
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -am "chore: compile latest changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

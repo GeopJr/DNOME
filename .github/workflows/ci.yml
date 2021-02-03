@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  ci:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install
+        run: npm install -g less
+      - name: Compile Less
+        run: lessc ./src/DNOME.less ./dist/DNOME.css
