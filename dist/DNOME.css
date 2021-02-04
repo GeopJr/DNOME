@@ -116,7 +116,7 @@
 .theme-light div[class*="peopleColumn-"] {
   background-color: var(--background-primary);
 }
-div[class*="colorDefault"]:hover,
+div[class*="colorDefault"]:hover:not(div[class*="colorDefault"][class*="hideInteraction"]),
 div[class*="colorDefault"][class*="focused"] {
   background-color: var(--dnome-accent);
 }
@@ -219,6 +219,25 @@ div[class*="barFill"] {
 }
 div[class*="progressContainer"] > div > div[class*="progressBar"] {
   background-color: var(--dnome-accent) !important;
+}
+div[class*="isUnread"] {
+  border-color: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="unreadPill"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="unreadPill"] > svg > path[class*="unreadPillCap"] {
+  color: var(--dnome-accent);
+  fill: var(--dnome-accent);
+}
+div[class*="circleIconButton"] {
+  color: var(--dnome-accent);
+}
+div[class*="circleIconButton"][class*="selected"] {
+  background-color: var(--dnome-accent) !important;
+}
+button[class*="buttonColor"] {
+  color: #ffffff !important;
 }
 div[aria-controls="Discord Nitro-tab"][aria-selected="false"],
 div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"] {
