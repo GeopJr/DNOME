@@ -25,7 +25,7 @@
 }
 
 div[class*="colorDefault"] {
-  &:hover,
+  &:hover:not(&[class*="hideInteraction"]),
   &[class*="focused"] {
     background-color: var(--dnome-accent);
   }
