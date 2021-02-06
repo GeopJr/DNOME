@@ -38,8 +38,18 @@ svg[class*="premiumIcon"] {
   color: var(--dnome-accent);
 }
 
-span[class*="botTag"] {
+div[class*="colorPremium"] {
+  svg[class*="icon-"] {
+    color: var(--dnome-accent);
+  }
+}
+
+span[class*="botTag-"] {
   background-color: var(--dnome-accent);
+  &[class*="botTagInvert-"] {
+    background-color: #fff;
+    color: var(--dnome-accent);
+  }
 }
 
 span[class*="wrapper-"][class*="mention"][class*="interactive"] {
@@ -79,4 +89,8 @@ div[class*="circleIconButton"] {
 
 button[class*="buttonColor"] {
   color: #ffffff !important;
+}
+
+svg[class*="iconTierThree-"] {
+  color: #fff;
 }
