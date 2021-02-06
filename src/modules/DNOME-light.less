@@ -6,11 +6,12 @@
 @accent-light: #3584e4;
 @border-light: darken(@bg-light, 18%);
 @link_color-light: lighten(@accent-light, 10%);
-@dark_fill-light: mix(@border, @bg-light, 10%);
+@dark_fill-light: mix(@border-light, @bg-light, 10%);
 
 @scroll_bg-light: mix(@bg-light, @fg-light, 80%);
 @scrollbar_slider_color-light: mix(@fg-light, @bg-light, 60%);
 @warning-light: #f57900;
+@error-light: #cc0000;
 
 @sidebar-light: mix(@bg-light, @base-light, 50%);
 
@@ -60,4 +61,6 @@
   --dnome-warning: @warning-light;
   --dnome-darker-base: @darker_base-light;
   --dnome-darker-accent: @darker_accent-light;
+  --dnome-faded-accent: fade(@accent, 30%);
+  --dnome-error: @error-light;
 }

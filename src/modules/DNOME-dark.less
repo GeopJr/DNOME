@@ -11,6 +11,7 @@
 @scroll_bg: mix(@base, @bg, 50%);
 @scrollbar_slider_color: mix(@fg, @bg, 60%);
 @warning: #f57900;
+@error: #cc0000;
 
 @sidebar: mix(@bg, @base, 50%);
 
@@ -60,4 +61,6 @@
   --dnome-warning: @warning;
   --dnome-darker-base: @darker_base;
   --dnome-darker-accent: @darker_accent;
+  --dnome-faded-accent: fade(@accent, 40%);
+  --dnome-error: @error;
 }

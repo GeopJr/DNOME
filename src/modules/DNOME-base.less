@@ -13,7 +13,7 @@
   ul[class*="perks"] > li[class*="perk-"] {
     background-color: var(--dnome-bg);
   }
-  div[class*="uploadModal"] {
+  div[class*="uploadModal-"] {
     background-color: var(--background-primary);
     > div[class*="footer"] {
       background-color: var(--background-tertiary);
@@ -69,4 +69,10 @@ div[style*="background-color: rgb(67, 181, 129)"] {
 div[class*="selectedCategoryItem"][class*="categoryItem"]
   > div[class*="itemInner"] {
   background-color: var(--dnome-accent);
+}
+
+button[class*="button-"][class*="lookOutlined-"] {
+  &:hover {
+    background-color: var(--dnome-darker-accent);
+  }
 }
