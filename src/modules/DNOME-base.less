@@ -25,13 +25,20 @@
 }
 
 div[class*="colorDefault"] {
-  &:hover:not(&[class*="hideInteraction"]),
+  &:not([class*="hideInteraction"]):hover,
   &[class*="focused"] {
     background-color: var(--dnome-accent);
   }
   &:active {
     background-color: var(--dnome-darker-accent) !important;
   }
+  &[class*="colorBrand"]:not(:hover) {
+    color: var(--interactive-normal);
+  }
+}
+
+div[class*="colorBrand"] {
+  color: var(--dnome-accent);
 }
 
 div[class*="wrapper"][class*="selected"],
