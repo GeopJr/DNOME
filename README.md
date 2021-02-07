@@ -37,7 +37,7 @@ The theme is written in Less and supports both light and dark mode! You can also
 
 ## Installing
 
-You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [BeauitfulDiscord](https://github.com/leovoel/BeautifulDiscord) & any other CSS injector available.
+You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [BeauitfulDiscord](https://github.com/leovoel/BeautifulDiscord), [BetterDiscord](https://betterdiscord.net/), [Powercord](https://powercord.dev/) & any other CSS injector available.
 
 There are 3 options for obtaining the theme:
 
