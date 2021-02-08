@@ -37,13 +37,24 @@ The theme is written in Less and supports both light and dark mode! You can also
 
 ## Installing
 
-You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [BeauitfulDiscord](https://github.com/leovoel/BeautifulDiscord), [BetterDiscord](https://betterdiscord.net/), [Powercord](https://powercord.dev/) & any other CSS injector available.
+You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [BeauitfulDiscord](https://github.com/leovoel/BeautifulDiscord), [BetterDiscord](https://github.com/rauenzi/BetterDiscordApp), [Powercord](https://powercord.dev/) & any other CSS injector available.
 
 There are 3 options for obtaining the theme:
 
 1. [DNOME-latest.css](https://github.com/GeopJr/DNOME/blob/main/DNOME-latest.css), which imports the latest compiled version.
 2. [dist/DNOME.css](https://github.com/GeopJr/DNOME/blob/main/dist/DNOME.css), which is the latest compiled version.
 3. [Compile it yourself](#Compiling).
+
+> Some client mods require certain changes. The theme is in its simpliest form.
+> However, if you feel something needs extra instructions, open an issue and I'll list it below.
+> Keep in mind that many plugins and elements from them might not be styled.
+
+### For BetterDiscord
+
+BetterDiscord requires a non-css META tag and a specific suffix on the filename. There are 2 option for installing the theme:
+
+1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/main/DNOME.theme.css) and place it in your `themes/` folder.
+2. Copy paste the contents of the desired file in the `Custom CSS` section in settings.
 
 #
 
