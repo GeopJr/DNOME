@@ -231,6 +231,9 @@ span[class*="wrapper-"][class*="mention"][class*="interactive"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
 }
+span[class*="wrapper-"][class*="mention"][class*="interactive"]:hover {
+  color: var(--dnome-link-color) !important;
+}
 div[class*="warning"] {
   border-color: var(--dnome-warning);
 }
