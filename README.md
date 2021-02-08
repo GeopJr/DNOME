@@ -46,14 +46,16 @@ There are 3 options for obtaining the theme:
 3. [Compile it yourself](#Compiling).
 
 > Some client mods require certain changes. The theme is in its simpliest form.
+
 > However, if you feel something needs extra instructions, open an issue and I'll list it below.
+
 > Keep in mind that many plugins and elements from them might not be styled.
 
 ### For BetterDiscord
 
-BetterDiscord requires a non-css META tag and a specific suffix on the filename. There are 2 option for installing the theme:
+BetterDiscord requires a non-css META tag and a specific suffix on the filename. There are 2 options for installing the theme:
 
-1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/main/DNOME.theme.css) and place it in your `themes/` folder.
+1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/main/extra/DNOME.theme.css) and place it in your `themes/` folder.
 2. Copy paste the contents of the desired file in the `Custom CSS` section in settings.
 
 #
@@ -74,7 +76,7 @@ BetterDiscord requires a non-css META tag and a specific suffix on the filename.
 6. Create a new Pull Request
 
 <a href="https://github.com/GeopJr/DNOME/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GeopJr/argyle" />
+  <img src="https://contrib.rocks/image?repo=GeopJr/DNOME" />
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
