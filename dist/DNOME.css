@@ -186,6 +186,12 @@ div[class*="userPopout"] div[class*="root"][aria-label*="Role"] {
 div[class*="userPopout"] input {
   border-color: var(--dnome-accent) !important;
 }
+div[role="dialog"] > div[class*="root-"] {
+  background-color: var(--background-primary);
+}
+div[role="dialog"] > div[class*="root-"] > form > div[class*="footer"] {
+  background-color: var(--background-tertiary);
+}
 div[class*="mentioned-"]::before {
   background-color: var(--dnome-warning);
 }
