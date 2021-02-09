@@ -34,3 +34,10 @@ div[class*="userPopout"] {
     border-color: var(--dnome-accent) !important;
   }
 }
+
+div[role="dialog"] > div[class*="root-"] {
+  background-color: var(--background-primary);
+  > form > div[class*="footer"] {
+    background-color: var(--background-tertiary);
+  }
+}
