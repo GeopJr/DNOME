@@ -100,8 +100,8 @@
 .theme-light div[class*="perksModal"] {
   background-color: var(--dnome-base);
 }
-.theme-dark div[class*="selected-"]:not([class*="tabBarItem"]),
-.theme-light div[class*="selected-"]:not([class*="tabBarItem"]),
+.theme-dark div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
+.theme-light div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
 .theme-dark div[class*="tierBody"],
 .theme-light div[class*="tierBody"],
 .theme-dark ul[class*="perks"] > li[class*="perk-"],
@@ -306,6 +306,15 @@ svg[class*="iconTierThree-"] {
 }
 div[class*="flowerStarContainer"] > svg[class*="flowerStar"] > path {
   fill: var(--dnome-accent);
+}
+button[class*="selectorButton-"][class*="selectorButtonSelected"] {
+  background-color: var(--dnome-accent);
+}
+button[class*="selectorButton-"]:not([class*="selectorButtonPremiumRequired-"]):hover {
+  background-color: var(--dnome-accent);
+}
+div[class*="sourceThumbnail"][class*="selected"] {
+  box-shadow: inset 0 0 0 2px var(--dnome-accent);
 }
 div[aria-controls="Discord Nitro-tab"][aria-selected="false"],
 div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"] {
