@@ -26,6 +26,7 @@
   --focus-primary: #1b6acb;
   --activity-card-background: #282828;
   --textbox-markdown-syntax: #1b6acb;
+  --radio-group-dot-foreground: #1b6acb;
   --dnome-base: #2d2d2d;
   --dnome-bg: #353535;
   --dnome-sidebar: #313131;
@@ -71,6 +72,7 @@
   --focus-primary: #3584e4;
   --activity-card-background: #f2f0ef;
   --textbox-markdown-syntax: #3584e4;
+  --radio-group-dot-foreground: #1b6acb;
   --dnome-base: #ffffff;
   --dnome-bg: #f6f5f4;
   --dnome-sidebar: #fbfafa;
@@ -99,6 +101,10 @@
 .theme-dark div[class*="perksModal"],
 .theme-light div[class*="perksModal"] {
   background-color: var(--dnome-base);
+}
+.theme-dark div[class*="autocompleteRowVertical"] > div[class*="selectable-"][class*="selected-"],
+.theme-light div[class*="autocompleteRowVertical"] > div[class*="selectable-"][class*="selected-"] {
+  background-color: var(--dnome-bg) !important;
 }
 .theme-dark div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
 .theme-light div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
