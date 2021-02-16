@@ -130,6 +130,9 @@ div[class*="colorDefault"]:active {
 div[class*="colorDefault"][class*="colorBrand"]:not(:hover) {
   color: var(--interactive-normal);
 }
+div[class*="colorDefault"] path[class*="checkbox-"] {
+  color: var(--dnome-accent);
+}
 div[class*="colorBrand"] {
   color: var(--dnome-accent);
 }
@@ -192,6 +195,9 @@ div[role="dialog"] > div[class*="root-"] {
 div[role="dialog"] > div[class*="root-"] > form > div[class*="footer"] {
   background-color: var(--background-tertiary);
 }
+div[class*="roundButton"][class*="activeButton"] {
+  background-color: var(--dnome-accent);
+}
 div[class*="mentioned-"]::before {
   background-color: var(--dnome-warning);
 }
@@ -223,6 +229,12 @@ div[class*="topSectionPlaying"] {
 svg[class*="premiumIcon"] {
   color: var(--dnome-accent);
 }
+button[class*="shinyButton"] > div[class*="premiumSubscribeButton"] > svg[class*="premiumIcon"] {
+  color: #fff;
+}
+div[class*="tipTitle"] {
+  color: var(--dnome-accent);
+}
 div[class*="colorPremium"] svg[class*="icon-"] {
   color: var(--dnome-accent);
 }
@@ -233,11 +245,11 @@ span[class*="botTag-"][class*="botTagInvert-"] {
   background-color: #fff;
   color: var(--dnome-accent);
 }
-span[class*="wrapper-"][class*="mention"][class*="interactive"] {
+span[class*="wrapper-"][class*="mention"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
 }
-span[class*="wrapper-"][class*="mention"][class*="interactive"]:hover {
+span[class*="wrapper-"][class*="mention"]:not([class*="hideInteraction"]):hover {
   color: var(--dnome-link-color) !important;
 }
 div[class*="warning"] {
@@ -291,6 +303,9 @@ div[class*="fakeButton-"] {
 }
 svg[class*="iconTierThree-"] {
   color: #fff;
+}
+div[class*="flowerStarContainer"] > svg[class*="flowerStar"] > path {
+  fill: var(--dnome-accent);
 }
 div[aria-controls="Discord Nitro-tab"][aria-selected="false"],
 div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"] {
