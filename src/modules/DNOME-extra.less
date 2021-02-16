@@ -38,6 +38,16 @@ svg[class*="premiumIcon"] {
   color: var(--dnome-accent);
 }
 
+button[class*="shinyButton"]
+  > div[class*="premiumSubscribeButton"]
+  > svg[class*="premiumIcon"] {
+  color: #fff;
+}
+
+div[class*="tipTitle"] {
+  color: var(--dnome-accent);
+}
+
 div[class*="colorPremium"] {
   svg[class*="icon-"] {
     color: var(--dnome-accent);
@@ -52,10 +62,10 @@ span[class*="botTag-"] {
   }
 }
 
-span[class*="wrapper-"][class*="mention"][class*="interactive"] {
+span[class*="wrapper-"][class*="mention"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
-  &:hover {
+  &:not([class*="hideInteraction"]):hover {
     color: var(--dnome-link-color) !important;
   }
 }
@@ -123,4 +133,12 @@ div[class*="fakeButton-"] {
 
 svg[class*="iconTierThree-"] {
   color: #fff;
+}
+
+div[class*="flowerStarContainer"] {
+  > svg[class*="flowerStar"] {
+    > path {
+      fill: var(--dnome-accent);
+    }
+  }
 }

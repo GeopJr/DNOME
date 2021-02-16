@@ -2,7 +2,7 @@
   <img alt="branding" width="128" src="https://i.imgur.com/jE8QoK2.png">
 </p>
 <h1 align="center">DNOME</h1>
-<h4 align="center">Adwaitta-inspired Discord Theme</h4>
+<h4 align="center">Adwaita-inspired Discord Theme</h4>
 <p align="center">
   <br />
     <a href="https://github.com/marketplace/actions/action-accessibility"><img src="https://img.shields.io/badge/ACTION-ACCESSIBILITY-396baf.svg?style=for-the-badge&labelColor=f8eae3" alt="action accessibility" /></a>
@@ -14,7 +14,7 @@
 
 ## Info
 
-This is a Discord theme inspired by GNOME's default theme, Adwaitta, in an attempt to make Discord look like it's part of the OS.
+This is a Discord theme inspired by GNOME's default theme, Adwaita, in an attempt to make Discord look like it's part of the OS.
 
 The theme is mostly a recolor of elements rather than a complete restyle as to not (completely) remove Discord's branding (https://stopthemingmy.app/). Feel free to fork this and add any additional styling you might want.
 
