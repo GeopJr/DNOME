@@ -142,3 +142,18 @@ div[class*="flowerStarContainer"] {
     }
   }
 }
+
+button[class*="selectorButton-"] {
+  &[class*="selectorButtonSelected"] {
+    background-color: var(--dnome-accent);
+  }
+  &:not([class*="selectorButtonPremiumRequired-"]):hover {
+    background-color: var(--dnome-accent);
+  }
+}
+
+div[class*="sourceThumbnail"] {
+  &[class*="selected"] {
+    box-shadow: inset 0 0 0 2px var(--dnome-accent);
+  }
+}
