@@ -62,11 +62,19 @@ span[class*="botTag-"] {
   }
 }
 
+div[class*="previewContainer-"] {
+  > div[class*="previewOverlay-"] {
+    background-color: var(--background-secondary) !important;
+    border-color: var(--background-primary) !important;
+  }
+}
+
 span[class*="wrapper-"][class*="mention"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
   &:not([class*="hideInteraction"]):hover {
-    color: var(--dnome-link-color) !important;
+    color: #ffffff;
+    background-color: var(--dnome-link-color) !important;
   }
 }
 
@@ -90,6 +98,9 @@ div[class*="isUnread"] {
       color: var(--dnome-accent);
       fill: var(--dnome-accent);
     }
+  }
+  > span[class*="content"] {
+    color: var(--dnome-accent);
   }
 }
 
