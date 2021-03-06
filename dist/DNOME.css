@@ -201,6 +201,12 @@ div[role="dialog"] > div[class*="root-"] {
 div[role="dialog"] > div[class*="root-"] > form > div[class*="footer"] {
   background-color: var(--background-tertiary);
 }
+div[role="dialog"] > div[class*="root-"] > div[class*="footer"] {
+  background-color: var(--background-tertiary);
+}
+div[role="dialog"] > div[class*="root-"] > div[class*="content"] > div[class*="message"] {
+  background-color: var(--background-primary);
+}
 div[class*="roundButton"][class*="activeButton"] {
   background-color: var(--dnome-accent);
 }
@@ -251,12 +257,17 @@ span[class*="botTag-"][class*="botTagInvert-"] {
   background-color: #fff;
   color: var(--dnome-accent);
 }
+div[class*="previewContainer-"] > div[class*="previewOverlay-"] {
+  background-color: var(--background-secondary) !important;
+  border-color: var(--background-primary) !important;
+}
 span[class*="wrapper-"][class*="mention"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
 }
 span[class*="wrapper-"][class*="mention"]:not([class*="hideInteraction"]):hover {
-  color: var(--dnome-link-color) !important;
+  color: #ffffff !important;
+  background-color: var(--dnome-link-color) !important;
 }
 div[class*="warning"] {
   border-color: var(--dnome-warning);
@@ -276,6 +287,9 @@ div[class*="isUnread"] > span[class*="unreadPill"] {
 div[class*="isUnread"] > span[class*="unreadPill"] > svg > path[class*="unreadPillCap"] {
   color: var(--dnome-accent);
   fill: var(--dnome-accent);
+}
+div[class*="isUnread"] > span[class*="content"] {
+  color: var(--dnome-accent);
 }
 div[class*="circleIconButton"] {
   color: var(--dnome-accent);
