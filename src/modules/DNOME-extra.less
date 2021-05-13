@@ -6,8 +6,13 @@ div[class*="mentioned-"]::before {
   background-color: var(--dnome-accent) !important;
 }
 
-div[class*="control"] > div[style*="background-color: rgb(67, 181, 129)"] {
-  background-color: var(--dnome-accent) !important;
+div[class*="control"] {
+  > div[style*="background-color: rgb(59, 165, 92)"],
+  div[style*="background-color: rgb(94, 135, 113)"],
+  div[style*="background-color: rgb(78, 149, 104)"],
+  div[style*="background-color: rgb(95, 134, 114)"] {
+    background-color: var(--dnome-accent) !important;
+  }
 }
 
 circle[class*="radioIconForeground"] {
@@ -80,6 +85,10 @@ span[class*="wrapper-"][class*="mention"] {
 
 div[class*="warning"] {
   border-color: var(--dnome-warning);
+}
+
+[class*="defaultValue-"] > div[class*="markValue-"] {
+  color: var(--dnome-accent) !important;
 }
 
 div[class*="barFill"] {
