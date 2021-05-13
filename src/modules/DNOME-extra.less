@@ -129,6 +129,7 @@ div[class*="uploadModalIn-"] div[class*="uploadDropModal-"] {
 
 div[class*="reactionMe"] {
   background-color: var(--dnome-faded-accent) !important;
+  border-color: var(--dnome-accent) !important;
 }
 
 div[class*="notice-"] {
@@ -166,5 +167,15 @@ button[class*="selectorButton-"] {
 div[class*="sourceThumbnail"] {
   &[class*="selected"] {
     box-shadow: inset 0 0 0 2px var(--dnome-accent);
+  }
+}
+
+div[class*="search-"] > div[class*="searchBox-"] {
+  &:focus-within,
+  &:focus {
+    -webkit-box-shadow: 0 0 0 1px var(--dnome-accent),
+      0 0 0 2px var(--dnome-link-color), 0 0 0 3px var(--dnome-link-color) !important;
+    box-shadow: 0 0 0 1px var(--dnome-accent), 0 0 0 2px var(--dnome-link-color),
+      0 0 0 3px var(--dnome-link-color) !important;
   }
 }
