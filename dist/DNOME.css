@@ -190,7 +190,7 @@ div[class*="userPopout"] div[class*="headerPlaying"] {
 div[class*="userPopout"] > div[class*="body"],
 div[class*="userPopout"] div[class*="footer"],
 div[class*="userPopout"] div[class*="root"][aria-label*="Role"] {
-  background-color: var(--dnome-bg);
+  background-color: var(--dnome-dark-fill);
 }
 div[class*="userPopout"] input {
   border-color: var(--dnome-accent) !important;
@@ -213,6 +213,28 @@ div[class*="roundButton"][class*="activeButton"] {
 div[class*="tierBody"] {
   background-color: var(--dnome-base) !important;
 }
+div[class*="noTabBar-"],
+div[class*="userInfoSection-"],
+div[class*="connectedAccount-"],
+div[class*="tabBarContainer-"] {
+  border-color: var(--dnome-bg) !important;
+}
+div[class*="paymentPane-"] {
+  background-color: var(--dnome-base) !important;
+}
+div[class*="paymentPane-"] > div[class*="paginator-"] {
+  background-color: var(--dnome-base) !important;
+}
+div[class*="paymentPane-"] > div[class*="paginator-"] > div[class*="bottomDivider-"] {
+  border-color: var(--dnome-bg) !important;
+}
+div[class*="paymentPane-"] > div[class*="paginator-"] > div[class*="bottomDivider-"] > div[class*="payment-"] {
+  border-color: var(--dnome-bg) !important;
+  background-color: var(--dnome-base) !important;
+}
+div[class*="paymentPane-"] > div[class*="paginator-"] > div[class*="bottomDivider-"] > div[class*="payment-"] > div[class*="expandedInfo-"] {
+  border-color: var(--dnome-base) !important;
+}
 div[class*="mentioned-"]::before {
   background-color: var(--dnome-warning);
 }
@@ -230,6 +252,7 @@ circle[class*="radioIconForeground"] {
 }
 div[class*="checkbox"][class*="checked"] {
   border-color: var(--dnome-accent) !important;
+  background-color: var(--dnome-faded-accent) !important;
 }
 div[class*="checkbox"][class*="checked"] > svg > path {
   fill: var(--dnome-accent);
@@ -351,6 +374,9 @@ div[class*="search-"] > div[class*="searchBox-"]:focus {
   -webkit-box-shadow: 0 0 0 1px var(--dnome-accent), 0 0 0 2px var(--dnome-link-color), 0 0 0 3px var(--dnome-link-color) !important;
   box-shadow: 0 0 0 1px var(--dnome-accent), 0 0 0 2px var(--dnome-link-color), 0 0 0 3px var(--dnome-link-color) !important;
 }
+div[class*="premiumIndicator-"] {
+  background-color: var(--dnome-accent) !important;
+}
 div[aria-controls="Discord Nitro-tab"][aria-selected="false"],
 div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="false"] {
   color: var(--interactive-normal) !important;
@@ -366,5 +392,8 @@ div[aria-controls="GUILD_PREMIUM-tab"][aria-selected="true"] {
 }
 div[aria-controls="Discord Nitro-tab"] > div > svg[class*="icon-"],
 div[aria-controls="GUILD_PREMIUM-tab"] > div > svg[class*="icon-"] {
+  display: none !important;
+}
+div[aria-label="Exclusive to Nitro"] {
   display: none !important;
 }
