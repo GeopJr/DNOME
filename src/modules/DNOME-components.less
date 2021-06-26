@@ -63,3 +63,19 @@ div[class*="tabBarContainer-"] {
   border-color: var(--dnome-bg) !important;
 }
 
+div[class*="paymentPane-"] {
+  > div[class*="paginator-"] {
+    background-color: var(--dnome-base) !important;
+    > div[class*="bottomDivider-"] {
+      border-color: var(--dnome-bg) !important;
+      > div[class*="payment-"] {
+        border-color: var(--dnome-bg) !important;
+        background-color: var(--dnome-base) !important;
+        > div[class*="expandedInfo-"] {
+          border-color: var(--dnome-base) !important;
+        }
+      }
+    }
+  }
+  background-color: var(--dnome-base) !important;
+}
