@@ -1,94 +1,116 @@
 .theme-dark {
   --text-normal: #ffffff;
-  --background-primary: #353535;
-  --background-secondary: #2d2d2d;
-  --background-secondary-alt: #313131;
-  --background-tertiary: #282828;
-  --background-accent: #1b6acb;
-  --background-floating: #282828;
-  --background-mobile-primary: #353535;
-  --background-mobile-secondary: #2d2d2d;
-  --background-modifier-selected: #353535;
-  --background-modifier-accent: #282828;
+  --background-primary: #1E1E1E;
+  --background-secondary: #242424;
+  --background-secondary-alt: #242424;
+  --background-tertiary: #242424;
+  --background-accent: #3584e4;
+  --background-floating: #383838;
+  --background-mobile-primary: #1E1E1E;
+  --background-mobile-secondary: #242424;
+  --background-modifier-selected: #1E1E1E;
+  --background-modifier-accent: #242424;
+  --background-modifier-hover: #333333;
   --background-mentioned: rgba(245, 121, 0, 0.05);
   --background-mentioned-hover: rgba(245, 121, 0, 0.08);
-  --background-message-hover: rgba(40, 40, 40, 0.3);
+  --background-message-hover: rgba(36, 36, 36, 0.3);
   --background-help-warning: rgba(245, 121, 0, 0.1);
-  --background-help-info: rgba(27, 106, 203, 0.1);
-  --scrollbar-thin-thumb: #a4a4a3;
+  --background-help-info: rgba(53, 132, 228, 0.1);
+  --scrollbar-thin-thumb: #9b9b9a;
   --scrollbar-thin-track: transparent;
-  --scrollbar-auto-thumb: #a4a4a3;
-  --scrollbar-auto-track: #313131;
-  --scrollbar-auto-scrollbar-color-thumb: #a4a4a3;
-  --scrollbar-auto-scrollbar-color-track: #2d2d2d;
-  --channeltextarea-background: #2d2d2d;
-  --logo-primary: #1b6acb;
-  --focus-primary: #1b6acb;
-  --activity-card-background: #282828;
-  --textbox-markdown-syntax: #1b6acb;
-  --radio-group-dot-foreground: #1b6acb;
-  --dnome-base: #2d2d2d;
-  --dnome-bg: #353535;
-  --dnome-sidebar: #313131;
-  --dnome-border: #1b1b1b;
-  --dnome-dark-fill: #282828;
-  --dnome-scroll-bg: #313131;
+  --scrollbar-auto-thumb: #9b9b9a;
+  --scrollbar-auto-track: #212121;
+  --scrollbar-auto-scrollbar-color-thumb: #9b9b9a;
+  --scrollbar-auto-scrollbar-color-track: #242424;
+  --channeltextarea-background: #242424;
+  --logo-primary: #3584e4;
+  --focus-primary: #3584e4;
+  --activity-card-background: #242424;
+  --textbox-markdown-syntax: #3584e4;
+  --radio-group-dot-foreground: #3584e4;
+  --search-popout-option-fade: #00000000;
+  --search-popout-option-fade-hover: #00000000;
+  --input-background: #242424;
+  --brand-experiment: #3584e4;
+  --brand-experiment-05a: rgba(53, 132, 228, 0.05);
+  --dnome-base: #242424;
+  --dnome-bg: #1E1E1E;
+  --dnome-sidebar: #242424;
+  --dnome-border: #454545;
+  --dnome-dark-fill: #242424;
+  --dnome-scroll-bg: #212121;
   --dnome-fg: #eeeeec;
-  --dnome-scrollbar-slider-color: #a4a4a3;
-  --dnome-accent: #1b6acb;
-  --dnome-link-color: #629fea;
+  --dnome-scrollbar-slider-color: #9b9b9a;
+  --dnome-accent: #3584e4;
+  --dnome-link-color: #8fbbf0;
   --dnome-text-color: #ffffff;
   --dnome-warning: #f57900;
-  --dnome-darker-base: #202020;
-  --dnome-darker-accent: #15539e;
-  --dnome-faded-accent: rgba(27, 106, 203, 0.4);
+  --dnome-darker-base: #171717;
+  --dnome-darker-accent: #1b6acb;
+  --dnome-faded-accent: rgba(53, 132, 228, 0.4);
   --dnome-error: #cc0000;
+  --dnome-list-item-hover: #333333;
+  --dnome-list-item-hover-selected: #404040;
+  --dnome-list-item-selected: #3A3A3A;
+  --dnome-accent-soft: #78aeed;
+  --dnome-searchbox: #454545;
 }
 .theme-light {
   --text-normal: #000000;
-  --background-primary: #f6f5f4;
-  --background-secondary: #ffffff;
-  --background-secondary-alt: #fbfafa;
-  --background-tertiary: #f2f0ef;
-  --background-accent: #3584e4;
-  --background-floating: #f2f0ef;
-  --background-mobile-primary: #f6f5f4;
-  --background-mobile-secondary: #ffffff;
-  --background-modifier-selected: #f6f5f4;
-  --background-modifier-accent: #f2f0ef;
+  --background-primary: #ffffff;
+  --background-secondary: #FAFAFA;
+  --background-secondary-alt: #FAFAFA;
+  --background-tertiary: #FAFAFA;
+  --background-accent: #3584E4;
+  --background-floating: #FAFAFA;
+  --background-mobile-primary: #ffffff;
+  --background-mobile-secondary: #FAFAFA;
+  --background-modifier-selected: #ffffff;
+  --background-modifier-accent: #FAFAFA;
+  --background-modifier-hover: var(--dnome-list-item-hover);
   --background-mentioned: rgba(245, 121, 0, 0.05);
   --background-mentioned-hover: rgba(245, 121, 0, 0.08);
-  --background-message-hover: rgba(242, 240, 239, 0.3);
+  --background-message-hover: rgba(250, 250, 250, 0.3);
   --background-help-warning: rgba(245, 121, 0, 0.1);
   --background-help-info: rgba(53, 132, 228, 0.1);
-  --scrollbar-thin-thumb: #7e8182;
+  --scrollbar-thin-thumb: #828586;
   --scrollbar-thin-track: transparent;
-  --scrollbar-auto-thumb: #7e8182;
-  --scrollbar-auto-track: #cecece;
-  --scrollbar-auto-scrollbar-color-thumb: #7e8182;
-  --scrollbar-auto-scrollbar-color-track: #ffffff;
-  --channeltextarea-background: #ffffff;
-  --logo-primary: #3584e4;
-  --focus-primary: #3584e4;
-  --activity-card-background: #f2f0ef;
-  --textbox-markdown-syntax: #3584e4;
-  --radio-group-dot-foreground: #1b6acb;
-  --dnome-base: #ffffff;
-  --dnome-bg: #f6f5f4;
-  --dnome-sidebar: #fbfafa;
-  --dnome-border: #cdc7c2;
-  --dnome-dark-fill: #f2f0ef;
-  --dnome-scroll-bg: #cecece;
+  --scrollbar-auto-thumb: #828586;
+  --scrollbar-auto-track: #d5d6d7;
+  --scrollbar-auto-scrollbar-color-thumb: #828586;
+  --scrollbar-auto-scrollbar-color-track: #FAFAFA;
+  --channeltextarea-background: #FAFAFA;
+  --logo-primary: #3584E4;
+  --focus-primary: #3584E4;
+  --activity-card-background: #FAFAFA;
+  --textbox-markdown-syntax: #3584E4;
+  --radio-group-dot-foreground: #3584E4;
+  --search-popout-option-fade: #00000000;
+  --search-popout-option-fade-hover: #00000000;
+  --input-background: #FAFAFA;
+  --brand-experiment: #3584E4;
+  --brand-experiment-05a: rgba(53, 132, 228, 0.05);
+  --dnome-base: #FAFAFA;
+  --dnome-bg: #ffffff;
+  --dnome-sidebar: #FAFAFA;
+  --dnome-border: #DCDCDC;
+  --dnome-dark-fill: #FAFAFA;
+  --dnome-scroll-bg: #d5d6d7;
   --dnome-fg: #2e3436;
-  --dnome-scrollbar-slider-color: #7e8182;
-  --dnome-accent: #3584e4;
+  --dnome-scrollbar-slider-color: #828586;
+  --dnome-accent: #3584E4;
   --dnome-link-color: #629fea;
   --dnome-text-color: #000000;
   --dnome-warning: #f57900;
-  --dnome-darker-base: #f2f2f2;
+  --dnome-darker-base: #ededed;
   --dnome-darker-accent: #1b6acb;
-  --dnome-faded-accent: rgba(27, 106, 203, 0.3);
+  --dnome-faded-accent: rgba(53, 132, 228, 0.3);
   --dnome-error: #cc0000;
+  --dnome-list-item-hover: #ECECEC;
+  --dnome-list-item-hover-selected: #DFDFDF;
+  --dnome-list-item-selected: #E6E6E6;
+  --dnome-accent-soft: #78aeed;
+  --dnome-searchbox: #D8D8D8;
 }
 .theme-dark div[class*="autocomplete-"],
 .theme-light div[class*="autocomplete-"],
@@ -106,8 +128,8 @@
 .theme-light div[class*="autocompleteRowVertical"] > div[class*="selectable-"][class*="selected-"] {
   background-color: var(--dnome-bg) !important;
 }
-.theme-dark div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
-.theme-light div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
+.theme-dark div[class*="selected-"]:not([class*="premiumLabel-"],[class*="tabBarItem"], [class*="gifFavoriteButton"], [class*="listItemWrapper-"]),
+.theme-light div[class*="selected-"]:not([class*="premiumLabel-"],[class*="tabBarItem"], [class*="gifFavoriteButton"], [class*="listItemWrapper-"]),
 .theme-dark div[class*="tierBody"],
 .theme-light div[class*="tierBody"],
 .theme-dark ul[class*="perks"] > li[class*="perk-"],
@@ -125,19 +147,6 @@
 .theme-dark div[class*="peopleColumn-"],
 .theme-light div[class*="peopleColumn-"] {
   background-color: var(--background-primary);
-}
-div[class*="colorDefault"]:not([class*="hideInteraction"]):hover,
-div[class*="colorDefault"][class*="focused"] {
-  background-color: var(--dnome-accent);
-}
-div[class*="colorDefault"]:active {
-  background-color: var(--dnome-darker-accent) !important;
-}
-div[class*="colorDefault"][class*="colorBrand"]:not(:hover) {
-  color: var(--interactive-normal);
-}
-div[class*="colorDefault"] path[class*="checkbox-"] {
-  color: var(--dnome-accent);
 }
 div[class*="colorBrand"] {
   color: var(--dnome-accent);
@@ -188,8 +197,7 @@ div[class*="userPopout"] div[class*="headerPlaying"] {
   background-color: var(--dnome-accent);
 }
 div[class*="userPopout"] > div[class*="body"],
-div[class*="userPopout"] div[class*="footer"],
-div[class*="userPopout"] div[class*="root"][aria-label*="Role"] {
+div[class*="userPopout"] div[class*="footer"] {
   background-color: var(--dnome-dark-fill);
 }
 div[class*="userPopout"] input {
@@ -213,12 +221,6 @@ div[class*="roundButton"][class*="activeButton"] {
 div[class*="tierBody"] {
   background-color: var(--dnome-base) !important;
 }
-div[class*="noTabBar-"],
-div[class*="userInfoSection-"],
-div[class*="connectedAccount-"],
-div[class*="tabBarContainer-"] {
-  border-color: var(--dnome-bg) !important;
-}
 div[class*="paymentPane-"] {
   background-color: var(--dnome-base) !important;
 }
@@ -234,6 +236,12 @@ div[class*="paymentPane-"] > div[class*="paginator-"] > div[class*="bottomDivide
 }
 div[class*="paymentPane-"] > div[class*="paginator-"] > div[class*="bottomDivider-"] > div[class*="payment-"] > div[class*="expandedInfo-"] {
   border-color: var(--dnome-base) !important;
+}
+div[class*="serverBoostTabItem-"] svg {
+  display: none;
+}
+div[class*="shineContainerDefault-"] {
+  display: none;
 }
 div[class*="mentioned-"]::before {
   background-color: var(--dnome-warning);
@@ -269,9 +277,6 @@ div[class*="topSectionPlaying"] {
 }
 svg[class*="premiumIcon"] {
   color: var(--dnome-accent);
-}
-button[class*="shinyButton"] > div[class*="premiumSubscribeButton"] > svg[class*="premiumIcon"] {
-  color: #fff;
 }
 div[class*="tipTitle"] {
   color: var(--dnome-accent);
@@ -396,4 +401,206 @@ div[aria-controls="GUILD_PREMIUM-tab"] > div > svg[class*="icon-"] {
 }
 div[aria-label="Exclusive to Nitro"] {
   display: none !important;
+}
+div[class*="buttons-"] > button[class*="colorBrand-"]:not([class*="expression-"]) {
+  display: none;
+}
+svg[class*="sparkleStar"],
+svg[class*="sparkle-"] {
+  display: none;
+}
+div[class*="sidebar-"] {
+  border-right: 1px solid var(--dnome-border);
+  border-left: 1px solid var(--dnome-border);
+}
+div[class*="sidebar-"] > section[class*="panels-"] {
+  border-top: 1px solid var(--dnome-border);
+}
+div[class*="sidebar-"] header[class*="header-"] {
+  border-bottom: 1px solid var(--dnome-border);
+  box-shadow: none;
+}
+div[class*="sidebar-"] div[class*="hasBanner-"] > header[class*="header-"] {
+  border-bottom: none;
+}
+div[class*="chat-"] main > form {
+  border-top: 1px solid var(--dnome-border);
+  background-color: var(--dnome-base);
+}
+div[class*="chat-"] div[class*="callContainer-"] {
+  background-color: var(--dnome-base) !important;
+}
+div[class*="chat-"] > div[class*="content-"] {
+  border-top: 1px solid var(--dnome-border);
+}
+div[class*="chat-"] > div[class*="content-"] div[class*="divider-"] {
+  border-color: var(--dnome-border);
+}
+div[class*="chat-"] > div[class*="content-"] div[class*="divider-"][class*="isUnread-"] {
+  border-color: var(--dnome-accent);
+}
+div[class*="chat-"] > div[class*="content-"]::before {
+  display: none;
+}
+div[class*="chat-"] > div[class*="content-"] > div[class*="container-"] {
+  border-left: 1px solid var(--dnome-border);
+}
+div[class*="chat-"] > div[class*="content-"] > div[class*="container-"] > aside[class*="membersWrap-"] div[class*="member-"] > div[class*="layout-"] {
+  border-radius: 6px;
+}
+div[class*="chat-"] > div[class*="content-"] > div[class*="container-"] > aside[class*="membersWrap-"] div[class*="member-"] > div[class*="layout-"]:hover {
+  background-color: var(--dnome-list-item-hover);
+}
+div[class*="chat-"] > div[class*="content-"] > div[class*="container-"] > aside[class*="membersWrap-"] div[class*="member-"][class*="selected-"] > div[class*="layout-"] {
+  background-color: var(--dnome-list-item-selected);
+}
+div[class*="chat-"] > div[class*="content-"] > div[class*="container-"] > aside[class*="membersWrap-"] div[class*="member-"][class*="selected-"] > div[class*="layout-"]:hover {
+  background-color: var(--dnome-list-item-hover-selected);
+}
+#channels li[class*="containerDefault-"][class*="selected-"] div[class*="iconVisibility-"]:not([class*="clickable-"]) div[class*="content-"] {
+  background-color: var(--dnome-list-item-selected);
+}
+#channels li[class*="containerDefault-"][class*="selected-"] div[class*="iconVisibility-"]:not([class*="clickable-"]) div[class*="content-"]:hover {
+  background-color: var(--dnome-list-item-hover-selected);
+}
+#channels li[class*="containerDefault-"] div[class*="iconVisibility-"]:not([class*="clickable-"]) div[class*="content-"] {
+  padding-top: 4.6px;
+  padding-bottom: 4.6px;
+  border-radius: 6px;
+}
+#channels li[class*="containerDefault-"] div[class*="iconVisibility-"]:not([class*="clickable-"]) div[class*="content-"]:hover {
+  background-color: var(--dnome-list-item-hover);
+}
+div[class*="toolbar-"] {
+  height: 100%;
+}
+div[class*="toolbar-"] > div[class*="search-"] {
+  height: 70%;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] {
+  height: 100%;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"][class*="focused-"] > div[class*="searchBar-"] {
+  border: 2px solid var(--dnome-accent-soft);
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] {
+  height: 100%;
+  align-items: center;
+  border-radius: 6px;
+  background-color: var(--dnome-searchbox);
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="public-DraftEditorPlaceholder-root"] {
+  padding-bottom: 0;
+  height: calc(100% - 4px);
+  display: inline-flex;
+  align-items: center;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="DraftEditor-editorContainer"] {
+  height: 100%;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="DraftEditor-editorContainer"] > div[class*="public-DraftEditor-content"] {
+  padding-bottom: 0;
+  height: 100%;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="DraftEditor-editorContainer"] > div[class*="public-DraftEditor-content"] div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"] span[class*="search"] {
+  background-color: transparent;
+  font-weight: bold;
+  text-decoration: underline;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="DraftEditor-editorContainer"] > div[class*="public-DraftEditor-content"] > div {
+  height: 100%;
+}
+div[class*="toolbar-"] > div[class*="search-"] > div[class*="search-"] > div[class*="searchBar-"] > div[class*="DraftEditor-root"] > div[class*="DraftEditor-editorContainer"] > div[class*="public-DraftEditor-content"] > div > div {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+div[group="SEARCH_OPTIONS"][class*="option-"],
+li[class*="option"][role="option"] {
+  padding-top: 3.7px;
+  padding-bottom: 3.7px;
+  border-radius: 6px;
+}
+div[group="SEARCH_OPTIONS"][class*="option-"]:hover,
+li[class*="option"][role="option"]:hover {
+  background-color: var(--dnome-list-item-hover);
+}
+div[group="SEARCH_OPTIONS"][class*="option-"]:hover::after,
+li[class*="option"][role="option"]:hover::after {
+  background-color: transparent;
+}
+div[group="SEARCH_OPTIONS"][class*="option-"]:hover::before,
+li[class*="option"][role="option"]:hover::before {
+  background-color: transparent;
+}
+div[group="SEARCH_OPTIONS"][class*="option-"] > svg,
+li[class*="option"][role="option"] > svg {
+  top: unset;
+}
+div[class*="queryContainer-"][class*="focused-"] {
+  background-color: transparent;
+  outline: 1px solid var(--dnome-border);
+}
+div[class*="messagesPopoutWrap-"] {
+  border-radius: 12px;
+}
+div[class*="recentMentionsPopout-"] {
+  border-radius: 12px;
+}
+div[class*="recentMentionsPopout-"] div[class*="tabBar"] > div[class*="tab-"] {
+  height: 30px;
+  border-radius: 6px;
+}
+div[class*="layerContainer-"] > div > div[class*="menu-"][role="menu"],
+div[class*="layerContainer-"] > div > div > div[class*="browser-"] {
+  border-radius: 12px;
+}
+div[class*="layerContainer-"] > div > div > div[class*="browser-"] div[class*="searchBox-"] {
+  background-color: var(--dnome-searchbox);
+  border-radius: 6px;
+  height: 70%;
+}
+div[class*="layerContainer-"] div[class*="layer"] div[class*="elevationBorderHigh-"] {
+  border-radius: 8px;
+}
+div[class*="pageWrapper-"] {
+  background-color: var(--dnome-bg) !important;
+}
+div[class*="animatorLeft-"] div[class*="userPopoutOuter-"] {
+  border-radius: 12px;
+}
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"] {
+  border-radius: 6px;
+}
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"]:not([class*="hideInteraction"]):hover,
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"][class*="focused"] {
+  background-color: var(--dnome-accent);
+}
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"]:active {
+  background-color: var(--dnome-darker-accent) !important;
+}
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"][class*="colorBrand"]:not(:hover) {
+  color: var(--interactive-normal);
+}
+div[class*="animatorBottom-"] > div[class*="menu-"] div[class*="colorDefault"] path[class*="checkbox-"] {
+  color: var(--dnome-accent);
+}
+div[class*="animatorBottom-"] > div[class*="container-"] {
+  border-radius: 12px;
+}
+div[class*="animatorBottom-"] > div[class*="container-"] > div[role="combobox"] > div[class*="container-"] {
+  height: 38px;
+}
+div[class*="animatorBottom-"] > div[class*="container-"] > div[role="combobox"] > div[class*="container-"] > div[class*="inner-"] {
+  background-color: var(--dnome-searchbox);
+  border-radius: 6px;
+}
+svg[class*="sparkleStar"],
+svg[class*="sparkle-"] {
+  display: none;
+}
+#sticker-picker-tab-panel div[class*="searchBar"],
+#emoji-picker-tab-panel div[class*="searchBar"] {
+  border-radius: 6px;
+  background-color: var(--dnome-searchbox);
 }
