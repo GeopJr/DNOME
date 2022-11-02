@@ -1,19 +1,19 @@
-@base: lighten(desaturate(#241f31, 100%), 2%);
+@base: #242424;
 @text_color: #ffffff;
-@bg: darken(desaturate(#3d3846, 100%), 4%);
+@bg: #1E1E1E; //darken(desaturate(#242424, 100%), 4%);
 @fg: #eeeeec;
 
-@accent: darken(#3584e4, 10%);
-@border: darken(@bg, 10%);
+@accent: #3584e4;
+@border: #454545;
 @link_color: lighten(@accent, 20%);
-@dark_fill: mix(@border, @bg, 50%);
+@dark_fill: @base;
 
 @scroll_bg: mix(@base, @bg, 50%);
 @scrollbar_slider_color: mix(@fg, @bg, 60%);
 @warning: #f57900;
 @error: #cc0000;
 
-@sidebar: mix(@bg, @base, 50%);
+@sidebar: @base;
 
 @darker_base: darken(@base, 5%);
 @darker_accent: darken(@accent, 10%);
@@ -25,11 +25,12 @@
   --background-secondary-alt: @sidebar;
   --background-tertiary: @dark_fill;
   --background-accent: @accent;
-  --background-floating: @dark_fill;
+  --background-floating: #383838;
   --background-mobile-primary: @bg;
   --background-mobile-secondary: @base;
   --background-modifier-selected: @bg;
   --background-modifier-accent: @dark_fill;
+  --background-modifier-hover: #333333;
   --background-mentioned: fade(@warning, 5%);
   --background-mentioned-hover: fade(@warning, 8%);
   --background-message-hover: fade(@dark_fill, 30%);
@@ -47,6 +48,11 @@
   --activity-card-background: @dark_fill;
   --textbox-markdown-syntax: @accent;
   --radio-group-dot-foreground: @accent;
+  --search-popout-option-fade: #00000000;
+  --search-popout-option-fade-hover: #00000000;
+  --input-background: @base;
+  --brand-experiment: @accent;
+  --brand-experiment-05a: fade(@accent, 5%);
 
   --dnome-base: @base;
   --dnome-bg: @bg;
@@ -64,4 +70,9 @@
   --dnome-darker-accent: @darker_accent;
   --dnome-faded-accent: fade(@accent, 40%);
   --dnome-error: @error;
+  --dnome-list-item-hover: #333333;
+  --dnome-list-item-hover-selected: #404040;
+  --dnome-list-item-selected: #3A3A3A;
+  --dnome-accent-soft: #78aeed;
+  --dnome-searchbox: #454545;
 }

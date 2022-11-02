@@ -1,20 +1,20 @@
-// Dear Discord, the Nitro tab should be the same color as the rest
-// Shady capitalism tactics <3
-
 // Includes both the settings button and the server boosts one
 div[aria-controls="Discord Nitro-tab"],
 div[aria-controls="GUILD_PREMIUM-tab"] {
   &[aria-selected="false"] {
     color: var(--interactive-normal) !important;
+
     &[style*="background-color"] {
       background-color: var(--background-modifier-hover) !important;
     }
   }
+
   &[aria-selected="true"] {
     color: var(--interactive-active) !important;
     background-color: var(--background-modifier-selected) !important;
   }
-  > div > svg[class*="icon-"] {
+
+  >div>svg[class*="icon-"] {
     display: none !important;
   }
 }
@@ -22,4 +22,17 @@ div[aria-controls="GUILD_PREMIUM-tab"] {
 // We noticed, don't worry
 div[aria-label="Exclusive to Nitro"] {
   display: none !important;
+}
+
+// No more gift nitro button
+div[class*="buttons-"] {
+  >button[class*="colorBrand-"]:not([class*="expression-"]) {
+    display: none;
+  }
+}
+
+// No more sparkles
+svg[class*="sparkleStar"],
+svg[class*="sparkle-"] {
+  display: none;
 }

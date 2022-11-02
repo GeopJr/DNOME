@@ -1,10 +1,13 @@
 #search-results {
   background-color: var(--dnome-base);
+
   div[role="option"] {
+
     &:hover,
     &[aria-selected="true"] {
       background-color: var(--dnome-dark-fill);
     }
+
     &:after {
       background: transparent;
     }
@@ -13,7 +16,8 @@
 
 div[class*="modal"][class*="small"] {
   background-color: var(--dnome-base);
-  > div[class*="footer"] {
+
+  >div[class*="footer"] {
     background-color: var(--dnome-dark-fill);
   }
 }
@@ -22,28 +26,33 @@ div[class*="userPopout"] {
   div[class*="headerNormal"] {
     background-color: var(--dnome-dark-fill);
   }
+
   div[class*="headerPlaying"] {
     background-color: var(--dnome-accent);
   }
-  > div[class*="body"],
-  div[class*="footer"],
-  div[class*="root"][aria-label*="Role"] {
+
+  >div[class*="body"],
+  div[class*="footer"] {
     background-color: var(--dnome-dark-fill);
   }
+
   input {
     border-color: var(--dnome-accent) !important;
   }
 }
 
-div[role="dialog"] > div[class*="root-"] {
+div[role="dialog"]>div[class*="root-"] {
   background-color: var(--background-primary);
-  > form > div[class*="footer"] {
+
+  >form>div[class*="footer"] {
     background-color: var(--background-tertiary);
   }
-  > div[class*="footer"] {
+
+  >div[class*="footer"] {
     background-color: var(--background-tertiary);
   }
-  > div[class*="content"] > div[class*="message"] {
+
+  >div[class*="content"]>div[class*="message"] {
     background-color: var(--background-primary);
   }
 }
@@ -56,26 +65,34 @@ div[class*="tierBody"] {
   background-color: var(--dnome-base) !important;
 }
 
-div[class*="noTabBar-"],
-div[class*="userInfoSection-"],
-div[class*="connectedAccount-"],
-div[class*="tabBarContainer-"] {
-  border-color: var(--dnome-bg) !important;
-}
-
 div[class*="paymentPane-"] {
-  > div[class*="paginator-"] {
+  >div[class*="paginator-"] {
     background-color: var(--dnome-base) !important;
-    > div[class*="bottomDivider-"] {
+
+    >div[class*="bottomDivider-"] {
       border-color: var(--dnome-bg) !important;
-      > div[class*="payment-"] {
+
+      >div[class*="payment-"] {
         border-color: var(--dnome-bg) !important;
         background-color: var(--dnome-base) !important;
-        > div[class*="expandedInfo-"] {
+
+        >div[class*="expandedInfo-"] {
           border-color: var(--dnome-base) !important;
         }
       }
     }
   }
+
   background-color: var(--dnome-base) !important;
 }
+
+div[class*="serverBoostTabItem-"] {
+  svg {
+    display: none;
+  }
+}
+
+div[class*="shineContainerDefault-"] {
+  display: none;
+}
+

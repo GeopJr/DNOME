@@ -12,7 +12,7 @@
     > div[class*="selectable-"][class*="selected-"] {
     background-color: var(--dnome-bg) !important;
   }
-  div[class*="selected-"]:not([class*="tabBarItem"], [class*="gifFavoriteButton"]),
+  div[class*="selected-"]:not([class*="premiumLabel-"],[class*="tabBarItem"], [class*="gifFavoriteButton"], [class*="listItemWrapper-"]),
   div[class*="tierBody"],
   ul[class*="perks"] > li[class*="perk-"] {
     background-color: var(--dnome-bg);
@@ -25,22 +25,6 @@
   }
   div[class*="peopleColumn-"] {
     background-color: var(--background-primary);
-  }
-}
-
-div[class*="colorDefault"] {
-  &:not([class*="hideInteraction"]):hover,
-  &[class*="focused"] {
-    background-color: var(--dnome-accent);
-  }
-  &:active {
-    background-color: var(--dnome-darker-accent) !important;
-  }
-  &[class*="colorBrand"]:not(:hover) {
-    color: var(--interactive-normal);
-  }
-  path[class*="checkbox-"] {
-    color: var(--dnome-accent);
   }
 }
 

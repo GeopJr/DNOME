@@ -41,8 +41,8 @@ You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [Beauitful
 
 There are 3 options for obtaining the theme:
 
-1. [DNOME-latest.css](https://github.com/GeopJr/DNOME/blob/main/DNOME-latest.css), which imports the latest compiled version.
-2. [dist/DNOME.css](https://github.com/GeopJr/DNOME/blob/main/dist/DNOME.css), which is the latest compiled version.
+1. [DNOME-latest.css](https://github.com/GeopJr/DNOME/blob/dev/DNOME-latest.css), which imports the latest compiled version.
+2. [dist/DNOME.css](https://github.com/GeopJr/DNOME/blob/dev/dist/DNOME.css), which is the latest compiled version.
 3. [Compile it yourself](#Compiling).
 
 > Some client mods require certain changes. The theme is in its simpliest form.
@@ -55,7 +55,7 @@ There are 3 options for obtaining the theme:
 
 BetterDiscord requires a non-css META tag and a specific suffix on the filename. There are 2 options for installing the theme:
 
-1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/main/extra/DNOME.theme.css) and place it in your `themes/` folder.
+1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/dev/extra/DNOME.theme.css) and place it in your `themes/` folder.
 2. Copy paste the contents of the desired file in the `Custom CSS` section in settings.
 
 #

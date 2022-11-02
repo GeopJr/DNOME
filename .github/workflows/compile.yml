@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '18.x'
       - name: Install
         run: npm install -g less
       - name: Compile Less

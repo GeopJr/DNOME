@@ -1,0 +1,312 @@
+div[class*="sidebar-"] {
+    border-right: 1px solid var(--dnome-border);
+    border-left: 1px solid var(--dnome-border);
+
+    >section[class*="panels-"] {
+        border-top: 1px solid var(--dnome-border);
+    }
+
+    header[class*="header-"] {
+        border-bottom: 1px solid var(--dnome-border);
+        box-shadow: none;
+    }
+
+    div[class*="hasBanner-"] {
+        >header[class*="header-"] {
+            border-bottom: none;
+        }
+    }
+}
+
+div[class*="chat-"] {
+    main>form {
+        border-top: 1px solid var(--dnome-border);
+        background-color: var(--dnome-base);
+    }
+
+    div[class*="callContainer-"] {
+        background-color: var(--dnome-base) !important;
+    }
+
+    >div[class*="content-"] {
+        div[class*="divider-"] {
+            border-color: var(--dnome-border);
+
+            &[class*="isUnread-"] {
+                border-color: var(--dnome-accent);
+            }
+        }
+
+        border-top: 1px solid var(--dnome-border);
+
+        &::before {
+            display: none;
+        }
+
+        >div[class*="container-"] {
+            border-left: 1px solid var(--dnome-border);
+
+            >aside[class*="membersWrap-"] {
+                div[class*="member-"] {
+                    >div[class*="layout-"] {
+                        border-radius: 6px;
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+                    }
+
+                    &[class*="selected-"] {
+                        >div[class*="layout-"] {
+                            background-color: var(--dnome-list-item-selected);
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover-selected);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#channels {
+    li[class*="containerDefault-"] {
+        // * {
+        //     color: white !important;
+        // }
+
+        &[class*="selected-"] {
+            div[class*="iconVisibility-"]:not([class*="clickable-"]) {
+                div[class*="content-"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+
+        div[class*="iconVisibility-"]:not([class*="clickable-"]) {
+            div[class*="content-"] {
+                padding-top: 4.6px;
+                padding-bottom: 4.6px;
+                border-radius: 6px;
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+            }
+        }
+    }
+}
+
+div[class*="toolbar-"] {
+    height: 100%;
+
+    >div[class*="search-"] {
+        // height: 40px;
+        height: 70%;
+
+        >div[class*="search-"] {
+            height: 100%;
+
+            // margin-top: -5px;
+            // margin-bottom: -5px;
+            // padding-top: 5px;
+            // padding-bottom: 5px;
+
+            &[class*="focused-"] {
+                >div[class*="searchBar-"] {
+                    border: 2px solid var(--dnome-accent-soft);
+                }
+            }
+
+            >div[class*="searchBar-"] {
+                height: 100%;
+                align-items: center;
+
+                >div[class*="DraftEditor-root"] {
+
+                    >div[class*="public-DraftEditorPlaceholder-root"] {
+                        padding-bottom: 0;
+                        height: calc(100% - 4px);
+                        display: inline-flex;
+                        align-items: center;
+                    }
+
+                    >div[class*="DraftEditor-editorContainer"] {
+                        height: 100%;
+
+                        >div[class*="public-DraftEditor-content"] {
+                            padding-bottom: 0;
+                            height: 100%;
+
+                            div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"] {
+                                span[class*="search"] {
+                                    background-color: transparent;
+                                    font-weight: bold;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            >div {
+                                height: 100%;
+
+                                >div {
+                                    height: 100%;
+                                    display: inline-flex;
+                                    align-items: center;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                border-radius: 6px;
+                background-color: var(--dnome-searchbox);
+            }
+        }
+    }
+}
+
+div[group="SEARCH_OPTIONS"][class*="option-"],
+li[class*="option"][role="option"] {
+    padding-top: 3.7px;
+    padding-bottom: 3.7px;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: var(--dnome-list-item-hover);
+
+        &::after {
+            background-color: transparent;
+        }
+
+        &::before {
+            background-color: transparent;
+        }
+
+
+    }
+
+    >svg {
+        top: unset;
+    }
+}
+
+div[class*="queryContainer-"][class*="focused-"] {
+    background-color: transparent;
+    outline: 1px solid var(--dnome-border);
+}
+
+div[class*="messagesPopoutWrap-"] {
+    border-radius: 12px;
+}
+
+div[class*="recentMentionsPopout-"] {
+    border-radius: 12px;
+
+    div[class*="tabBar"] {
+        >div[class*="tab-"] {
+            height: 30px;
+            border-radius: 6px;
+        }
+    }
+}
+
+div[class*="layerContainer-"] {
+    >div {
+
+        >div[class*="menu-"][role="menu"],
+        >div>div[class*="browser-"] {
+            border-radius: 12px;
+        }
+
+        >div>div[class*="browser-"] {
+            div[class*="searchBox-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: 6px;
+                height: 70%;
+            }
+        }
+    }
+
+    div[class*="layer"] {
+        div[class*="elevationBorderHigh-"] {
+            border-radius: 8px;
+        }
+    }
+}
+
+div[class*="pageWrapper-"] {
+    background-color: var(--dnome-bg) !important;
+}
+
+div[class*="animatorLeft-"] {
+    div[class*="userPopoutOuter-"] {
+        border-radius: 12px;
+    }
+}
+
+div[class*="animatorBottom-"] {
+    >div[class*="menu-"] {
+
+        div[class*="colorDefault"] {
+            border-radius: 6px;
+
+            &:not([class*="hideInteraction"]):hover,
+            &[class*="focused"] {
+                background-color: var(--dnome-accent);
+            }
+
+            &:active {
+                background-color: var(--dnome-darker-accent) !important;
+            }
+
+            &[class*="colorBrand"]:not(:hover) {
+                color: var(--interactive-normal);
+            }
+
+            path[class*="checkbox-"] {
+                color: var(--dnome-accent);
+            }
+        }
+    }
+
+    >div[class*="container-"] {
+        border-radius: 12px;
+
+        >div[role="combobox"]>div[class*="container-"] {
+            height: 38px;
+
+            >div[class*="inner-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+svg[class*="sparkleStar"],
+svg[class*="sparkle-"] {
+    display: none;
+}
+
+#sticker-picker-tab-panel,
+#emoji-picker-tab-panel {
+    div[class*="searchBar"] {
+        border-radius: 6px;
+        background-color: var(--dnome-searchbox);
+    }
+}
+
+div[class*="buttons-"] {
+    >button[class*="colorBrand-"]:not([class*="expression-"]) {
+        display: none;
+    }
+}
