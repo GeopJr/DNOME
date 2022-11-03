@@ -17,10 +17,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '18.x'
-      - name: Install
+      - name: Install Less
         run: npm install -g less
+      - name: Install the clean css plugin
+        run: npm install -g less-plugin-clean-css
       - name: Compile Less
-        run: lessc ./src/DNOME.less ./dist/DNOME.css
+        run: lessc -clean-css ./src/DNOME.less ./dist/DNOME.css
       - name: Commit files
         run: |
           git add -f ./dist/DNOME.css
