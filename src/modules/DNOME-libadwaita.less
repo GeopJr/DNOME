@@ -2,6 +2,76 @@ div[class*="sidebar-"] {
     border-right: 1px solid var(--dnome-border);
     border-left: 1px solid var(--dnome-border);
 
+    >div>div[class*="categoryItem-"] {
+        >div[class*="itemInner-"] {
+            border-radius: var(--dnome-border-small);
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        &[class*="selectedCategoryItem-"] {
+            >div[class*="itemInner-"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+        }
+    }
+
+    // Lost all progress due to power outage, reverse engineering from compiled version...
+    >section[class*="panels-"] {
+        >div>div[class*="avatarWrapper-"] {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        button[role="switch"] {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+
+            &[aria-checked="true"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+        }
+
+        button[type="button"]:not([role="switch"]) {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+    }
+
+
+    >nav[class*="privateChannels-"] {
+        >div>ul[role="list"] {
+            >li>div[class*="interactive-"] {
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[class*="selected-"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+    }
+
     >section[class*="panels-"] {
         border-top: 1px solid var(--dnome-border);
     }
@@ -19,6 +89,27 @@ div[class*="sidebar-"] {
 }
 
 div[class*="chat-"] {
+    div[class*="newMessagesBar"] {
+        margin-top: 15px;
+        border-radius: var(--dnome-border-small);
+        height: 50px;
+    }
+
+    // div[class*="messageAttachment-"] { // not on gifs
+    div[class*="imageContent-"] {
+        div[class*="imageContainer-"] {
+            div[class*="imageWrapper-"] {
+                border-radius: var(--dnome-border-small);
+            }
+        }
+    }
+
+    // }
+
+    div[class*="gifTag-"] {
+        border-radius: 4px;
+    }
+
     main>form {
         border-top: 1px solid var(--dnome-border);
         background-color: var(--dnome-base);
@@ -43,13 +134,36 @@ div[class*="chat-"] {
             display: none;
         }
 
+        >div[class*="membersWrap-"] {
+            div[class*="member-"] {
+                >div[class*="layout-"] {
+                    border-radius: var(--dnome-border-small);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+
+                }
+
+                &[aria-expanded="true"] {
+                    >div[class*="layout-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+        }
+
         >div[class*="container-"] {
             border-left: 1px solid var(--dnome-border);
 
             >aside[class*="membersWrap-"] {
                 div[class*="member-"] {
                     >div[class*="layout-"] {
-                        border-radius: 6px;
+                        border-radius: var(--dnome-border-small);
 
                         &:hover {
                             background-color: var(--dnome-list-item-hover);
@@ -93,7 +207,7 @@ div[class*="chat-"] {
             div[class*="content-"] {
                 padding-top: 4.6px;
                 padding-bottom: 4.6px;
-                border-radius: 6px;
+                border-radius: var(--dnome-border-small);
 
                 &:hover {
                     background-color: var(--dnome-list-item-hover);
@@ -167,7 +281,7 @@ div[class*="toolbar-"] {
                     }
                 }
 
-                border-radius: 6px;
+                border-radius: var(--dnome-border-small);
                 background-color: var(--dnome-searchbox);
             }
         }
@@ -178,10 +292,10 @@ div[group="SEARCH_OPTIONS"][class*="option-"],
 li[class*="option"][role="option"] {
     padding-top: 3.7px;
     padding-bottom: 3.7px;
-    border-radius: 6px;
+    border-radius: var(--dnome-border-small);
 
     &:hover {
-        background-color: var(--dnome-list-item-hover);
+        background-color: var(--dnome-popup-hover);
 
         &::after {
             background-color: transparent;
@@ -205,62 +319,614 @@ div[class*="queryContainer-"][class*="focused-"] {
 }
 
 div[class*="messagesPopoutWrap-"] {
-    border-radius: 12px;
+    border-radius: var(--dnome-border-big);
+
+    >div[class*="header-"] {
+        border-bottom: 1px solid var(--dnome-border);
+        box-shadow: none;
+    }
+
+    >div[class*="messagesPopout-"] {
+        >div[role="list"] {
+            >div[class*="messageGroupWrapper-"] {
+                border-radius: 7px;
+                background-color: var(--dnome-list-item-hover);
+
+                div>div[id*="message-accessories-"] {
+                    >article[class*="embedWrapper-"] {
+                        border-radius: var(--dnome-border-big);
+                    }
+                }
+
+
+                >div[class*="actionButtons-"] {
+                    height: 25px;
+
+                    >div[class*="jumpButton-"][role="button"] {
+                        background-color: var(--dnome-accent);
+                        height: 100%;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        border-radius: var(--dnome-border-small);
+                        align-items: center;
+                        color: white;
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 div[class*="recentMentionsPopout-"] {
-    border-radius: 12px;
+    border-radius: var(--dnome-border-big);
 
     div[class*="tabBar"] {
         >div[class*="tab-"] {
             height: 30px;
-            border-radius: 6px;
+            border-radius: var(--dnome-border-small);
         }
     }
 }
 
+section[role="navigation"] {
+    >div[class*="children-"] {
+        height: 100%;
+
+        >div[class*="tabBar-"][role*="tablist"] {
+            height: 70%;
+
+            >div[class*="item"] {
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[class*="selected-"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+
+                &[class*="addFriend-"] {
+                    background-color: var(--dnome-accent);
+
+                    &:hover {
+                        background-color: var(--dnome-accent-lighter);
+                    }
+
+                    &[class*="selected-"] {
+                        background-color: var(--dnome-list-item-selected);
+                        color: unset;
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 div[class*="layerContainer-"] {
+
+    >div[class*="layer-"] {
+        >div[class*="wrapper-"] {
+            >div[class*="focusLock-"] {
+                >div[class*="modal-"] {
+                    div[class*="select-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+
+                    >div[class*="footer-"] {
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-right-radius: var(--dnome-border-big);
+
+                        div[class*="inputWrapper-"] {
+                            >input[class*="inputDefault-"] {
+                                background-color: var(--dnome-searchbox);
+                                border-radius: var(--dnome-border-medium);
+                            }
+
+                            margin-right: 25px;
+                        }
+
+                        button[class*="copyButton-"] {
+                            height: 100%;
+                        }
+                    }
+
+                    div[class*="inviteRow-"] {
+                        >button[type="button"][class*="inviteRowButton-"] {
+                            border-radius: var(--dnome-border-small);
+                        }
+                    }
+
+                    div[class*="headerContainer-"] {
+
+                        >div[class*="header-"] {
+
+                            >div[class*="searchBar-"] {
+                                background-color: var(--dnome-searchbox);
+                                border-radius: var(--dnome-border-medium);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    div[class*="labelContainer-"][class*="item-"] {
+        border-radius: var(--dnome-border-medium);
+
+        &[class*="focused-"] {
+            background-color: var(--dnome-popup-hover);
+        }
+    }
+
+    div[class*="paymentModalContent"] {
+        background-color: var(--dnome-base);
+
+        div[class*="cardNumberWrapper-"] {
+            >div[class*="cardInput-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-medium);
+            }
+        }
+    }
+
+    div[class*="connectionsContainer-"] {
+
+        >div[class*="wrapper-"],
+        >div[class*="accountAddWrapper-"] {
+
+            >button[class*="inner-"],
+            >button[class*="accountAddInner-"] {
+                background-color: transparent;
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &:active {
+                    background-color: var(--dnome-list-item-selected);
+                }
+            }
+        }
+    }
+
+    >div[id*="popout_"] {
+        >div[class*="animatorBottom-"] {
+            >div[class*="container-"] {
+                background-color: var(--background-floating);
+
+                div[class*="list-"] {
+                    li[class*="item-"] {
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-popup-hover);
+                        }
+
+                        // no dash
+                        &[class*="selected"] {
+                            background-color: var(--dnome-popup-selected);
+                        }
+                    }
+                }
+            }
+        }
+
+        div[class*="upsellButtonsContainer-"] {
+            button[type="button"] {
+                border-radius: var(--dnome-border-small);
+            }
+        }
+
+        div[class*="addGamePopout-"] {
+            background-color: var(--background-floating);
+
+            >div[class*="wrapper-"] {
+                >div[class*="select-"] {
+                    border-radius: var(--dnome-border-medium);
+                    background-color: var(--dnome-searchbox);
+                    border: none;
+                }
+            }
+        }
+
+        >div[role="listbox"][class*="popout-"] {
+            background-color: var(--dnome-base);
+            border-radius: var(--dnome-border-big);
+
+            >div[class*="option-"] {
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[aria-selected="true"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+
+        >div>div[class*="colorPickerCustom-"] {
+            background: var(--background-floating);
+            border-radius: var(--dnome-border-big);
+            border: none;
+
+            input[class*="inputDefault-"] {
+                background-color: var(--dnome-popup-hover);
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[class*="suggestedColor-"] {
+                border-radius: var(--dnome-border-medium);
+            }
+
+            >div[class*="wrapper-"] {
+                >div[class*="saturation-"] {
+                    >div {
+                        border-radius: var(--dnome-border-medium);
+
+                        >div[class*="saturation-"] {
+                            border-radius: var(--dnome-border-medium);
+                        }
+                    }
+                }
+            }
+        }
+
+        >div>div>li[class*="option-"] {
+            &[class*="focused-"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        div[role="group"] {
+            >div[class*="item-"] {
+                border-radius: var(--dnome-border-small);
+                height: 41px;
+
+                &:hover,
+                &[class*="focused-"] {
+                    background-color: var(--dnome-popup-hover);
+                }
+
+                &:active {
+                    background-color: var(--dnome-popup-selected);
+                }
+            }
+        }
+
+        ul[role="group"] {
+            &[aria-labelledby="SEARCH_OPTIONS-header"] {
+                &::before {
+                    border-top: none;
+                }
+            }
+
+            &[aria-labelledby="HISTORY-header"] {
+                &::before {
+                    border-color: var(--dnome-border);
+                }
+            }
+        }
+
+        div[class*="accountProfilePopoutWrapper-"] {
+            div[class*="userPopoutOuter-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="userPopoutInner-"] {
+                    div[class*="item-"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &[class*="menuItemFocused-"] {
+                            background-color: var(--dnome-popup-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-popup-selected);
+                        }
+                    }
+
+                    div[class*="submenuPaddingContainer-"] {
+                        >div[class*="submenu-"] {
+                            background-color: var(--background-floating);
+                            border-radius: var(--dnome-border-big);
+
+                            div[class*="separator-"] {
+                                border-color: var(--dnome-border);
+                            }
+
+                            div[class*="labelContainer-"],
+                            div[class*="item-"]:not([class*="labelContainer-"]) {
+                                border-radius: var(--dnome-border-small);
+
+                                &:hover,
+                                &[class*="focused-"] {
+                                    background-color: var(--dnome-popup-hover);
+                                }
+
+                                &:active {
+                                    background-color: var(--dnome-popup-selected);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     >div {
+        >div>div[class*="focusLock-"] {
+            >div[class*="root-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="container-"] {
+                    div[class*="footer-"] {
+                        box-shadow: none;
+                        border-top: 1px soild var(--dnome-border);
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-right-radius: var(--dnome-border-big);
+
+                        >button[class*="footerButton-"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            background-color: var(--dnome-accent);
+
+                            &:hover {
+                                background-color: var(--dnome-accent-lighter);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >div[class*="focusLock-"] {
+
+            >div[class*="root-"] {
+                background-color: var(--dnome-base);
+                border-radius: var(--dnome-border-big);
+
+                input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                >div {
+                    >div[class*="message-"] {
+                        background-color: var(--dnome-list-item-hover);
+                        border-radius: var(--dnome-border-big);
+                        box-shadow: none;
+                    }
+
+                    >button[type="submit"][class*="colorRed"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+                }
+
+                div[class*="footer-"] {
+                    box-shadow: none;
+                    border-top: 1px solid var(--dnome-border);
+
+                    >button[type="submit"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+
+                    >button[type="button"][class*="secondaryButton-"] {
+                        border-radius: var(--dnome-border-small);
+                        background-color: transparent;
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover) !important;
+                        }
+                    }
+                }
+            }
+
+            >div[class*="modal-"],
+            >div[class*="popout-"] {
+                border-radius: var(--dnome-border-big);
+            }
+
+            >div[class*="popout-"] {
+                background-color: var(--dnome-base);
+
+                div[class*="searchBarComponent-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-small);
+
+                    a[class*="anchor"] {
+                        background-color: var(--dnome-base);
+                        border-radius: 4px;
+                    }
+                }
+
+                >div[class*="footerSeparator-"] {
+                    display: none;
+                }
+
+                >div[class*="footer-"] {
+                    border-top: 1px solid var(--dnome-border);
+                    border-radius: var(--dnome-border-big);
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+
+                    >button {
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        >div[class*="menu-"][role="menu"] {
+            #channel-attach-upload-file {
+                border-radius: 7px;
+            }
+
+            >div {
+                >div[id*="message-actions-"] {
+                    border-radius: 7px;
+
+                    &:hover,
+                    &[class*="focused-"] {
+                        background-color: var(--dnome-popup-hover);
+                    }
+
+                    &:active {
+                        background-color: var(--dnome-popup-selected);
+                    }
+                }
+            }
+        }
 
         >div[class*="menu-"][role="menu"],
         >div>div[class*="browser-"] {
-            border-radius: 12px;
+            border-radius: var(--dnome-border-big);
         }
 
         >div>div[class*="browser-"] {
             div[class*="searchBox-"] {
                 background-color: var(--dnome-searchbox);
-                border-radius: 6px;
+                border-radius: var(--dnome-border-small);
+                height: 70%;
+            }
+
+            button[class*="createButton-"] {
                 height: 70%;
             }
         }
+
     }
 
     div[class*="layer"] {
         div[class*="elevationBorderHigh-"] {
-            border-radius: 8px;
+            border-radius: var(--dnome-border-medium);
         }
     }
 }
 
 div[class*="pageWrapper-"] {
     background-color: var(--dnome-bg) !important;
+
+    div[class*="viewWrapper-"] {
+
+        >div[class*="searchHeader-"],
+        >div[class*="headerContainer-"] {
+            >img[class*="headerImage-"] {
+                border-radius: var(--dnome-border-big);
+            }
+        }
+
+        >div>section[class*="guildListSection-"] {
+            >div[class*="guildList-"] {
+                >div[class*="loaded-"] {
+                    >div[class*="card-"] {
+                        border-radius: var(--dnome-border-big);
+                        background-color: var(--dnome-list-item-hover);
+
+                        >div[class*="cardHeader-"] {
+                            >div[class*="actionButtons-"] {
+                                >div[class*="actionButtonsContainer-"] {
+                                    >div[class*="wrapper-"] {
+                                        border: 1px solid var(--dnome-border);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 div[class*="animatorLeft-"] {
     div[class*="userPopoutOuter-"] {
-        border-radius: 12px;
+        border-radius: var(--dnome-border-big);
+
+        >div[class*="userPopoutInner-"] {
+            >div[class*="userPopoutOverlayBackground-"] {
+                border-radius: var(--dnome-border-big);
+            }
+        }
     }
+
 }
 
 div[class*="animatorBottom-"] {
     >div[class*="menu-"] {
+        border-radius: var(--dnome-border-big);
+
+        div[class*="item-"][class*="labelContainer-"] {
+            border-radius: var(--dnome-border-medium);
+
+            &[class*="focused-"] {
+                background-color: var(--dnome-popup-hover) !important;
+            }
+
+            &:active {
+                background-color: var(--dnome-popup-selected) !important;
+            }
+
+            svg {
+                >path[class*="check-"] {
+                    color: white !important;
+                }
+            }
+        }
+
+        div[class*="separator-"] {
+            border-color: transparent;
+        }
 
         div[class*="colorDefault"] {
-            border-radius: 6px;
+            border-radius: var(--dnome-border-small);
 
             &:not([class*="hideInteraction"]):hover,
-            &[class*="focused"] {
+            &[class*="focused-"] {
                 background-color: var(--dnome-accent);
             }
 
@@ -279,28 +945,707 @@ div[class*="animatorBottom-"] {
     }
 
     >div[class*="container-"] {
-        border-radius: 12px;
+        border-radius: var(--dnome-border-big);
 
         >div[role="combobox"]>div[class*="container-"] {
             height: 38px;
 
             >div[class*="inner-"] {
                 background-color: var(--dnome-searchbox);
-                border-radius: 6px;
+                border-radius: var(--dnome-border-small);
             }
         }
     }
 }
 
-svg[class*="sparkleStar"],
-svg[class*="sparkle-"] {
-    display: none;
-}
-
 #sticker-picker-tab-panel,
 #emoji-picker-tab-panel {
     div[class*="searchBar"] {
-        border-radius: 6px;
+        border-radius: var(--dnome-border-small);
         background-color: var(--dnome-searchbox);
+    }
+}
+
+div[class*="tooltip-"] {
+    border-radius: var(--dnome-border-medium);
+}
+
+div[class*="groupStart-"] {
+    li[class*="messageListItem-"] {
+        >div[class*="message-"] {
+            background-color: var(--dnome-error-soft);
+
+            &:hover {
+                background-color: var(--dnome-error-soft);
+                outline: 1px dashed var(--dnome-error);
+            }
+        }
+    }
+}
+
+li[id*="chat-messages-"][class*="messageListItem-"] {
+    >div[class*="message-"] {
+        &:hover {
+            background-color: var(--dnome-base);
+            outline: 1px solid var(--dnome-border);
+        }
+
+        div[class*="channelTextArea-"] {
+            >div[class*="scrollableContainer"] {
+                background-color: var(--dnome-searchbox);
+            }
+        }
+
+        >div[class*="buttonContainer-"] {
+            >div[class*="buttons-"] {
+                >div[class*="wrapper-"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-medium);
+                    border: 1px solid var(--dnome-border);
+                    box-shadow: none;
+
+                    >div[class*="button-"] {
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+                    }
+
+                    >div[class*="button-"][class*="selected-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[class*="checkbox"] {
+    &[class*="checked"] {
+        border-color: var(--dnome-accent) !important;
+        background-color: var(--dnome-accent) !important;
+
+        >svg>path {
+            fill: white;
+        }
+
+        &[style*="background-color: rgb(114, 137, 218)"] {
+            background-color: var(--dnome-accent) !important;
+
+            >svg>path {
+                fill: #ffffff;
+            }
+        }
+    }
+}
+
+section[class*="searchResultsWrap-"] {
+    >div>div[role="list"] {
+        >ul[role="group"] {
+            >li[role="listitem"] {
+                >div[class*="searchResult-"] {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                >div[class*="buttonsContainer-"] {
+                    >div[class*="button-"] {
+                        background-color: var(--dnome-accent);
+                        border-radius: var(--dnome-border-small);
+                        color: white;
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >header[class*="searchHeader-"] {
+        >div[class*="searchHeaderTabList-"] {
+            >div[class*="item-"] {
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[class*="selected-"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[data-list-item-id*="guildsnav___"] {
+    background-color: var(--dnome-bg);
+
+    &:hover {
+        background-color: var(--dnome-list-item-hover);
+    }
+
+    >div[class*="childWrapper-"] {
+        background-color: var(--dnome-list-item-hover);
+    }
+}
+
+div[class*="standardSidebarView-"] {
+    div[class*="sidebarRegion-"] {
+        border-right: 1px solid var(--dnome-border);
+    }
+
+    div[class*="textBadge-"] {
+        background-color: var(--background-accent) !important;
+        border-radius: var(--dnome-border-small);
+    }
+
+    nav[class*="sidebar-"] {
+        >div[class*="side-"] {
+            >div[class*="item-"] {
+                border-radius: var(--dnome-border-small);
+                padding-top: 10.5px;
+                padding-bottom: 10.5px;
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[class*="selected-"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+    }
+
+    div[class*="contentRegion-"] {
+        >div[class*="customColumn-"] {
+            >div[class*="customContainer-"] {
+                >div[class*="customScroller-"] {
+                    >div[class*="content-"] {
+                        >div[role="list"] {
+                            >div[class*="auditLog-"] {
+                                border: none;
+
+                                >div[class*="divider"] {
+                                    display: none;
+                                }
+
+                                // no dash
+                                >div[class*="header"] {
+                                    background-color: transparent;
+                                    border-top-left-radius: var(--dnome-border-medium);
+                                    border-top-right-radius: var(--dnome-border-medium);
+                                    border-bottom-left-radius: var(--dnome-border-medium);
+                                    border-bottom-right-radius: var(--dnome-border-medium);
+
+                                    &:hover {
+                                        background-color: var(--dnome-list-item-hover);
+                                    }
+
+                                    &[aria-expanded="true"] {
+                                        background-color: var(--dnome-list-item-selected);
+                                        border-top-left-radius: var(--dnome-border-medium);
+                                        border-top-right-radius: var(--dnome-border-medium);
+                                        border-bottom-left-radius: 0px;
+                                        border-bottom-right-radius: 0px;
+                                    }
+                                }
+
+                                >div[class*="changeDetails-"] {
+                                    background-color: var(--dnome-list-item-selected);
+                                    border-bottom-left-radius: var(--dnome-border-medium);
+                                    border-bottom-right-radius: var(--dnome-border-medium);
+
+                                }
+                            }
+                        }
+
+                        >div[class*="inviteSettingsInviteRow-"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            div[class*="revokeInvite-"] {
+                                right: -15px;
+                                background-color: var(--dnome-base);
+                                box-shadow: none;
+                                border: 1px solid var(--dnome-border);
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover);
+                                }
+                            }
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover);
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        div[class*="contentColumn-"] {
+            div[class*="infoWrapper-"] {
+                >div[class*="infoItem-"] {
+                    >div[class*="copyInputDefault-"] {
+                        border: none;
+                    }
+
+                    button[type="button"][class*="button-"][class*="lookFilled-"] {
+                        height: 100%;
+                        margin: 0;
+                        background-color: var(--dnome-accent);
+                    }
+                }
+            }
+
+            // div[class*="top-"][class*="brand-"]{
+            //     &:hover {
+            //         
+            //     }
+            // }
+
+            // div[class*="slider-"] {
+            //     div[class*="bar-"] {
+            //     }
+            // }
+
+            div[class*="tiers-"] {
+                >div[class*="tier-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    // no dash
+                    >div[class*="tierHeader"] {
+                        border-top-left-radius: var(--dnome-border-big);
+                        border-top-left-radius: var(--dnome-border-big);
+
+                    }
+
+                    >div[class*="tierBody-"] {
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-left-radius: var(--dnome-border-big);
+
+                    }
+                }
+
+            }
+
+            >div[class*="page-"] {
+                >div[class*="sidebar-"] {
+                    div[class*="list-"] {
+                        >div[class*="side-"] {
+                            >div[class*="row-"] {
+                                border-radius: var(--dnome-border-small);
+                                height: 41px;
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover);
+                                }
+
+                                &[class*="selected-"] {
+                                    background-color: var(--dnome-list-item-selected);
+
+                                    &:hover {
+                                        background-color: var(--dnome-list-item-hover-selected);
+
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                >div[class*="contentContainer-"] {
+                    >div[class*="container-"] {
+                        >div[class*="headerContainer-"]>div[class*="contentWidth-"] {
+                            >div[class*="header-"] {
+                                >div[class*="searchContainer-"] {
+                                    >div[class*="container-"] {
+                                        border-radius: var(--dnome-border-medium);
+                                        background-color: var(--dnome-searchbox);
+                                    }
+                                }
+                            }
+                        }
+
+                        >div[class*="list-"] {
+                            div[class*="contentWidth-"] {
+                                >div[class*="memberRow-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                }
+                            }
+                        }
+                    }
+
+                    >div>div[class*="contentWidth-"] {
+                        button[type="button"][class*="colorPickerSwatch-"] {
+                            border-radius: var(--dnome-border-small);
+                        }
+
+                        button[type="button"][class*="lookFilled-"] {
+                            background-color: var(--dnome-accent);
+                        }
+
+                        div[class*="previewContainer-"] {
+                            border-radius: var(--dnome-border-medium);
+                            border-color: var(--dnome-border);
+
+                            >div[class*="theme-"] {
+                                >div[class*="messageContainer-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                }
+                            }
+                        }
+
+                        >div[class*="header-"] {
+                            >div[class*="searchContainer-"] {
+                                >div[class*="container-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                    background-color: var(--dnome-searchbox);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >div[class*="customColumn-"] {
+                >div[class*="customContainer-"] {
+                    >div[class*="customScroller-"] {
+                        >div[class*="content-"] {
+                            >div[class*="roleRow-"] {
+                                border-radius: var(--dnome-border-big);
+
+                                div[class*="buttonsContainer-"] {
+                                    >div[class*="circleButton-"] {
+                                        background-color: var(--dnome-popup-hover);
+
+                                        &:hover {
+                                            background-color: var(--dnome-popup-selected);
+                                        }
+                                    }
+                                }
+                            }
+
+                            >div {
+                                >div[class*="container-"][role="button"] {
+                                    border-radius: var(--dnome-border-big);
+
+                                    >div[class*="icon-"] {
+                                        background-color: var(--dnome-list-item-hover-selected);
+                                    }
+                                }
+
+                                >div>div[class*="searchContainer-"] {
+                                    >div[class*="container-"] {
+                                        background-color: var(--dnome-searchbox);
+                                        border-radius: var(--dnome-border-medium);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div[class*="activeGame-"] {
+                border-radius: var(--dnome-border-big);
+            }
+
+            div[class*="defaultKeybindShortcutGroup-"] {
+                >div[class*="keybindShortcut-"] {
+                    height: 35px;
+
+                    >span[class*="key-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-small);
+                        height: 100%;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2px var(--dnome-border-big);
+                    }
+                }
+            }
+
+            div[class*="container-"][class*="warning-"] {
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[class*="preview-"][class*="card-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="previewMessage-"] {
+                    background-color: var(--dnome-list-item-hover);
+                    border-radius: var(--dnome-border-medium);
+                }
+            }
+
+            div[class*="paymentHistory-"] {
+                div[class*="paymentPane-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="paymentRow-"] {
+                        border-bottom-color: var(--dnome-border);
+                    }
+
+                    div[class*="expandedInfo-"] {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+                }
+
+                div[class*="pageActions-"] {
+
+                    // without dash
+                    >div[class*="page"] {
+                        border-color: var(--dnome-border);
+                    }
+                }
+
+
+            }
+
+            div[class*="codeRedemptionRedirect-"] {
+                background-color: var(--dnome-base);
+                border: none;
+                border-radius: var(--dnome-border-big);
+            }
+
+            div[class*="inputWrapper-"] {
+                >input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                >div[class*="inputMaxLength-"] {
+                    >textarea[class*="inputDefault-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+            }
+
+            section[class*="guildsSection-"] {
+                >div[class*="guilds-"] {
+                    >div[class*="cardWrapper-"] {
+                        background-color: var(--dnome-base);
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+                    }
+                }
+
+            }
+
+            div[class*="formNotice-"] {
+                border-color: var(--dnome-border);
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[class*="connectionList-"] {
+                >div[class*="connection-"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-medium);
+
+                    >div[class*="connectionHeader-"] {
+                        background-color: var(--dnome-base);
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+            }
+
+            div[class*="connectContainer-"] {
+                background-color: var(--dnome-base);
+
+                >div[class*="connectionsContainer-"] {
+
+                    >div[class*="wrapper-"],
+                    >div[class*="accountAddWrapper-"] {
+
+                        >button[class*="inner-"],
+                        >button[class*="accountAddInner-"] {
+                            background-color: transparent;
+                            border-radius: var(--dnome-border-small);
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover);
+                            }
+
+                            &:active {
+                                background-color: var(--dnome-list-item-selected);
+                            }
+                        }
+                    }
+                }
+            }
+
+            div[role="radiogroup"] {
+                >div[class*="item-"] {
+                    >div[class*="radioBar-"] {
+                        border-radius: var(--dnome-border-medium);
+                        border: 1px solid var(--radio-bar-accent-color);
+                    }
+
+                    &[class*="itemFilled-"] {
+                        background-color: transparent;
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        &:active,
+                        &[aria-checked="true"] {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+
+                        &[aria-checked="true"]:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+
+            div[class*="tabBar-"] {
+                border-color: var(--dnome-border);
+            }
+
+            div[class*="select-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[class*="userPopoutOuter-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="userPopoutInner-"] {
+                    button[class*="button"] {
+                        background-color: var(--dnome-popup-hover);
+
+                        &:hover {
+                            background-color: var(--dnome-popup-selected) !important;
+                        }
+                    }
+                }
+            }
+
+            div[class*="profileCustomizationSection-"] {
+
+                * {
+                    border-bottom: none;
+                }
+
+                input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                div[class*="colorSwatch-"],
+                div[class*="customSwatch-"] {
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                div[class*="bioTextArea-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+            }
+
+            button[class*="button-"][class*="lookFilled-"] {
+                border-radius: var(--dnome-border-small);
+
+                svg[class*="premiumIcon"] {
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: var(--dnome-accent-lighter) !important;
+                }
+
+                &[class*="colorRed"] {
+                    border-color: var(--dnome-error);
+
+                    &:hover {
+                        background-color: var(--dnome-error) !important;
+                    }
+                }
+            }
+
+            button[class*="button-"] {
+                border-radius: var(--dnome-border-small);
+
+                &[class*="lookFilled-"] {
+                    &:hover {
+                        background-color: var(--dnome-accent-lighter) !important;
+                    }
+                }
+
+                &[class*="lookOutlined-"][class*="colorRed"] {
+                    border-color: var(--dnome-error);
+
+                    &:hover {
+                        background-color: var(--dnome-error) !important;
+                    }
+                }
+            }
+
+            >div>div>div[class*="children-"] {
+                >div[class*="accountProfileCard-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="userInfo-"] {
+                        button {
+                            border-radius: var(--dnome-border-small);
+
+                            &:hover {
+                                background-color: var(--dnome-accent-lighter) !important;
+                            }
+                        }
+                    }
+
+                    >div[class*="background-"] {
+                        >div[class*="fieldList-"] {
+                            background-color: var(--dnome-list-item-hover);
+
+                            button[class*="fieldButton-"] {
+                                border-radius: var(--dnome-border-small);
+
+                                background-color: transparent;
+
+                                &:hover {
+                                    background-color: var(--dnome-popup-hover);
+                                }
+
+                                &:active {
+                                    background-color: var(--dnome-popup-selected);
+                                }
+                            }
+                        }
+
+                        background-color: var(--dnome-list-item-hover);
+                    }
+                }
+            }
+        }
     }
 }

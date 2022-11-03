@@ -36,3 +36,31 @@ svg[class*="sparkleStar"],
 svg[class*="sparkle-"] {
   display: none;
 }
+
+// No purple borders for you
+div[class*="premiumFeatureBorder-"] {
+  background: transparent;
+
+  >div[class*="background-"] {
+    background: transparent;
+  }
+}
+
+// No accent tab color for you
+div[class*="premiumTab-"] {
+  >div[class*="selectedBackground-"] {
+    background-color: var(--dnome-list-item-selected);
+    border-radius: 6px;
+
+    &:hover {
+      background-color: var(--dnome-list-item-hover-selected);
+    }
+  }
+}
+
+// Yes, we know we get invite backgrounds
+// on nitro - as seen in settings, boosts,
+// popups, announcements etc.
+div[class*="inviteBannerUpsell-"] {
+  display: none;
+}

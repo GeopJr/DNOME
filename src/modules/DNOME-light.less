@@ -20,6 +20,7 @@
 
 .theme-light {
   --text-normal: @text_color-light;
+  --text-link: var(--dnome-accent-soft);
   --background-primary: @bg-light;
   --background-secondary: @base-light;
   --background-secondary-alt: @sidebar-light;
@@ -53,6 +54,13 @@
   --input-background: @base-light;
   --brand-experiment: @accent-light;
   --brand-experiment-05a: fade(@accent-light, 5%);
+  --profile-body-background-color: var(--dnome-list-item-hover);
+  --profile-body-divider-color: @border-light;
+  --brand-experiment-560: #3584e4;
+  --brand-experiment: #3584e4;
+  --control-brand-foreground: #3584e4;
+  --profile-message-input-border-color: @border-light;
+  --deprecated-card-bg: @base-light;
 
 
   --dnome-base: @base-light;
@@ -64,6 +72,7 @@
   --dnome-fg: @fg-light;
   --dnome-scrollbar-slider-color: @scrollbar_slider_color-light;
   --dnome-accent: @accent-light;
+  --dnome-accent-lighter: lighten(@accent-light, 10%);
   --dnome-link-color: @link_color-light;
   --dnome-text-color: @text_color-light;
   --dnome-warning: @warning-light;
@@ -71,9 +80,15 @@
   --dnome-darker-accent: @darker_accent-light;
   --dnome-faded-accent: fade(@accent, 30%);
   --dnome-error: @error-light;
+  --dnome-error-soft: rgba(204, 0, 0, 0.2);
   --dnome-list-item-hover: #ECECEC;
   --dnome-list-item-hover-selected: #DFDFDF;
   --dnome-list-item-selected: #E6E6E6;
   --dnome-accent-soft: #78aeed;
   --dnome-searchbox: #D8D8D8;
+  --dnome-popup-hover: #EBEBEB;
+  --dnome-popup-selected: #D8D8D8;
+  --dnome-border-big: 12px;
+  --dnome-border-medium: 8px;
+  --dnome-border-small: 6px;
 }

@@ -4,10 +4,16 @@ div[class*="mentioned-"]::before {
 
 [class*="lookFilled"][class*="color"]:not([class*="colorPrimary"]) {
   background-color: var(--dnome-accent) !important;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: var(--dnome-accent-lighter) !important;
+  }
 }
 
 div[class*="control"] {
-  > div[style*="background-color: rgb(59, 165, 92)"],
+
+  >div[style*="background-color: rgb(59, 165, 92)"],
   div[style*="background-color: rgb(94, 135, 113)"],
   div[style*="background-color: rgb(78, 149, 104)"],
   div[style*="background-color: rgb(95, 134, 114)"] {
@@ -17,22 +23,6 @@ div[class*="control"] {
 
 circle[class*="radioIconForeground"] {
   color: var(--dnome-accent);
-}
-
-div[class*="checkbox"] {
-  &[class*="checked"] {
-    border-color: var(--dnome-accent) !important;
-    background-color: var(--dnome-faded-accent) !important;
-    > svg > path {
-      fill: var(--dnome-accent);
-    }
-    &[style*="background-color: rgb(114, 137, 218)"] {
-      background-color: var(--dnome-accent) !important;
-      > svg > path {
-        fill: #ffffff;
-      }
-    }
-  }
 }
 
 div[class*="newMessagesBar"],
@@ -56,6 +46,7 @@ div[class*="colorPremium"] {
 
 span[class*="botTag-"] {
   background-color: var(--dnome-accent);
+
   &[class*="botTagInvert-"] {
     background-color: #fff;
     color: var(--dnome-accent);
@@ -63,7 +54,7 @@ span[class*="botTag-"] {
 }
 
 div[class*="previewContainer-"] {
-  > div[class*="previewOverlay-"] {
+  >div[class*="previewOverlay-"] {
     background-color: var(--background-secondary) !important;
     border-color: var(--background-primary) !important;
   }
@@ -72,6 +63,7 @@ div[class*="previewContainer-"] {
 span[class*="wrapper-"][class*="mention"] {
   color: var(--dnome-link-color);
   background-color: var(--background-help-info);
+
   &:not([class*="hideInteraction"]):hover {
     color: #ffffff !important;
     background-color: var(--dnome-link-color) !important;
@@ -82,7 +74,7 @@ div[class*="warning"] {
   border-color: var(--dnome-warning);
 }
 
-[class*="defaultValue-"] > div[class*="markValue-"] {
+[class*="defaultValue-"]>div[class*="markValue-"] {
   color: var(--dnome-accent) !important;
 }
 
@@ -90,26 +82,30 @@ div[class*="barFill"] {
   background-color: var(--dnome-accent);
 }
 
-div[class*="progressContainer"] > div > div[class*="progressBar"] {
+div[class*="progressContainer"]>div>div[class*="progressBar"] {
   background-color: var(--dnome-accent) !important;
 }
 
 div[class*="isUnread"] {
   border-color: var(--dnome-accent);
-  > span[class*="unreadPill"] {
+
+  >span[class*="unreadPill"] {
     background-color: var(--dnome-accent);
-    > svg > path[class*="unreadPillCap"] {
+
+    >svg>path[class*="unreadPillCap"] {
       color: var(--dnome-accent);
       fill: var(--dnome-accent);
     }
   }
-  > span[class*="content"] {
+
+  >span[class*="content"] {
     color: var(--dnome-accent);
   }
 }
 
 div[class*="circleIconButton"] {
   color: var(--dnome-accent);
+
   &[class*="selected"] {
     background-color: var(--dnome-accent) !important;
   }
@@ -123,8 +119,10 @@ div[class*="uploadModalIn-"] div[class*="uploadDropModal-"] {
   div[class*="bgScale-"] {
     background-color: var(--dnome-accent);
   }
+
   &[class*="error-"] {
     background-color: var(--dnome-error);
+
     div[class*="instructions"] {
       color: #ffffffee;
     }
@@ -138,6 +136,7 @@ div[class*="reactionMe"] {
 
 div[class*="notice-"] {
   background-color: var(--dnome-accent);
+
   &[class*="colorBrand"] {
     color: #fff;
   }
@@ -152,8 +151,8 @@ svg[class*="iconTierThree-"] {
 }
 
 div[class*="flowerStarContainer"] {
-  > svg[class*="flowerStar"] {
-    > path {
+  >svg[class*="flowerStar"] {
+    >path {
       fill: var(--dnome-accent);
     }
   }
@@ -163,6 +162,7 @@ button[class*="selectorButton-"] {
   &[class*="selectorButtonSelected"] {
     background-color: var(--dnome-accent);
   }
+
   &:not([class*="selectorButtonPremiumRequired-"]):hover {
     background-color: var(--dnome-accent);
   }
@@ -174,7 +174,8 @@ div[class*="sourceThumbnail"] {
   }
 }
 
-div[class*="search-"] > div[class*="searchBox-"] {
+div[class*="search-"]>div[class*="searchBox-"] {
+
   &:focus-within,
   &:focus {
     -webkit-box-shadow: 0 0 0 1px var(--dnome-accent),
