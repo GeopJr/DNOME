@@ -2,23 +2,6 @@ div[class*="sidebar-"] {
     border-right: 1px solid var(--dnome-border);
     border-left: 1px solid var(--dnome-border);
 
-    >nav[class*="privateChannels-"] {
-        >div[class*="searchBar-"] {
-            box-shadow: none;
-            border-bottom: 1px solid var(--dnome-border);
-
-            >button[class*="searchBarComponent-"] {
-                background-color: var(--dnome-searchbox);
-                height: 70%;
-                border-radius: var(--dnome-border-small);
-
-                &:hover {
-                    background-color: var(--dnome-popup-hover);
-                }
-            }
-        }
-    }
-
     >div>div[class*="categoryItem-"] {
         >div[class*="itemInner-"] {
             border-radius: var(--dnome-border-small);
@@ -38,456 +21,11 @@ div[class*="sidebar-"] {
             }
         }
     }
-
-    // Lost all progress due to power outage, reverse engineering from compiled version...
-    >section[class*="panels-"] {
-        >div>div[class*="avatarWrapper-"] {
-            &:hover {
-                background-color: var(--dnome-list-item-hover);
-            }
-        }
-
-        button[role="switch"] {
-            &:hover {
-                background-color: var(--dnome-list-item-hover);
-            }
-
-            &[aria-checked="true"] {
-                background-color: var(--dnome-list-item-selected);
-
-                &:hover {
-                    background-color: var(--dnome-list-item-hover-selected);
-                }
-            }
-        }
-
-        button[type="button"]:not([role="switch"]) {
-            &:hover {
-                background-color: var(--dnome-list-item-hover);
-            }
-        }
-    }
-
-
-    >nav[class*="privateChannels-"] {
-        >div>ul[role="list"] {
-            >li>div[class*="interactive-"] {
-                border-radius: var(--dnome-border-small);
-
-                &:hover {
-                    background-color: var(--dnome-list-item-hover);
-                }
-
-                &[class*="selected-"] {
-                    background-color: var(--dnome-list-item-selected);
-
-                    &:hover {
-                        background-color: var(--dnome-list-item-hover-selected);
-                    }
-                }
-            }
-        }
-    }
-
-    >section[class*="panels-"] {
-        border-top: 1px solid var(--dnome-border);
-    }
-
-    header[class*="header-"] {
-        border-bottom: 1px solid var(--dnome-border);
-        box-shadow: none;
-    }
-
-    div[class*="hasBanner-"] {
-        >header[class*="header-"] {
-            border-bottom: none;
-        }
-    }
-}
-
-div[class*="chat-"] {
-    div[class*="newMessagesBar"] {
-        margin-top: 15px;
-        border-radius: var(--dnome-border-small);
-        height: 50px;
-    }
-
-    // div[class*="messageAttachment-"] { // not on gifs
-    div[class*="imageContent-"] {
-        div[class*="imageContainer-"] {
-            div[class*="imageWrapper-"] {
-                border-radius: var(--dnome-border-small);
-            }
-        }
-    }
-
-    // }
-
-    div[class*="gifTag-"] {
-        border-radius: 4px;
-    }
-
-    main>form {
-        border-top: 1px solid var(--dnome-border);
-        background-color: var(--dnome-base);
-    }
-
-    div[class*="callContainer-"] {
-        background-color: var(--dnome-base) !important;
-    }
-
-    >div[class*="content-"] {
-        div[class*="divider-"] {
-            border-color: var(--dnome-border);
-
-            &[class*="isUnread-"] {
-                border-color: var(--dnome-accent);
-            }
-        }
-
-        border-top: 1px solid var(--dnome-border);
-
-        &::before {
-            display: none;
-        }
-
-        >div[class*="membersWrap-"] {
-            div[class*="member-"] {
-                >div[class*="layout-"] {
-                    border-radius: var(--dnome-border-small);
-
-                    &:hover {
-                        background-color: var(--dnome-list-item-hover);
-                    }
-
-                }
-
-                &[aria-expanded="true"] {
-                    >div[class*="layout-"] {
-                        background-color: var(--dnome-list-item-selected);
-
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover-selected);
-                        }
-                    }
-                }
-            }
-        }
-
-        >div[class*="container-"] {
-            border-left: 1px solid var(--dnome-border);
-
-            >aside[class*="membersWrap-"] {
-                div[class*="member-"] {
-                    >div[class*="layout-"] {
-                        border-radius: var(--dnome-border-small);
-
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover);
-                        }
-                    }
-
-                    &[class*="selected-"] {
-                        >div[class*="layout-"] {
-                            background-color: var(--dnome-list-item-selected);
-
-                            &:hover {
-                                background-color: var(--dnome-list-item-hover-selected);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-#channels {
-    li[class*="containerDefault-"] {
-        // * {
-        //     color: white !important;
-        // }
-
-        &[class*="selected-"] {
-            div[class*="iconVisibility-"]:not([class*="clickable-"]) {
-                div[class*="content-"] {
-                    background-color: var(--dnome-list-item-selected);
-
-                    &:hover {
-                        background-color: var(--dnome-list-item-hover-selected);
-                    }
-                }
-            }
-        }
-
-        div[class*="iconVisibility-"]:not([class*="clickable-"]) {
-            div[class*="content-"] {
-                height: 41px;
-                // padding-top: 4.6px;
-                // padding-bottom: 4.6px;
-                // margin-top: 4.6px;
-                // margin-bottom: 4.6px;
-
-                border-radius: var(--dnome-border-small);
-
-                &:hover {
-                    background-color: var(--dnome-list-item-hover);
-                }
-            }
-        }
-    }
-}
-
-div[class*="toolbar-"] {
-    height: 100%;
-
-    >div[class*="search-"] {
-        // height: 40px;
-        height: 70%;
-
-        >div[class*="search-"] {
-            height: 100%;
-
-            // margin-top: -5px;
-            // margin-bottom: -5px;
-            // padding-top: 5px;
-            // padding-bottom: 5px;
-
-            &[class*="focused-"] {
-                >div[class*="searchBar-"] {
-                    border: 2px solid var(--dnome-accent-soft);
-                }
-            }
-
-            >div[class*="searchBar-"] {
-                height: 100%;
-                align-items: center;
-
-                >div[class*="DraftEditor-root"] {
-
-                    >div[class*="public-DraftEditorPlaceholder-root"] {
-                        padding-bottom: 0;
-                        height: calc(100% - 4px);
-                        display: inline-flex;
-                        align-items: center;
-                    }
-
-                    >div[class*="DraftEditor-editorContainer"] {
-                        height: 100%;
-
-                        >div[class*="public-DraftEditor-content"] {
-                            padding-bottom: 0;
-                            height: 100%;
-
-                            div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"] {
-                                span[class*="search"] {
-                                    background-color: transparent;
-                                    font-weight: bold;
-                                    text-decoration: underline;
-                                }
-                            }
-
-                            >div {
-                                height: 100%;
-
-                                >div {
-                                    height: 100%;
-                                    display: inline-flex;
-                                    align-items: center;
-
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                border-radius: var(--dnome-border-small);
-                background-color: var(--dnome-searchbox);
-            }
-        }
-    }
-}
-
-div[group="SEARCH_OPTIONS"][class*="option-"],
-li[class*="option"][role="option"] {
-    padding-top: 3.7px;
-    padding-bottom: 3.7px;
-    border-radius: var(--dnome-border-small);
-
-    &:hover {
-        background-color: var(--dnome-popup-hover);
-
-        &::after {
-            background-color: transparent;
-        }
-
-        &::before {
-            background-color: transparent;
-        }
-
-
-    }
-
-    >svg {
-        top: unset;
-    }
 }
 
 div[class*="queryContainer-"][class*="focused-"] {
     background-color: transparent;
     outline: 1px solid var(--dnome-border);
-}
-
-div[class*="messagesPopoutWrap-"] {
-    border-radius: var(--dnome-border-big);
-
-    >div[class*="header-"] {
-        border-bottom: 1px solid var(--dnome-border);
-        box-shadow: none;
-    }
-
-    >div[class*="messagesPopout-"] {
-        >div[role="list"] {
-            >div[class*="messageGroupWrapper-"] {
-                border-radius: 7px;
-                background-color: var(--dnome-list-item-hover);
-
-                div>div[id*="message-accessories-"] {
-                    >article[class*="embedWrapper-"] {
-                        border-radius: var(--dnome-border-big);
-                    }
-                }
-
-
-                >div[class*="actionButtons-"] {
-                    height: 25px;
-
-                    >div[class*="jumpButton-"][role="button"] {
-                        background-color: var(--dnome-accent);
-                        height: 100%;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        border-radius: var(--dnome-border-small);
-                        align-items: center;
-                        color: white;
-
-                        &:hover {
-                            background-color: var(--dnome-accent-lighter);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-}
-
-div[class*="recentMentionsPopout-"] {
-    border-radius: var(--dnome-border-big);
-
-    div[class*="tabBar"] {
-        >div[class*="tab-"] {
-            height: 30px;
-            border-radius: var(--dnome-border-small);
-        }
-    }
-}
-
-main[class*="container-"] {
-
-    div[class*="tabBody-"] {
-        &::before {
-            box-shadow: none;
-            border-bottom: 1px solid var(--dnome-border);
-        }
-
-        >div[class*="peopleColumn-"] {
-            >div[class*="searchBar-"] {
-                background-color: var(--dnome-searchbox);
-                border-radius: var(--dnome-border-medium);
-                height: 41px;
-                margin: 16px 20px 8px 30px;
-            }
-
-            >div[class*="peopleList-"] {
-                >div[class*="content-"] {
-                    >div[class*="peopleListItem-"] {
-                        border-radius: var(--dnome-border-medium);
-                        border: none;
-
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover);
-                        }
-
-                        // &:active {
-                        //     background-color: var(--dnome-list-item-selected);
-                        // }
-                        >div[class*="listItemContents-"] {
-                            >div[class*="actions-"] {
-                                >div[class*="actionButton-"] {
-                                    background-color: transparent;
-
-                                    &:hover {
-                                        background-color: var(--dnome-popup-hover);
-                                    }
-                                }
-                            }
-                        }
-
-                        &[class*="active-"] {
-                            background-color: var(--dnome-list-item-selected);
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-
-    section[role="navigation"] {
-        >div[class*="children-"] {
-            height: 100%;
-
-            >div[class*="tabBar-"][role*="tablist"] {
-                height: 70%;
-
-                >div[class*="item"] {
-                    border-radius: var(--dnome-border-small);
-
-                    &:hover {
-                        background-color: var(--dnome-list-item-hover);
-                    }
-
-                    &[class*="selected-"] {
-                        background-color: var(--dnome-list-item-selected);
-
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover-selected);
-                        }
-                    }
-
-                    &[class*="addFriend-"] {
-                        background-color: var(--dnome-accent);
-
-                        &:hover {
-                            background-color: var(--dnome-accent-lighter);
-                        }
-
-                        &[class*="selected-"] {
-                            background-color: var(--dnome-list-item-selected);
-                            color: unset;
-
-                            &:hover {
-                                background-color: var(--dnome-list-item-hover-selected);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 html[class*="theme-light"] {
@@ -560,9 +98,6 @@ html[class*="theme-light"] {
                 }
             }
         }
-
-
-
     }
 }
 
@@ -600,8 +135,10 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    height: 41px;
-                    border-radius: var(--dnome-border-medium);
+                    &:not([id*="account-divider-"]) {
+                        height: 41px;
+                        border-radius: var(--dnome-border-medium);
+                    }
                 }
 
                 div[class*="submenuPaddingContainer-"] {
@@ -816,7 +353,7 @@ div[class*="layerContainer-"] {
         }
 
         div[role="group"] {
-            >div[class*="item-"] {
+            >div[class*="item-"]:not([id*="account-divider-"]) {
                 border-radius: var(--dnome-border-small);
                 height: 41px;
 
@@ -1247,200 +784,8 @@ div[class*="animatorBottom-"] {
     }
 }
 
-
-#emoji-picker-tab-panel {
-    div[class*="searchBar"] {
-        border-radius: var(--dnome-border-small);
-        background-color: var(--dnome-searchbox);
-    }
-
-    >div>div[class*="header-"] {
-        box-shadow: none;
-        border-bottom: 1px solid var(--dnome-border);
-    }
-
-    div[class*="inspector-"] {
-        border-top: 1px solid var(--dnome-border);
-    }
-
-    div[class*="categoryList-"] {
-        border-right: 1px solid var(--dnome-border);
-    }
-
-    li[role="gridcell"][id*="emoji-picker-"] {
-        >button[class*="emojiItem-"] {
-            &[class*="emojiItemSelected-"] {
-                background-color: var(--dnome-list-item-hover);
-                border-radius: var(--dnome-border-medium);
-            }
-        }
-    }
-
-    div[class*="diversitySelectorButton-"] {
-        &:hover {
-            background-color: var(--dnome-list-item-hover);
-            padding: 5px;
-            margin: -5px;
-            border-radius: var(--dnome-border-medium);
-        }
-
-    }
-
-    div[role="listbox"][data-list-id="diversity"] {
-        >div[class*="diversityEmojiItem-"] {
-            &:first-child {
-                border-top-left-radius: var(--dnome-border-medium);
-                border-top-right-radius: var(--dnome-border-medium);
-            }
-
-            &:last-child {
-                border-bottom-left-radius: var(--dnome-border-medium);
-                border-bottom-right-radius: var(--dnome-border-medium);
-            }
-
-            &:hover {
-                background-color: var(--dnome-popup-hover);
-
-            }
-        }
-
-        border-radius: var(--dnome-border-medium);
-        background-color: var(--background-floating);
-    }
-}
-
-#gif-picker-tab-panel {
-    >div[class*="header-"] {
-        box-shadow: none;
-        border-bottom: 1px solid var(--dnome-border);
-
-        div[class*="searchBar"] {
-            border-radius: var(--dnome-border-small);
-            background-color: var(--dnome-searchbox);
-        }
-    }
-
-    div[class*="result-"] {
-        border-radius: var(--dnome-border-medium);
-
-        &:hover {
-            box-shadow: none;
-        }
-
-        >video[class*="gif-"],
-        >img[class*="gif-"],
-        // no dash
-        >div[class*="categoryFade"] {
-            border-radius: var(--dnome-border-medium);
-        }
-    }
-}
-
-#sticker-picker-tab-panel {
-    >div[class*="header-"] {
-        box-shadow: none;
-        border-bottom: 1px solid var(--dnome-border);
-
-        >div[class*="wrapper-"] {
-            >div[class*="container-"] {
-                >div[class*="inner-"] {
-                    border-radius: var(--dnome-border-small);
-                    background-color: var(--dnome-searchbox);
-                }
-            }
-        }
-    }
-
-    div[role="gridcell"][id*="sticker-picker-"] {
-        >div[class*="sticker-"] {
-            &[class*="stickerInspected-"] {
-                div[class*="inspectedIndicator-"] {
-                    background-color: var(--dnome-list-item-hover);
-                    border-radius: var(--dnome-border-medium);
-                }
-            }
-        }
-    }
-
-    div[class*="inspector-"] {
-        border-top: 1px solid var(--dnome-border);
-    }
-
-    div[class*="categoryList-"] {
-        border-right: 1px solid var(--dnome-border);
-    }
-}
-
 div[class*="tooltip-"] {
     border-radius: var(--dnome-border-medium);
-}
-
-div[class*="groupStart-"] {
-    li[class*="messageListItem-"] {
-        >div[class*="message-"] {
-            background-color: var(--dnome-error-soft);
-
-            &:hover {
-                background-color: var(--dnome-error-soft);
-                outline: 1px dashed var(--dnome-error);
-            }
-        }
-    }
-}
-
-// Hide text input if chatting is disabled
-div[class*="channelTextArea-"][class*="channelTextAreaDisabled-"] {
-    >div[class*="scrollableContainer"] {
-        // background-color: var(--dnome-base);
-        // opacity: 1;
-        display: none;
-    }
-}
-
-li[id*="chat-messages-"][class*="messageListItem-"] {
-    >div[class*="message-"] {
-        &:hover {
-            background-color: var(--dnome-base);
-            outline: 1px solid var(--dnome-border);
-        }
-
-        article[class*="embedWrapper-"] {
-            border: 2px solid;
-            border-radius: var(--dnome-border-medium);
-            background-color: var(--dnome-base);
-        }
-
-        div[class*="channelTextArea-"] {
-            >div[class*="scrollableContainer"] {
-                background-color: var(--dnome-searchbox);
-            }
-        }
-
-        >div[class*="buttonContainer-"] {
-            >div[class*="buttons-"] {
-                >div[class*="wrapper-"] {
-                    background-color: var(--dnome-base);
-                    border-radius: var(--dnome-border-medium);
-                    border: 1px solid var(--dnome-border);
-                    box-shadow: none;
-
-                    >div[class*="button-"] {
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover);
-                        }
-                    }
-
-                    >div[class*="button-"][class*="selected-"] {
-                        background-color: var(--dnome-list-item-selected);
-
-                        &:hover {
-                            background-color: var(--dnome-list-item-hover-selected);
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 div[class*="checkbox"] {
@@ -1459,62 +804,6 @@ div[class*="checkbox"] {
                 fill: #ffffff;
             }
         }
-    }
-}
-
-section[class*="searchResultsWrap-"] {
-    >div>div[role="list"] {
-        >ul[role="group"] {
-            >li[role="listitem"] {
-                >div[class*="searchResult-"] {
-                    background-color: var(--dnome-list-item-hover);
-                }
-
-                >div[class*="buttonsContainer-"] {
-                    >div[class*="button-"] {
-                        background-color: var(--dnome-accent);
-                        border-radius: var(--dnome-border-small);
-                        color: white;
-
-                        &:hover {
-                            background-color: var(--dnome-accent-lighter);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    >header[class*="searchHeader-"] {
-        >div[class*="searchHeaderTabList-"] {
-            >div[class*="item-"] {
-                border-radius: var(--dnome-border-small);
-
-                &:hover {
-                    background-color: var(--dnome-list-item-hover);
-                }
-
-                &[class*="selected-"] {
-                    background-color: var(--dnome-list-item-selected);
-
-                    &:hover {
-                        background-color: var(--dnome-list-item-hover-selected);
-                    }
-                }
-            }
-        }
-    }
-}
-
-div[data-list-item-id*="guildsnav___"] {
-    background-color: var(--dnome-bg);
-
-    &:hover {
-        background-color: var(--dnome-list-item-hover);
-    }
-
-    >div[class*="childWrapper-"] {
-        background-color: var(--dnome-list-item-hover);
     }
 }
 
@@ -1556,6 +845,21 @@ div[class*="standardSidebarView-"] {
 
     div[class*="sidebarRegion-"] {
         border-right: 1px solid var(--dnome-border);
+
+        >div[class*="sidebarRegionScroller-"] {
+            >nav[class*="sidebar-"] {
+                >div[class*="side-"] {
+                    &:after {
+                        margin-top: 1rem;
+                        content: "Made by queer.software & GeopJr with 💖 (and lots of CSS)\A\Ahttps://queer.software/\Ahttps://geopjr.dev/";
+                        white-space: pre-wrap;
+                        color: var(--text-normal);
+                        font-weight: bold;
+                    }
+                }
+            }
+
+        }
     }
 
     div[class*="textBadge-"] {
@@ -1566,17 +870,10 @@ div[class*="standardSidebarView-"] {
     nav[class*="sidebar-"] {
         >div[class*="side-"] {
             >div[class*="info-"] {
-                background: linear-gradient(to bottom,
-                        #5ccefa,
-                        #5ccefa 20%,
-                        #f6a8b7 20%,
-                        #f6a8b7 40%,
-                        #fff 40%,
-                        #fff 60%,
-                        #f6a8b7 60%,
-                        #f6a8b7 80%,
-                        #5ccefa 80%,
-                        #5ccefa);
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='85' height='85' viewBox='0 0 22.49 22.49'%3E%3Cpath fill-opacity='.1' d='M13.23 0a13.23 13.23 0 1 0 0 26.46 13.23 13.23 0 0 0 4.01-.64v-3.1a10.32 10.32 0 0 1-4 .83 10.32 10.32 0 1 1 0-20.64A10.32 10.32 0 0 1 22.9 16.8h3.06A13.23 13.23 0 0 0 13.23 0zM6.35 6.09a11.7 11.7 0 0 0-2.9 6.35v.26c.52.26 4.23 3.7 9.25 1.85 2.12-.8 3.44.27 5.03 1.32l.53.27-2.12 6.61.53-.26.53-.27 5.03-13.49h-.53c-1.06-1.06-1.59-1.85-2.91-2.38-1.85-.8-3.44.8-5.03 1.32-2.64.53-5.03.27-7.14-1.06l-.27-.52zm-2.9 6.87v.53l.52 1.33c1.06 2.64 4.24 3.7 6.62 3.17 1.32 0 1.58.27 2.38.53h.26l-1.32 4.5a2.38 2.38 0 0 0 .8 0l2.9-7.94-.53-.26c-1.32-.53-2.38.26-3.7.53-3.44.53-5.56-.27-7.94-2.39z'/%3E%3C/svg%3E"), linear-gradient(to bottom, #5ccefa, #5ccefa 20%, #f6a8b7 20%, #f6a8b7 40%, #fff 40%, #fff 60%, #f6a8b7 60%, #f6a8b7 80%, #5ccefa 80%, #5ccefa);
+                background-position: right bottom, center center;
+                background-repeat: no-repeat, repeat;
+
                 border-radius: var(--dnome-border-medium);
                 color: black;
 
@@ -1593,6 +890,7 @@ div[class*="standardSidebarView-"] {
             }
 
             >div[class*="item-"] {
+                // display: none;
                 border-radius: var(--dnome-border-small);
                 padding-top: 10.5px;
                 padding-bottom: 10.5px;
@@ -2171,4 +1469,10 @@ div[class*="standardSidebarView-"] {
             }
         }
     }
+}
+
+
+
+div[class*="colorBrand"] {
+    color: var(--dnome-accent);
 }

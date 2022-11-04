@@ -1,0 +1,34 @@
+#sticker-picker-tab-panel {
+    >div[class*="header-"] {
+        box-shadow: none;
+        border-bottom: 1px solid var(--dnome-border);
+
+        >div[class*="wrapper-"] {
+            >div[class*="container-"] {
+                >div[class*="inner-"] {
+                    border-radius: var(--dnome-border-small);
+                    background-color: var(--dnome-searchbox);
+                }
+            }
+        }
+    }
+
+    div[role="gridcell"][id*="sticker-picker-"] {
+        >div[class*="sticker-"] {
+            &[class*="stickerInspected-"] {
+                div[class*="inspectedIndicator-"] {
+                    background-color: var(--dnome-list-item-hover);
+                    border-radius: var(--dnome-border-medium);
+                }
+            }
+        }
+    }
+
+    div[class*="inspector-"] {
+        border-top: 1px solid var(--dnome-border);
+    }
+
+    div[class*="categoryList-"] {
+        border-right: 1px solid var(--dnome-border);
+    }
+}

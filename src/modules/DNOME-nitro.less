@@ -86,3 +86,28 @@ html[class*="theme-light"] {
 div[class*="inviteBannerUpsell-"] {
   display: none;
 }
+
+// Removes icon next to tab
+// disabled for now
+// div[class*="serverBoostTabItem-"] {
+//   svg {
+//     display: none;
+//   }
+// }
+
+// There's a nitro tab literally
+// on every view
+// no point to have it below "Friends"
+div[class*="sidebar-"] {
+  >nav[class*="privateChannels-"] {
+    >div[class*="scroller-"] {
+      >ul[role="list"] {
+        >li[class*="channel-"] {
+          >div>a[href="/store"] {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

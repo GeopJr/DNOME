@@ -1,0 +1,76 @@
+div[class*="chat-"] {
+    main>form {
+        border-top: 1px solid var(--dnome-border);
+        background-color: var(--dnome-base);
+    }
+
+    form[class*="form-"] {
+        >div[class*="channelTextArea-"] {
+
+            // Hide text input if chatting is disabled
+            &[class*="channelTextAreaDisabled-"] {
+                >div[class*="scrollableContainer"] {
+                    // background-color: var(--dnome-base);
+                    // opacity: 1;
+                    display: none;
+                }
+            }
+
+            >div[class*="scrollableContainer-"] {
+                >div[class*="divider-"] {
+                    display: none;
+                }
+
+                >ul[class*="channelAttachmentArea-"] {
+                    >li[role="listitem"] {
+                        background-color: var(--dnome-list-item-hover);
+                        border-radius: var(--dnome-border-medium);
+
+                        div[class*="actionBarContainer-"] {
+                            >div[class*="actionBar-"] {
+                                >div[class*="wrapper-"] {
+                                    background-color: var(--dnome-list-item-hover);
+                                    border: 1px solid var(--dnome-border);
+                                    border-radius: var(--dnome-border-medium);
+
+                                    >div[class*="button-"] {
+                                        &:hover {
+                                            background-color: var(--dnome-list-item-selected);
+                                        }
+                                    }
+
+                                    &:hover {
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div[id*="message-content-Uploader"] {
+        >div[class*="attachment-"] {
+            border-radius: var(--dnome-border-medium);
+            background-color: var(--dnome-base);
+        }
+    }
+
+    div[class*="autocomplete-"] {
+        background-color: var(--dnome-dark-fill);
+        border-radius: var(--dnome-border-medium);
+
+        div[class*="clickable-"] {
+            >div[class*="base-"] {
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+main[class*="container-"] {
+    div[class*="tabBody-"] {
+        &::before {
+            box-shadow: none;
+            border-bottom: 1px solid var(--dnome-border);
+        }
+
+        >div[class*="peopleColumn-"] {
+            >div[class*="searchBar-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-medium);
+                height: 41px;
+                margin: 16px 20px 8px 30px;
+            }
+
+            >div[class*="peopleList-"] {
+                >div[class*="content-"] {
+                    >div[class*="peopleListItem-"] {
+                        border-radius: var(--dnome-border-medium);
+                        border: none;
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        // &:active {
+                        //     background-color: var(--dnome-list-item-selected);
+                        // }
+                        >div[class*="listItemContents-"] {
+                            >div[class*="actions-"] {
+                                >div[class*="actionButton-"] {
+                                    background-color: transparent;
+
+                                    &:hover {
+                                        background-color: var(--dnome-popup-hover);
+                                    }
+                                }
+                            }
+                        }
+
+                        &[class*="active-"] {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    section[role="navigation"] {
+        >div[class*="children-"] {
+            height: 100%;
+
+            >div[class*="tabBar-"][role*="tablist"] {
+                height: 70%;
+
+                >div[class*="item"] {
+                    border-radius: var(--dnome-border-small);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+
+                    &[class*="selected-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+
+                    &[class*="addFriend-"] {
+                        background-color: var(--dnome-accent);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter);
+                        }
+
+                        &[class*="selected-"] {
+                            background-color: var(--dnome-list-item-selected);
+                            color: unset;
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover-selected);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

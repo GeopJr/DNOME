@@ -1,0 +1,33 @@
+main[class*="container-"] {
+    div[class*="nowPlayingColumn-"] {
+        >aside>div[class*="scroller-"] {
+            border-left: 1px solid var(--dnome-border);
+        }
+
+        div[class*="itemCard-"] {
+            background-color: var(--dnome-base);
+            border: none;
+            border-radius: var(--dnome-border-medium);
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover) !important;
+
+                >div>div[class*="body-"]>section {
+                    background-color: var(--dnome-list-item-hover);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-selected);
+                    }
+                }
+            }
+
+            &:active {
+                background-color: var(--dnome-list-item-selected);
+            }
+
+            >div>div[class*="body-"]>section {
+                background-color: var(--dnome-base);
+            }
+        }
+    }
+}

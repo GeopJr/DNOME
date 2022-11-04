@@ -1,0 +1,83 @@
+div[class*="groupStart-"] {
+    li[class*="messageListItem-"] {
+        >div[class*="message-"] {
+            background-color: var(--dnome-error-soft);
+
+            &:hover {
+                background-color: var(--dnome-error-soft);
+                outline: 1px dashed var(--dnome-error);
+            }
+
+            >div[class*="buttonContainer-"] {
+                >div[class*="buttons-"] {
+                    >div[class*="wrapper-"] {
+                        background-color: var(--dnome-base);
+                        border-radius: var(--dnome-border-medium);
+                        border: 1px solid var(--dnome-border);
+                        box-shadow: none;
+
+                        >div[class*="button-"] {
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover);
+                            }
+                        }
+
+                        >div[class*="button-"][class*="selected-"] {
+                            background-color: var(--dnome-list-item-selected);
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover-selected);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+li[id*="chat-messages-"][class*="messageListItem-"] {
+    >div[class*="message-"] {
+        &:hover {
+            background-color: var(--dnome-base);
+            outline: 1px solid var(--dnome-border);
+        }
+
+        article[class*="embedWrapper-"] {
+            border: 2px solid;
+            border-radius: var(--dnome-border-medium);
+            background-color: var(--dnome-base);
+        }
+
+        div[class*="channelTextArea-"] {
+            >div[class*="scrollableContainer"] {
+                background-color: var(--dnome-searchbox);
+            }
+        }
+
+        >div[class*="buttonContainer-"] {
+            >div[class*="buttons-"] {
+                >div[class*="wrapper-"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-medium);
+                    border: 1px solid var(--dnome-border);
+                    box-shadow: none;
+
+                    >div[class*="button-"] {
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+                    }
+
+                    >div[class*="button-"][class*="selected-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

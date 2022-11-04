@@ -1,0 +1,58 @@
+div[class*="chat-"] {
+    div[class*="gifTag-"] {
+        border-radius: 4px;
+    }
+    
+    div[class*="imageContent-"] {
+        div[class*="imageContainer-"] {
+            div[class*="imageWrapper-"] {
+                border-radius: var(--dnome-border-small);
+            }
+        }
+    }
+
+    div[class*="messageAttachment-"] {
+        >div[class*="embedWrapper-"]:not([class*="imageContent-"]) {
+            border-radius: var(--dnome-border-medium);
+            border: 2px solid var(--dnome-accent);
+
+            >div[class*="textContainer-"] {
+                border-top-left-radius: var(--dnome-border-medium);
+                border-top-right-radius: var(--dnome-border-medium);
+            }
+
+            >div[class*="text-"][class*="footer-"] {
+                border-top: 1px solid var(--dnome-border);
+                border-bottom-left-radius: var(--dnome-border-medium);
+                border-bottom-right-radius: var(--dnome-border-medium);
+            }
+
+            &[class*="wrapperAudio-"] {
+                padding: 10px 0px;
+
+                >div[class*="audioMetadata-"] {
+                    border-bottom: 1px solid var(--dnome-border);
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                >div[class*="audioControls-"] {
+                    border-radius: var(--dnome-border-medium);
+                    background-color: transparent;
+
+                    >* {
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        border-radius: var(--dnome-border-medium);
+
+                        &:active {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

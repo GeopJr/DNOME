@@ -1,0 +1,60 @@
+#emoji-picker-tab-panel {
+    div[class*="searchBar"] {
+        border-radius: var(--dnome-border-small);
+        background-color: var(--dnome-searchbox);
+    }
+
+    >div>div[class*="header-"] {
+        box-shadow: none;
+        border-bottom: 1px solid var(--dnome-border);
+    }
+
+    div[class*="inspector-"] {
+        border-top: 1px solid var(--dnome-border);
+    }
+
+    div[class*="categoryList-"] {
+        border-right: 1px solid var(--dnome-border);
+    }
+
+    li[role="gridcell"][id*="emoji-picker-"] {
+        >button[class*="emojiItem-"] {
+            &[class*="emojiItemSelected-"] {
+                background-color: var(--dnome-list-item-hover);
+                border-radius: var(--dnome-border-medium);
+            }
+        }
+    }
+
+    div[class*="diversitySelectorButton-"] {
+        &:hover {
+            background-color: var(--dnome-list-item-hover);
+            padding: 5px;
+            margin: -5px;
+            border-radius: var(--dnome-border-medium);
+        }
+
+    }
+
+    div[role="listbox"][data-list-id="diversity"] {
+        >div[class*="diversityEmojiItem-"] {
+            &:first-child {
+                border-top-left-radius: var(--dnome-border-medium);
+                border-top-right-radius: var(--dnome-border-medium);
+            }
+
+            &:last-child {
+                border-bottom-left-radius: var(--dnome-border-medium);
+                border-bottom-right-radius: var(--dnome-border-medium);
+            }
+
+            &:hover {
+                background-color: var(--dnome-popup-hover);
+
+            }
+        }
+
+        border-radius: var(--dnome-border-medium);
+        background-color: var(--background-floating);
+    }
+}

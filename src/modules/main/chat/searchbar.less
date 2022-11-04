@@ -1,0 +1,89 @@
+div[class*="toolbar-"] {
+    height: 100%;
+
+    >div[class*="search-"] {
+        height: 70%;
+
+        >div[class*="search-"] {
+            height: 100%;
+
+            &[class*="focused-"] {
+                >div[class*="searchBar-"] {
+                    border: 2px solid var(--dnome-accent-soft);
+                }
+            }
+
+            >div[class*="searchBar-"] {
+                height: 100%;
+                align-items: center;
+
+                >div[class*="DraftEditor-root"] {
+
+                    >div[class*="public-DraftEditorPlaceholder-root"] {
+                        padding-bottom: 0;
+                        height: calc(100% - 4px);
+                        display: inline-flex;
+                        align-items: center;
+                    }
+
+                    >div[class*="DraftEditor-editorContainer"] {
+                        height: 100%;
+
+                        >div[class*="public-DraftEditor-content"] {
+                            padding-bottom: 0;
+                            height: 100%;
+
+                            div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"] {
+                                span[class*="search"] {
+                                    background-color: transparent;
+                                    font-weight: bold;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            >div {
+                                height: 100%;
+
+                                >div {
+                                    height: 100%;
+                                    display: inline-flex;
+                                    align-items: center;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                border-radius: var(--dnome-border-small);
+                background-color: var(--dnome-searchbox);
+            }
+        }
+    }
+}
+
+div[group="SEARCH_OPTIONS"][class*="option-"],
+li[class*="option"][role="option"] {
+    padding-top: 3.7px;
+    padding-bottom: 3.7px;
+    border-radius: var(--dnome-border-small);
+
+    &:hover {
+        background-color: var(--dnome-popup-hover);
+
+        &::after {
+            background-color: transparent;
+        }
+
+        &::before {
+            background-color: transparent;
+        }
+
+
+    }
+
+    >svg {
+        top: unset;
+    }
+}

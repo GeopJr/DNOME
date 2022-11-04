@@ -1,0 +1,38 @@
+div[data-list-item-id*="guildsnav___"] {
+    background-color: var(--dnome-bg);
+
+    &:hover {
+        background-color: var(--dnome-list-item-hover);
+    }
+
+    >div[class*="childWrapper-"] {
+        background-color: var(--dnome-list-item-hover);
+    }
+
+    &[class*="folder-"] {
+        &:hover {
+            background-color: var(--dnome-list-item-selected);
+        }
+    }
+
+    &[class*="circleIconButton"] {
+        color: var(--dnome-accent);
+
+        &:hover {
+            color: white;
+        }
+
+        &[class*="selected"] {
+            background-color: var(--dnome-accent) !important;
+        }
+    }
+}
+
+div[class*="folder-"][data-list-item-id*="guildsnav___"],
+span[class*="expandedFolderBackground"][data-list-item-id*="guildsnav___"] {
+    background-color: var(--dnome-list-item-hover);
+
+    &:hover {
+        background-color: var(--dnome-list-item-selected);
+    }
+}

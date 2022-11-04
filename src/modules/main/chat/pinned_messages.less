@@ -1,0 +1,41 @@
+div[class*="messagesPopoutWrap-"] {
+    border-radius: var(--dnome-border-big);
+
+    >div[class*="header-"] {
+        border-bottom: 1px solid var(--dnome-border);
+        box-shadow: none;
+    }
+
+    >div[class*="messagesPopout-"] {
+        >div[role="list"] {
+            >div[class*="messageGroupWrapper-"] {
+                border-radius: 7px;
+                background-color: var(--dnome-list-item-hover);
+
+                div>div[id*="message-accessories-"] {
+                    >article[class*="embedWrapper-"] {
+                        border-radius: var(--dnome-border-big);
+                    }
+                }
+
+                >div[class*="actionButtons-"] {
+                    height: 25px;
+
+                    >div[class*="jumpButton-"][role="button"] {
+                        background-color: var(--dnome-accent);
+                        height: 100%;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        border-radius: var(--dnome-border-small);
+                        align-items: center;
+                        color: white;
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

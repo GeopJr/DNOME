@@ -1,0 +1,38 @@
+div[class*="chat-"] {
+    div[class*="newMessagesBar"] {
+        margin-top: 15px;
+        border-radius: var(--dnome-border-small);
+        height: 50px;
+    }
+
+    div[class*="callContainer-"] {
+        background-color: var(--dnome-base) !important;
+    }
+
+    >div[class*="content-"] {
+        div[class*="divider-"] {
+            border-color: var(--dnome-border);
+            margin-left: 0rem;
+            margin-right: 0rem;
+
+            &[class*="isUnread-"] {
+                border-color: var(--dnome-accent);
+
+                >span[class*="unreadPill"] {
+                    background-color: var(--dnome-accent);
+
+                    >svg>path[class*="unreadPillCap"] {
+                        color: var(--dnome-accent);
+                        fill: var(--dnome-accent);
+                    }
+                }
+            }
+        }
+
+        border-top: 1px solid var(--dnome-border);
+
+        &::before {
+            display: none;
+        }
+    }
+}

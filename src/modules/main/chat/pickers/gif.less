@@ -1,0 +1,26 @@
+#gif-picker-tab-panel {
+    >div[class*="header-"] {
+        box-shadow: none;
+        border-bottom: 1px solid var(--dnome-border);
+
+        div[class*="searchBar"] {
+            border-radius: var(--dnome-border-small);
+            background-color: var(--dnome-searchbox);
+        }
+    }
+
+    div[class*="result-"] {
+        border-radius: var(--dnome-border-medium);
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        >video[class*="gif-"],
+        >img[class*="gif-"],
+        // no dash
+        >div[class*="categoryFade"] {
+            border-radius: var(--dnome-border-medium);
+        }
+    }
+}

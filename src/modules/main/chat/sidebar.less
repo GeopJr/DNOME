@@ -1,0 +1,69 @@
+div[class*="sidebar-"] {
+    header[class*="header-"] {
+        border-bottom: 1px solid var(--dnome-border);
+        box-shadow: none;
+    }
+
+    div[class*="hasBanner-"] {
+        >header[class*="header-"] {
+            border-bottom: none;
+        }
+    }
+
+    #channels {
+        li[class*="containerDefault-"] {
+            &[class*="selected-"] {
+                div[class*="iconVisibility-"]:not([class*="clickable-"]) {
+                    div[class*="content-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+
+            div[class*="iconVisibility-"]:not([class*="clickable-"]) {
+                div[class*="content-"] {
+                    height: 41px;
+                    border-radius: var(--dnome-border-small);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+                }
+            }
+        }
+    }
+
+    >section[class*="panels-"] {
+        border-top: 1px solid var(--dnome-border);
+
+        >div>div[class*="avatarWrapper-"] {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        button[role="switch"] {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+
+            &[aria-checked="true"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+        }
+
+        button[type="button"]:not([role="switch"]) {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+    }
+}
