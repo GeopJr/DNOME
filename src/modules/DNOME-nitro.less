@@ -58,6 +58,28 @@ div[class*="premiumTab-"] {
   }
 }
 
+html[class*="theme-light"] {
+  div[class*="sidebarRegion-"] {
+    &:not([class*="theme-dark"]) {
+      div[class*="premiumTab-"] {
+        &[class*="selected-"] {
+          color: black;
+
+          svg,
+          path {
+            fill: black;
+          }
+
+          * {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+}
+
 // Yes, we know we get invite backgrounds
 // on nitro - as seen in settings, boosts,
 // popups, announcements etc.
