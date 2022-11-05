@@ -1,0 +1,115 @@
+// User profile when you click on their
+// name.
+
+// Usually from the members sidebar.
+// Opens on the left side.
+div[class*="animatorLeft-"] {
+    div[class*="userPopoutOuter-"] {
+        border-radius: var(--dnome-border-big);
+
+        >div[class*="userPopoutInner-"] {
+            >div[class*="userPopoutOverlayBackground-"] {
+                border-radius: var(--dnome-border-big);
+
+                div[class*="roles-"] {
+
+                    >div[class*="role-"],
+                    >button[class*="role-"] {
+                        background-color: transparent;
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-popup-hover);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Usually a modal or from the top
+// side when you click on your own
+// profile at the bottom of the
+// main sidebar.
+div[class*="layerContainer-"] {
+    >div[class*="layer-"] {
+        >div[class*="focusLock-"] {
+            >div[class*="root"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="userProfileModalOuter-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="userProfileModalInner-"] {
+                        border-radius: var(--dnome-border-big);
+
+                        div[class*="relationshipButtons-"] {
+                            >button {
+                                background-color: var(--dnome-accent);
+                                border-radius: var(--dnome-border-medium);
+
+                                &:hover:not([disabled="true"]) {
+                                    background-color: var(--dnome-accent-lighter);
+                                }
+
+                            }
+                        }
+
+                        >div[class*="userProfileModalOverlayBackground-"] {
+                            border-radius: var(--dnome-border-big);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >div[id*="popout_"] {
+        div[class*="accountProfilePopoutWrapper-"] {
+            div[class*="userPopoutOuter-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="userPopoutInner-"] {
+                    div[class*="item-"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &[class*="menuItemFocused-"] {
+                            background-color: var(--dnome-popup-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-popup-selected);
+                        }
+                    }
+
+                    div[class*="submenuPaddingContainer-"] {
+                        >div[class*="submenu-"] {
+                            background-color: var(--background-floating);
+                            border-radius: var(--dnome-border-big);
+
+                            div[class*="separator-"] {
+                                border-color: var(--dnome-border);
+                            }
+
+                            div[class*="labelContainer-"],
+                            div[class*="item-"]:not([class*="labelContainer-"]) {
+                                border-radius: var(--dnome-border-small);
+
+                                &:hover,
+                                &[class*="focused-"] {
+                                    background-color: var(--dnome-popup-hover);
+                                }
+
+                                &:active {
+                                    background-color: var(--dnome-popup-selected);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

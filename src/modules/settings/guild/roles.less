@@ -1,0 +1,44 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            >div[class*="customColumn-"] {
+                >div[class*="customContainer-"] {
+                    >div[class*="customScroller-"] {
+                        >div[class*="content-"] {
+                            >div[class*="roleRow-"] {
+                                border-radius: var(--dnome-border-big);
+
+                                div[class*="buttonsContainer-"] {
+                                    >div[class*="circleButton-"] {
+                                        background-color: var(--dnome-popup-hover);
+
+                                        &:hover {
+                                            background-color: var(--dnome-popup-selected);
+                                        }
+                                    }
+                                }
+                            }
+
+                            >div {
+                                >div[class*="container-"][role="button"] {
+                                    border-radius: var(--dnome-border-big);
+
+                                    >div[class*="icon-"] {
+                                        background-color: var(--dnome-list-item-hover-selected);
+                                    }
+                                }
+
+                                >div>div[class*="searchContainer-"] {
+                                    >div[class*="container-"] {
+                                        background-color: var(--dnome-searchbox);
+                                        border-radius: var(--dnome-border-medium);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

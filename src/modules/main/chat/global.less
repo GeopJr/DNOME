@@ -1,10 +1,20 @@
 div[class*="chat-"] {
-    div[class*="newMessagesBar"] {
+
+    // New messages bar at the top.
+    div[class*="newMessagesBar"],
+    div[class*="jumpToPresentBar-"] {
         margin-top: 15px;
         border-radius: var(--dnome-border-small);
         height: 50px;
     }
 
+    // Jump to present bar at the bottom.
+    div[class*="jumpToPresentBar-"] {
+        bottom: 15px;
+        padding-bottom: 0;
+    }
+
+    // In-call panel.
     div[class*="callContainer-"] {
         background-color: var(--dnome-base) !important;
     }
@@ -15,6 +25,7 @@ div[class*="chat-"] {
             margin-left: 0rem;
             margin-right: 0rem;
 
+            // "New messages since" bar.
             &[class*="isUnread-"] {
                 border-color: var(--dnome-accent);
 
@@ -25,6 +36,10 @@ div[class*="chat-"] {
                         color: var(--dnome-accent);
                         fill: var(--dnome-accent);
                     }
+                }
+
+                >span[class*="content"] {
+                    color: var(--dnome-accent);
                 }
             }
         }

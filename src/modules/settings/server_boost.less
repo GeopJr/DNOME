@@ -1,0 +1,26 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            section[class*="guildsSection-"] {
+                >div[class*="guilds-"] {
+                    >div[class*="cardWrapper-"] {
+                        background-color: var(--dnome-base);
+                        border-radius: var(--dnome-border-medium);
+
+                        >div[class*="card-"] {
+                            border-radius: var(--dnome-border-medium);
+                        }
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+// Some overrides ONLY for the light theme.
+// (Mostly text color).
+html[class*="theme-light"] {
+    div[class*="defaultKeybindShortcutGroup-"] {
+        >div[class*="keybindShortcut-"] {
+            >span[class*="key-"] {
+                color: black;
+
+                svg,
+                path,
+                g {
+                    fill: black;
+                }
+            }
+        }
+    }
+
+
+    div[class*="submenuPaddingContainer-"] {
+        >div[class*="submenu-"] {
+            *[class*="focused-"] {
+                color: black;
+
+                svg,
+                path,
+                circle {
+                    color: black;
+                }
+
+                div[class*="subtext-"] {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    #channel-context-channel-notifications {
+        div[class*="subtext-"] {
+            color: black;
+        }
+    }
+
+    div[class*="layerContainer-"] {
+        div[class*="labelContainer-"][class*="item-"] {
+            &[class*="focused-"] {
+                color: black;
+            }
+        }
+
+
+        div[class*="menu-"][role="menu"] {
+            >div[class*="scroller-"] {
+                >div[role="group"]:not([class*="wrapper-"]) {
+
+                    >div[class*="item-"],
+                    >div>div[class*="item-"] {
+
+                        // Invite button
+                        &[class*="colorBrand-"]:not([id="guild-header-popout-invite-people"]) {
+                            color: var(--interactive-normal);
+
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

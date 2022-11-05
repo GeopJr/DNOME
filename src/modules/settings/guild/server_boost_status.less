@@ -1,0 +1,24 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            div[class*="tiers-"] {
+                >div[class*="tier-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    // no dash
+                    >div[class*="tierHeader"] {
+                        border-top-left-radius: var(--dnome-border-big);
+                        border-top-right-radius: var(--dnome-border-big);
+                        background-color: var(--dnome-base);
+                    }
+
+                    >div[class*="tierBody-"] {
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-right-radius: var(--dnome-border-big);
+                        background-color: var(--dnome-base);
+                    }
+                }
+            }
+        }
+    }
+}

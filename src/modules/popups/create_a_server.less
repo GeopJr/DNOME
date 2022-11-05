@@ -1,0 +1,28 @@
+div[class*="layerContainer-"] {
+    >div {
+        >div>div[class*="focusLock-"] {
+            >div[class*="root-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="container-"] {
+                    div[class*="footer-"] {
+                        box-shadow: none;
+                        border-top: 1px soild var(--dnome-border);
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-right-radius: var(--dnome-border-big);
+
+                        >button[class*="footerButton-"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            background-color: var(--dnome-accent);
+
+                            &:hover {
+                                background-color: var(--dnome-accent-lighter);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

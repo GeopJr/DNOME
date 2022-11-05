@@ -1,0 +1,64 @@
+// Popup that shows up when you click the
+// plus icon (+) on a user profile in a
+// guild.
+div[class*="animatorBottom-"] {
+    >div[class*="menu-"] {
+        border-radius: var(--dnome-border-big);
+
+        div[class*="item-"][class*="labelContainer-"] {
+            border-radius: var(--dnome-border-medium);
+
+            &[class*="focused-"] {
+                background-color: var(--dnome-popup-hover) !important;
+            }
+
+            &:active {
+                background-color: var(--dnome-popup-selected) !important;
+            }
+
+            svg {
+                >path[class*="check-"] {
+                    color: white !important;
+                }
+            }
+        }
+
+        div[class*="separator-"] {
+            border-color: transparent;
+        }
+
+        div[class*="colorDefault"] {
+            border-radius: var(--dnome-border-small);
+
+            &:not([class*="hideInteraction"]):hover,
+            &[class*="focused-"] {
+                background-color: var(--dnome-accent);
+            }
+
+            &:active {
+                background-color: var(--dnome-darker-accent) !important;
+            }
+
+            &[class*="colorBrand"]:not(:hover) {
+                color: var(--interactive-normal);
+            }
+
+            path[class*="checkbox-"] {
+                color: var(--dnome-accent);
+            }
+        }
+    }
+
+    >div[class*="container-"] {
+        border-radius: var(--dnome-border-big);
+
+        >div[role="combobox"]>div[class*="container-"] {
+            height: 38px;
+
+            >div[class*="inner-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-small);
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+div[class*="standardSidebarView-"] {
+    div[class*="sidebarRegion-"] {
+        div[class*="textBadge-"] {
+            background-color: var(--background-accent) !important;
+            border-radius: var(--dnome-border-small);
+        }
+
+        nav[class*="sidebar-"] {
+            >div[class*="side-"] {
+                >div[class*="item-"] {
+                    border-radius: var(--dnome-border-small);
+                    padding-top: 10.5px;
+                    padding-bottom: 10.5px;
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+
+                    &[class*="selected-"] {
+                        background-color: var(--dnome-list-item-selected);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

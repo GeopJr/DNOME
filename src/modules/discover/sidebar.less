@@ -1,0 +1,22 @@
+// The discover page sidebar.
+div[class*="sidebar-"] {
+    >div>div[class*="categoryItem-"] {
+        >div[class*="itemInner-"] {
+            border-radius: var(--dnome-border-small);
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        &[class*="selectedCategoryItem-"] {
+            >div[class*="itemInner-"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+        }
+    }
+}

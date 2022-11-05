@@ -1,15 +1,19 @@
+// The channels sidebar.
 div[class*="sidebar-"] {
     header[class*="header-"] {
         border-bottom: 1px solid var(--dnome-border);
         box-shadow: none;
     }
 
+    // Remove the border if there's a banner
+    // so its unified with the header.
     div[class*="hasBanner-"] {
         >header[class*="header-"] {
             border-bottom: none;
         }
     }
 
+    // The channel tabs.
     #channels {
         li[class*="containerDefault-"] {
             &[class*="selected-"] {
@@ -26,7 +30,10 @@ div[class*="sidebar-"] {
 
             div[class*="iconVisibility-"]:not([class*="clickable-"]) {
                 div[class*="content-"] {
-                    height: 41px;
+                    & when (not (@fix_scrollbar_bug)) {
+                        height: 41px;
+                    }
+
                     border-radius: var(--dnome-border-small);
 
                     &:hover {
@@ -37,6 +44,7 @@ div[class*="sidebar-"] {
         }
     }
 
+    // The account panel at the bottom.
     >section[class*="panels-"] {
         border-top: 1px solid var(--dnome-border);
 

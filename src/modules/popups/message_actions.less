@@ -1,0 +1,23 @@
+// Pressing the 3-dot button
+// on the message tooltip that
+// shows up when you hover a message.
+div[class*="layerContainer-"] {
+    >div {
+        >div[class*="menu-"][role="menu"] {
+            >div {
+                >div[id*="message-actions-"] {
+                    border-radius: 7px;
+
+                    &:hover,
+                    &[class*="focused-"] {
+                        background-color: var(--dnome-popup-hover);
+                    }
+
+                    &:active {
+                        background-color: var(--dnome-popup-selected);
+                    }
+                }
+            }
+        }
+    }
+}

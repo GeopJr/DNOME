@@ -1,0 +1,28 @@
+// If @attribution is false, then it gets replaced with this style that
+// adds "DNOME v{version}" next to the other debug info at the bottom
+// of the sidebar of the global settings, matching their style.
+//
+// If you are distributing DNOME with attribution disabled, consider:
+// https://geopjr.dev/donate
+div[class*="layer-"] {
+    >div[class*="standardSidebarView-"] {
+        >div[class*="sidebarRegion-"] {
+            >div[class*="sidebarRegionScroller-"] {
+                >nav[class*="sidebar-"] {
+                    >div[class*="side-"] {
+                        >div[class*="info-"] {
+                            &:before {
+                                content: "DNOME v@{version}";
+                                text-transform: none;
+                                color: var(--text-muted);
+                                font-family: var(--font-primary);
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

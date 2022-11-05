@@ -1,0 +1,42 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            div[class*="connectContainer-"] {
+                background-color: var(--dnome-base);
+
+                >div[class*="connectionsContainer-"] {
+
+                    >div[class*="wrapper-"],
+                    >div[class*="accountAddWrapper-"] {
+
+                        >button[class*="inner-"],
+                        >button[class*="accountAddInner-"] {
+                            background-color: transparent;
+                            border-radius: var(--dnome-border-small);
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover);
+                            }
+
+                            &:active {
+                                background-color: var(--dnome-list-item-selected);
+                            }
+                        }
+                    }
+                }
+            }
+
+            div[class*="connectionList-"] {
+                >div[class*="connection-"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-medium);
+
+                    >div[class*="connectionHeader-"] {
+                        background-color: var(--dnome-base);
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+            }
+        }
+    }
+}

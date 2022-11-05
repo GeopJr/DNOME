@@ -1,0 +1,43 @@
+div[class*="recentMentionsPopout-"] {
+    border-radius: var(--dnome-border-big);
+
+    div[class*="tabBar"] {
+        >div[class*="tab-"] {
+            height: 30px;
+            border-radius: var(--dnome-border-small);
+        }
+    }
+
+    div[class*="controls-"] {
+        >div[class*="button-"] {
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+    }
+
+    div[class*="closeButton-"] {
+        &:hover {
+            background-color: var(--dnome-list-item-hover);
+        }
+    }
+
+    div[class*="messagesPopout-"] {
+        div[class*="messageContainer-"] {
+            background-color: var(--dnome-list-item-hover);
+
+            >div[class*="jumpButton-"][role="button"] {
+                background-color: var(--dnome-accent);
+                border-radius: var(--dnome-border-small);
+
+                >div {
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: var(--dnome-accent-lighter);
+                }
+            }
+        }
+    }
+}

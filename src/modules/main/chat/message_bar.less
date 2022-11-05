@@ -1,3 +1,5 @@
+// The input you type message in at the bottom
+// of the main panel.
 div[class*="chat-"] {
     main>form {
         border-top: 1px solid var(--dnome-border);
@@ -5,7 +7,15 @@ div[class*="chat-"] {
     }
 
     form[class*="form-"] {
+
+        div[class*="submitContainer-"]>div[class*="channelTextArea-"],
         >div[class*="channelTextArea-"] {
+            >div[class*="channelTextAreaInner-"] {
+                &[class*="channelTextAreaInnerError-"] {
+                    border: none;
+                }
+
+            }
 
             // Hide text input if chatting is disabled
             &[class*="channelTextAreaDisabled-"] {
@@ -16,16 +26,39 @@ div[class*="chat-"] {
                 }
             }
 
+            // The "replying to" bar.
+            >div[class*="attachedBars-"] {
+                background: transparent;
+                border-radius: var(--dnome-border-medium);
+                margin-top: -18px;
+
+                div[class*="replyBar-"] {
+                    border-radius: var(--dnome-border-medium);
+
+                    background: var(--dnome-accent);
+
+                    >* {
+                        div {
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+
             >div[class*="scrollableContainer-"] {
                 >div[class*="divider-"] {
                     display: none;
                 }
 
+                // The attachment overview before
+                // sending.
                 >ul[class*="channelAttachmentArea-"] {
                     >li[role="listitem"] {
                         background-color: var(--dnome-list-item-hover);
                         border-radius: var(--dnome-border-medium);
 
+                        // The small toolbar at the top right of an
+                        // attachment in the attachment overview.
                         div[class*="actionBarContainer-"] {
                             >div[class*="actionBar-"] {
                                 >div[class*="wrapper-"] {
@@ -51,6 +84,7 @@ div[class*="chat-"] {
         }
     }
 
+    // Drag n Drop.
     div[id*="message-content-Uploader"] {
         >div[class*="attachment-"] {
             border-radius: var(--dnome-border-medium);
@@ -58,8 +92,10 @@ div[class*="chat-"] {
         }
     }
 
+    // The autocomplete panel
+    // when you type @ or : or #.
     div[class*="autocomplete-"] {
-        background-color: var(--dnome-dark-fill);
+        background-color: var(--dnome-base);
         border-radius: var(--dnome-border-medium);
 
         div[class*="clickable-"] {

@@ -1,4 +1,6 @@
-// Includes both the settings button and the server boosts one
+// Removes dark patterns from Discord.
+
+// Tabs don't get special colors.
 div[aria-controls="Discord Nitro-tab"],
 div[aria-controls="GUILD_PREMIUM-tab"] {
   &[aria-selected="false"] {
@@ -19,25 +21,24 @@ div[aria-controls="GUILD_PREMIUM-tab"] {
   }
 }
 
-// We noticed, don't worry
-div[aria-label="Exclusive to Nitro"] {
-  display: none !important;
-}
-
-// No more gift nitro button
+// Removes the gift button
+// from the message bar.
 div[class*="buttons-"] {
   >button[class*="colorBrand-"]:not([class*="expression-"]) {
     display: none;
   }
 }
 
-// No more sparkles
+// Removes sparkles svgs,
+// used sometimes around nitro
+// buttons and headers.
 svg[class*="sparkleStar"],
 svg[class*="sparkle-"] {
   display: none;
 }
 
-// No purple borders for you
+// Removes purple borders around
+// Nitro features.
 div[class*="premiumFeatureBorder-"] {
   background: transparent;
 
@@ -46,7 +47,7 @@ div[class*="premiumFeatureBorder-"] {
   }
 }
 
-// No accent tab color for you
+// Removes accent color on tab.
 div[class*="premiumTab-"] {
   >div[class*="selectedBackground-"] {
     background-color: var(--dnome-list-item-selected);
@@ -58,6 +59,9 @@ div[class*="premiumTab-"] {
   }
 }
 
+// Light mode override,
+// since we remove the special tab colors,
+// the nitro icon is still white.
 html[class*="theme-light"] {
   div[class*="sidebarRegion-"] {
     &:not([class*="theme-dark"]) {
@@ -77,12 +81,10 @@ html[class*="theme-light"] {
       }
     }
   }
-
 }
 
-// Yes, we know we get invite backgrounds
-// on nitro - as seen in settings, boosts,
-// popups, announcements etc.
+// Removes the "special invite backgrounds"
+// promo on invite creation popup.
 div[class*="inviteBannerUpsell-"] {
   display: none;
 }
@@ -95,9 +97,9 @@ div[class*="inviteBannerUpsell-"] {
 //   }
 // }
 
-// There's a nitro tab literally
-// on every view
-// no point to have it below "Friends"
+// Removes the nitro tab below Friends
+// as there's a nitro tab
+// literally everywhere.
 div[class*="sidebar-"] {
   >nav[class*="privateChannels-"] {
     >div[class*="scroller-"] {
@@ -110,4 +112,10 @@ div[class*="sidebar-"] {
       }
     }
   }
+}
+
+// Removes the "Buy Nitro" button
+// shine animation.
+div[class*="shineContainer"] {
+  display: none;
 }

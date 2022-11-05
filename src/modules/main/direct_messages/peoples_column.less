@@ -1,5 +1,11 @@
+// The center part of the Friends page.
 main[class*="container-"] {
+
+    // The body aka not the tabs at the top.
     div[class*="tabBody-"] {
+
+        // Remove box-shadow and instead use
+        // border.
         &::before {
             box-shadow: none;
             border-bottom: 1px solid var(--dnome-border);
@@ -36,6 +42,14 @@ main[class*="container-"] {
                                     }
                                 }
                             }
+
+                            >div[class*="actionButton-"] {
+                                background-color: transparent;
+
+                                &:hover {
+                                    background-color: var(--dnome-popup-hover);
+                                }
+                            }
                         }
 
                         &[class*="active-"] {
@@ -48,10 +62,17 @@ main[class*="container-"] {
         }
     }
 
+    // The tabs at the top.
     section[role="navigation"] {
+
+        // We need to make the buttons bigger
+        // so we make it take the full height.
         >div[class*="children-"] {
             height: 100%;
 
+            // However the buttons section will be
+            // its 70% (instead of setting each one
+            // to the desireable height).
             >div[class*="tabBar-"][role*="tablist"] {
                 height: 70%;
 
@@ -70,6 +91,8 @@ main[class*="container-"] {
                         }
                     }
 
+                    // The add friend button is accent
+                    // colored.
                     &[class*="addFriend-"] {
                         background-color: var(--dnome-accent);
 

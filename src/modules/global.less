@@ -1,0 +1,206 @@
+// Global styles that can proabably be found many pages and components.
+
+// Checkboxes.
+div[class*="checkbox"] {
+    &[class*="checked"] {
+        border-color: var(--dnome-accent) !important;
+        background-color: var(--dnome-accent) !important;
+
+        >svg>path {
+            fill: white;
+        }
+
+        &[style*="background-color: rgb(114, 137, 218)"] {
+            background-color: var(--dnome-accent) !important;
+
+            >svg>path {
+                fill: #ffffff;
+            }
+        }
+    }
+}
+
+// Tooltips
+div[class*="tooltip-"] {
+    border-radius: var(--dnome-border-medium);
+}
+
+// Usually Discord branded buttons.
+div[class*="colorBrand"] {
+    color: var(--dnome-accent);
+}
+
+// All sidebars.
+div[class*="sidebar-"] {
+    border-right: 1px solid var(--dnome-border);
+    border-left: 1px solid var(--dnome-border);
+}
+
+div[class*="standardSidebarView-"] {
+    div[class*="sidebarRegion-"] {
+        border-right: 1px solid var(--dnome-border);
+    }
+
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            div[class*="section-"] {
+                >div[class*="card-"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-medium);
+                }
+            }
+
+            div[class*="applicationPermissions-"] {
+                >div[class*="card-"] {
+                    border-radius: var(--dnome-border-medium);
+                    background-color: var(--dnome-base);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+
+                    >div[class*="cardHeader"] {
+                        border-radius: var(--dnome-border-medium);
+                        background-color: transparent;
+                    }
+
+                    div[class*="entryActions-"] {
+                        >div[role="radiogroup"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            >div[role="radio"] {
+                                background-color: var(--dnome-list-item-selected);
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover-selected);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div[class*="container-"][class*="warning-"] {
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[class*="inputWrapper-"] {
+                >input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                >div[class*="inputMaxLength-"] {
+                    >textarea[class*="inputDefault-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+            }
+
+            div[class*="formNotice-"] {
+                border-color: var(--dnome-border);
+                border-radius: var(--dnome-border-medium);
+            }
+
+            div[role="radiogroup"] {
+                >div[class*="item-"] {
+                    >div[class*="radioBar-"] {
+                        border-radius: var(--dnome-border-medium);
+                        border: 1px solid var(--radio-bar-accent-color);
+                    }
+
+                    &[class*="itemFilled-"] {
+                        background-color: transparent;
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        &:active,
+                        &[aria-checked="true"] {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+
+                        &[aria-checked="true"]:hover {
+                            background-color: var(--dnome-list-item-hover-selected);
+                        }
+                    }
+                }
+            }
+
+            div[class*="select-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-medium);
+            }
+
+            button[class*="button-"][class*="lookFilled-"] {
+                border-radius: var(--dnome-border-small);
+
+                >div[class*="upsellButton-"] {
+                    color: white;
+                }
+
+                svg[class*="premiumIcon"] {
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: var(--dnome-accent-lighter) !important;
+                }
+
+                &[class*="colorRed"] {
+                    border-color: var(--dnome-error);
+
+                    &:hover {
+                        background-color: var(--dnome-error) !important;
+                    }
+                }
+            }
+
+            button[class*="button-"] {
+                border-radius: var(--dnome-border-small);
+
+                &[class*="lookFilled-"] {
+                    &:hover {
+                        background-color: var(--dnome-accent-lighter) !important;
+                    }
+                }
+
+                &[class*="lookOutlined-"][class*="colorRed"] {
+                    border-color: var(--dnome-error);
+
+                    &:hover {
+                        background-color: var(--dnome-error) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Buttons that are filled but not "primary".
+[class*="lookFilled"][class*="color"]:not([class*="colorPrimary"]) {
+    background-color: var(--dnome-accent) !important;
+    border-radius: var(--dnome-border-medium);
+
+    &:hover {
+        background-color: var(--dnome-accent-lighter) !important;
+    }
+}
+
+[class*="lookFilled"] {
+    border-radius: var(--dnome-border-medium);
+
+}
+
+// Buttons that are outlined instead of filled.
+button[class*="button-"][class*="lookOutlined-"] {
+    &:hover {
+        background-color: var(--dnome-accent);
+
+        // Can be red for danger, white for nitro etc.
+        border-color: transparent !important;
+    }
+}

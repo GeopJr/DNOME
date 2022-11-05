@@ -1,0 +1,303 @@
+// Styles used by *all* modals or popups.
+div[class*="layerContainer-"] {
+    div[class*="layer"] {
+        div[class*="elevationBorderHigh-"] {
+            border-radius: var(--dnome-border-medium);
+        }
+    }
+
+    >div[class*="layer-"] {
+        >div[class*="wrapper-"] {
+            >div[class*="focusLock-"] {
+                >div[class*="modal-"] {
+                    div[class*="select-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+
+                    >div[class*="footer-"] {
+                        border-bottom-left-radius: var(--dnome-border-big);
+                        border-bottom-right-radius: var(--dnome-border-big);
+                    }
+
+                    div[class*="headerContainer-"] {
+
+                        >div[class*="header-"] {
+
+                            >div[class*="searchBar-"] {
+                                background-color: var(--dnome-searchbox);
+                                border-radius: var(--dnome-border-medium);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    >div[id*="popout_"] {
+        div[class*="upsellButtonsContainer-"] {
+            button[type="button"] {
+                border-radius: var(--dnome-border-small);
+            }
+        }
+
+        >div[class*="animatorBottom-"] {
+            >div[class*="container-"] {
+                background-color: var(--background-floating);
+
+                div[class*="list-"] {
+                    li[class*="item-"] {
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-popup-hover);
+                        }
+
+                        // no dash
+                        &[class*="selected"] {
+                            background-color: var(--dnome-popup-selected);
+                        }
+                    }
+                }
+            }
+        }
+
+        >div[role="listbox"][class*="popout-"] {
+            background-color: var(--dnome-base);
+            border-radius: var(--dnome-border-big);
+
+            >div[class*="option-"] {
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &[aria-selected="true"] {
+                    background-color: var(--dnome-list-item-selected);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover-selected);
+                    }
+                }
+            }
+        }
+
+        // dropdown
+        >div>div>li[class*="option-"] {
+            &[class*="focused-"] {
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+        }
+
+        div[role="group"] {
+            >div[class*="item-"]:not([id*="account-divider-"]) {
+                border-radius: var(--dnome-border-small);
+                height: 41px;
+
+                &:hover,
+                &[class*="focused-"] {
+                    background-color: var(--dnome-popup-hover);
+                }
+
+                &:active {
+                    background-color: var(--dnome-popup-selected);
+                }
+            }
+        }
+
+    }
+
+    >div {
+        >div[class*="focusLock-"] {
+            >div[class*="root-"] {
+                background-color: var(--dnome-base);
+                border-radius: var(--dnome-border-big);
+
+                div[class*="overviewSidebar-"] {
+                    border-top-left-radius: var(--dnome-border-big);
+                    border-bottom-left-radius: var(--dnome-border-big);
+                }
+
+                div[class*="searchBar"] {
+                    border-radius: var(--dnome-border-small);
+                    background-color: var(--dnome-searchbox);
+                }
+
+
+                input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                div[class*="footer-"] {
+                    border-bottom-left-radius: var(--dnome-border-big);
+                    border-bottom-right-radius: var(--dnome-border-big);
+                }
+
+                >div {
+
+                    // no ban video
+                    >video[loop] {
+                        display: none;
+                    }
+
+                    div[class*="select-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+
+                    div[role="radiogroup"] {
+                        >div[class*="item-"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            &:hover {
+                                background-color: var(--dnome-list-item-hover);
+                            }
+
+                            &[aria-checked="true"] {
+                                background-color: var(--dnome-list-item-selected);
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover-selected);
+                                }
+                            }
+                        }
+                    }
+
+                    div[class*="banReasonOtherClickable-"] {
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-list-item-selected);
+                        }
+                    }
+
+                    div[class*="inputMaxLength-"] {
+                        >textarea[class*="inputDefault-"] {
+                            background-color: var(--dnome-searchbox);
+                            border-radius: var(--dnome-border-medium);
+                        }
+                    }
+
+                    >div[class*="message-"] {
+                        background-color: var(--dnome-list-item-hover);
+                        border-radius: var(--dnome-border-big);
+                        box-shadow: none;
+                    }
+
+                    >button[type="submit"][class*="colorRed"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+                }
+
+                div[class*="footer-"] {
+                    box-shadow: none;
+                    border-top: 1px solid var(--dnome-border);
+                    border-bottom-left-radius: var(--dnome-border-big);
+                    border-bottom-right-radius: var(--dnome-border-big);
+
+                    >div[class*="footer-"] {
+                        border: none;
+                    }
+
+
+                    >button[type="submit"] {
+                        border-radius: var(--dnome-border-small);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+
+                    >button[type="button"][class*="secondaryButton-"] {
+                        border-radius: var(--dnome-border-small);
+                        background-color: transparent;
+
+                        &:hover {
+                            background-color: var(--dnome-list-item-hover) !important;
+                        }
+                    }
+                }
+            }
+
+            >div[class*="modal-"],
+            >div[class*="popout-"] {
+                border-radius: var(--dnome-border-big);
+            }
+
+            >div[class*="popout-"] {
+                background-color: var(--dnome-base);
+
+                div[class*="searchBarComponent-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-small);
+
+                    a[class*="anchor"] {
+                        background-color: var(--dnome-base);
+                        border-radius: 4px;
+                    }
+                }
+
+                >div[class*="footerSeparator-"] {
+                    display: none;
+                }
+
+                >div[class*="footer-"] {
+                    border-top: 1px solid var(--dnome-border);
+                    border-radius: var(--dnome-border-big);
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+
+                    >button {
+                        border-radius: var(--dnome-border-medium);
+
+                        &:hover {
+                            background-color: var(--dnome-accent-lighter) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div[role="dialog"]>div[class*="root-"] {
+    background-color: var(--background-primary);
+
+    >form>div[class*="footer"] {
+        background-color: var(--background-tertiary);
+    }
+
+    >div[class*="footer"] {
+        background-color: var(--background-tertiary);
+    }
+
+    >div[class*="content"]>div[class*="message"] {
+        background-color: var(--background-primary);
+    }
+}
+
+div[class*="modal"][class*="small"] {
+    background-color: var(--dnome-base);
+
+    >div[class*="footer"] {
+        background-color: var(--dnome-base);
+    }
+}

@@ -1,5 +1,8 @@
+// The recent DMs sidebar in the Friends page.
 div[class*="sidebar-"] {
     >nav[class*="privateChannels-"] {
+
+        // The search bar / button at the top.
         >div[class*="searchBar-"] {
             box-shadow: none;
             border-bottom: 1px solid var(--dnome-border);
@@ -15,6 +18,7 @@ div[class*="sidebar-"] {
             }
         }
 
+        // The user/group dm list.
         >div>ul[role="list"] {
             >li>div[class*="interactive-"] {
                 border-radius: var(--dnome-border-small);

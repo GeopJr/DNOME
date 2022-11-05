@@ -1,3 +1,5 @@
+// The guild sidebar (aka the vertical sidebar
+// that has all the servers you are in).
 div[data-list-item-id*="guildsnav___"] {
     background-color: var(--dnome-bg);
 
@@ -5,6 +7,7 @@ div[data-list-item-id*="guildsnav___"] {
         background-color: var(--dnome-list-item-hover);
     }
 
+    // Discord logo button at the top.
     >div[class*="childWrapper-"] {
         background-color: var(--dnome-list-item-hover);
     }
@@ -15,10 +18,15 @@ div[data-list-item-id*="guildsnav___"] {
         }
     }
 
+    // The Discover and Create new server buttons.
     &[class*="circleIconButton"] {
         color: var(--dnome-accent);
+        background-color: var(--dnome-list-item-hover);
 
-        &:hover {
+
+        &:hover,
+        &:active,
+        &[class*="selected-"] {
             color: white;
         }
 
@@ -28,8 +36,16 @@ div[data-list-item-id*="guildsnav___"] {
     }
 }
 
+// Mentions badge
+div[class*="lowerBadge-"] {
+    >div[class*="numberBadge-"] {
+        background-color: var(--dnome-accent) !important;
+    }
+}
+
+// Folders
 div[class*="folder-"][data-list-item-id*="guildsnav___"],
-span[class*="expandedFolderBackground"][data-list-item-id*="guildsnav___"] {
+span[class*="expandedFolderBackground"] {
     background-color: var(--dnome-list-item-hover);
 
     &:hover {

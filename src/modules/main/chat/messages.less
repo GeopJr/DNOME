@@ -1,3 +1,7 @@
+// Messages in the main panel (center).
+// (And probably threads).
+
+// Blocked (or highlighted) messages.
 div[class*="groupStart-"] {
     li[class*="messageListItem-"] {
         >div[class*="message-"] {
@@ -36,6 +40,7 @@ div[class*="groupStart-"] {
     }
 }
 
+// Normal messages.
 li[id*="chat-messages-"][class*="messageListItem-"] {
     >div[class*="message-"] {
         &:hover {
@@ -43,18 +48,22 @@ li[id*="chat-messages-"][class*="messageListItem-"] {
             outline: 1px solid var(--dnome-border);
         }
 
+        // Embeds.
         article[class*="embedWrapper-"] {
             border: 2px solid;
             border-radius: var(--dnome-border-medium);
             background-color: var(--dnome-base);
         }
 
+        // Edit message.
         div[class*="channelTextArea-"] {
             >div[class*="scrollableContainer"] {
                 background-color: var(--dnome-searchbox);
             }
         }
 
+        // Buttons that show up on the right when
+        // you hover over a message.
         >div[class*="buttonContainer-"] {
             >div[class*="buttons-"] {
                 >div[class*="wrapper-"] {

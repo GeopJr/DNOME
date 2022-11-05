@@ -20,9 +20,11 @@ jobs:
       - name: Install Less
         run: npm install -g less
       - name: Install the clean css plugin
-        run: npm install -g less-plugin-clean-css
+        run: npm install -g csso-cli
       - name: Compile Less
-        run: lessc -clean-css ./src/DNOME.less ./dist/DNOME.css
+        run: lessc ./src/DNOME.less ./dist/DNOME.css
+      - name: Optimize CSS
+        run: csso ./dist/DNOME.css -o ./dist/DNOME.css --comments none --stat
       - name: Commit files
         run: |
           git add -f ./dist/DNOME.css

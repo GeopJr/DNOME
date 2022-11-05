@@ -1,0 +1,85 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            >div[class*="page-"] {
+                >div[class*="sidebar-"] {
+                    div[class*="list-"] {
+                        >div[class*="side-"] {
+                            >div[class*="row-"] {
+                                border-radius: var(--dnome-border-small);
+                                height: 41px;
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover);
+                                }
+
+                                &[class*="selected-"] {
+                                    background-color: var(--dnome-list-item-selected);
+
+                                    &:hover {
+                                        background-color: var(--dnome-list-item-hover-selected);
+
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                >div[class*="contentContainer-"] {
+                    >div[class*="container-"] {
+                        >div[class*="headerContainer-"]>div[class*="contentWidth-"] {
+                            >div[class*="header-"] {
+                                >div[class*="searchContainer-"] {
+                                    >div[class*="container-"] {
+                                        border-radius: var(--dnome-border-medium);
+                                        background-color: var(--dnome-searchbox);
+                                    }
+                                }
+                            }
+                        }
+
+                        >div[class*="list-"] {
+                            div[class*="contentWidth-"] {
+                                >div[class*="memberRow-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                }
+                            }
+                        }
+                    }
+
+                    >div>div[class*="contentWidth-"] {
+                        button[type="button"][class*="colorPickerSwatch-"] {
+                            border-radius: var(--dnome-border-small);
+                        }
+
+                        button[type="button"][class*="lookFilled-"] {
+                            background-color: var(--dnome-accent);
+                        }
+
+                        div[class*="previewContainer-"] {
+                            border-radius: var(--dnome-border-medium);
+                            border-color: var(--dnome-border);
+
+                            >div[class*="theme-"] {
+                                >div[class*="messageContainer-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                }
+                            }
+                        }
+
+                        >div[class*="header-"] {
+                            >div[class*="searchContainer-"] {
+                                >div[class*="container-"] {
+                                    border-radius: var(--dnome-border-medium);
+                                    background-color: var(--dnome-searchbox);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

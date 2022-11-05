@@ -1,0 +1,24 @@
+// Modal in Settings > Connection when you
+// click the show more button.
+div[class*="layerContainer-"] {
+    div[class*="connectionsContainer-"] {
+
+        >div[class*="wrapper-"],
+        >div[class*="accountAddWrapper-"] {
+
+            >button[class*="inner-"],
+            >button[class*="accountAddInner-"] {
+                background-color: transparent;
+                border-radius: var(--dnome-border-small);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                &:active {
+                    background-color: var(--dnome-list-item-selected);
+                }
+            }
+        }
+    }
+}

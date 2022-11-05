@@ -1,0 +1,70 @@
+// Context menus (right-click).
+div[class*="layerContainer-"] {
+    div[class*="menu-"][role="menu"] {
+        >div[class*="scroller-"] {
+            >div[class*="wrapper-"][role="group"] {
+                >div[id*="message-quickreact-"][role="menuitem"] {
+                    >div[class*="button"] {
+                        background-color: transparent;
+
+                        &:hover {
+                            background-color: var(--dnome-popup-hover);
+                        }
+
+                        &:active {
+                            background-color: var(--dnome-popup-selected);
+                        }
+                    }
+                }
+            }
+
+            >div[role="group"]:not([class*="wrapper-"]) {
+
+                >div[class*="item-"],
+                >div>div[class*="item-"] {
+
+                    // Invite button
+                    &[class*="colorBrand-"]:not([id="guild-header-popout-invite-people"]) {
+                        color: var(--interactive-normal);
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+
+                    &:not([id*="account-divider-"]) {
+                        height: 41px;
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+
+                div[class*="submenuPaddingContainer-"] {
+                    >div[class*="submenu-"] {
+                        border-radius: var(--dnome-border-big);
+
+                        >div>div[class*="item-"] {
+                            height: 41px;
+                            border-radius: var(--dnome-border-medium);
+                        }
+                    }
+                }
+            }
+
+            >div[class*="separator-"][role="separator"] {
+                display: none;
+            }
+        }
+    }
+
+    div[class*="labelContainer-"][class*="item-"] {
+        border-radius: var(--dnome-border-medium);
+
+        &[role="menuitem"] {
+            min-height: 41px;
+        }
+
+        &[class*="focused-"] {
+            background-color: var(--dnome-popup-hover);
+        }
+    }
+}

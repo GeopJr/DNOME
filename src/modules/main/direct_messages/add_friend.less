@@ -1,0 +1,20 @@
+// The page you get by clicking the add friend button.
+main[class*="container-"] {
+    div[class*="tabBody-"] {
+        >div[class*="peopleColumn-"] {
+            div[class*="addFriendInputWrapper-"] {
+                background-color: var(--dnome-searchbox);
+                border-radius: var(--dnome-border-medium);
+                border: none;
+
+                >button[type="submit"] {
+                    border-radius: var(--dnome-border-medium);
+
+                    &:hover {
+                        background-color: var(--dnome-accent-lighter);
+                    }
+                }
+            }
+        }
+    }
+}

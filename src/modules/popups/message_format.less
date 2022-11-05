@@ -1,0 +1,40 @@
+// Tooltip that shows up when
+// you hightlight a region of
+// the text you are typing in
+// the message bar.
+// Bold, italic, underline etc.
+div[class*="layerContainer-"] {
+    >div[class*="toolbar-"][id="slate-toolbar"] {
+        background-color: var(--background-floating);
+        border-radius: var(--dnome-border-medium);
+
+        >button {
+            &:first-of-type {
+                border-top-left-radius: var(--dnome-border-medium) !important;
+                border-bottom-left-radius: var(--dnome-border-medium) !important;
+            }
+
+            &:last-of-type {
+                border-top-right-radius: var(--dnome-border-medium) !important;
+                border-bottom-right-radius: var(--dnome-border-medium) !important;
+            }
+
+            &:hover {
+                background-color: var(--dnome-popup-hover);
+            }
+
+            &:active,
+            &[class*="active-"]:not([class*="inactive-"]) {
+                background-color: var(--dnome-popup-selected);
+            }
+        }
+
+        >div[class*="divider-"] {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}

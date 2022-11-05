@@ -1,0 +1,45 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            div[class*="profileCustomizationSection-"] {
+
+                * {
+                    border-bottom: none;
+                }
+
+                input[class*="inputDefault-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                div[class*="colorSwatch-"],
+                div[class*="customSwatch-"] {
+                    border-radius: var(--dnome-border-medium);
+                }
+
+                div[class*="bioTextArea-"] {
+                    background-color: var(--dnome-searchbox);
+                    border-radius: var(--dnome-border-medium);
+                }
+            }
+
+            div[class*="tabBar-"] {
+                border-color: var(--dnome-border);
+            }
+
+            div[class*="userPopoutOuter-"] {
+                border-radius: var(--dnome-border-big);
+
+                >div[class*="userPopoutInner-"] {
+                    button[class*="button"] {
+                        background-color: var(--dnome-popup-hover);
+
+                        &:hover {
+                            background-color: var(--dnome-popup-selected) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

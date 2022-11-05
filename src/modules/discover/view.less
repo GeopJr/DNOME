@@ -1,0 +1,62 @@
+// The discover page content
+div[class*="pageWrapper-"] {
+    background-color: var(--dnome-bg) !important;
+
+    div[class*="viewWrapper-"] {
+
+        // The header image.
+        >div[class*="searchHeader-"],
+        >div[class*="headerContainer-"] {
+            >img[class*="headerImage-"] {
+                border-radius: var(--dnome-border-big);
+            }
+        }
+
+        // The header search bar.
+        >div[class*="searchHeader-"] {
+            >div[class*="headerContentWrapper-"] {
+                >div[class*="headerContent-"] {
+                    >div[class*="container-"] {
+                        >div[class*="search-"] {
+                            >div[class*="searchBox-"] {
+                                background-color: var(--dnome-searchbox);
+                                border-radius: var(--dnome-border-medium);
+
+                                >div>input[class*="inputDefault-"] {
+                                    color: white;
+                                }
+
+                                >div>[class*="clearIcon-"],
+                                >svg[class*="searchIcon-"] {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // The guild cards below the header.
+        >div>section[class*="guildListSection-"] {
+            >div[class*="guildList-"] {
+                >div[class*="loaded-"] {
+                    >div[class*="card-"] {
+                        border-radius: var(--dnome-border-big);
+                        background-color: var(--dnome-list-item-hover);
+
+                        >div[class*="cardHeader-"] {
+                            >div[class*="actionButtons-"] {
+                                >div[class*="actionButtonsContainer-"] {
+                                    >div[class*="wrapper-"] {
+                                        border: 1px solid var(--dnome-border);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

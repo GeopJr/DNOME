@@ -1,0 +1,50 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            div[class*="paymentHistory-"] {
+
+                div[class*="paymentPane-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="paymentRow-"] {
+                        border-bottom-color: var(--dnome-border);
+                        background-color: var(--dnome-base);
+                    }
+
+                    div[class*="expandedInfo-"] {
+                        background-color: var(--dnome-list-item-hover);
+                        border-color: var(--dnome-base);
+                    }
+
+                    >div[class*="paginator-"] {
+                        background-color: var(--dnome-base);
+
+                        >div[class*="bottomDivider-"] {
+                            border-color: var(--dnome-border);
+
+                            >div[class*="payment-"] {
+                                border-color: var(--dnome-border);
+                                background-color: var(--dnome-base);
+
+                            }
+                        }
+                    }
+                }
+
+                div[class*="pageActions-"] {
+
+                    // without dash
+                    >div[class*="page"] {
+                        border-color: var(--dnome-border);
+                    }
+                }
+            }
+
+            div[class*="codeRedemptionRedirect-"] {
+                background-color: var(--dnome-base);
+                border: none;
+                border-radius: var(--dnome-border-big);
+            }
+        }
+    }
+}

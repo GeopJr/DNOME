@@ -1,0 +1,49 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        >div[class*="customColumn-"] {
+            >div[class*="customContainer-"] {
+                >div[class*="customScroller-"] {
+                    >div[class*="content-"] {
+                        >div[role="list"] {
+                            >div[class*="auditLog-"] {
+                                border: none;
+
+                                >div[class*="divider"] {
+                                    display: none;
+                                }
+
+                                // no dash
+                                >div[class*="header"] {
+                                    background-color: transparent;
+                                    border-top-left-radius: var(--dnome-border-medium);
+                                    border-top-right-radius: var(--dnome-border-medium);
+                                    border-bottom-left-radius: var(--dnome-border-medium);
+                                    border-bottom-right-radius: var(--dnome-border-medium);
+
+                                    &:hover {
+                                        background-color: var(--dnome-list-item-hover);
+                                    }
+
+                                    &[aria-expanded="true"] {
+                                        background-color: var(--dnome-list-item-selected);
+                                        border-top-left-radius: var(--dnome-border-medium);
+                                        border-top-right-radius: var(--dnome-border-medium);
+                                        border-bottom-left-radius: 0px;
+                                        border-bottom-right-radius: 0px;
+                                    }
+                                }
+
+                                >div[class*="changeDetails-"] {
+                                    background-color: var(--dnome-list-item-selected);
+                                    border-bottom-left-radius: var(--dnome-border-medium);
+                                    border-bottom-right-radius: var(--dnome-border-medium);
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

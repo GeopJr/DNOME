@@ -1,12 +1,10 @@
 @base: #242424;
 @text_color: #ffffff;
-@bg: #1E1E1E; //darken(desaturate(#242424, 100%), 4%);
+@bg: #1E1E1E;
 @fg: #eeeeec;
 
 @accent: #3584e4;
 @border: #454545;
-@link_color: lighten(@accent, 20%);
-@dark_fill: @base;
 
 @scroll_bg: mix(@base, @bg, 50%);
 @scrollbar_slider_color: mix(@fg, @bg, 60%);
@@ -15,7 +13,6 @@
 
 @sidebar: @base;
 
-@darker_base: darken(@base, 5%);
 @darker_accent: darken(@accent, 10%);
 
 .theme-dark {
@@ -24,17 +21,17 @@
   --background-primary: @bg;
   --background-secondary: @base;
   --background-secondary-alt: @sidebar;
-  --background-tertiary: @dark_fill;
+  --background-tertiary: @base;
   --background-accent: @accent;
   --background-floating: #383838;
   --background-mobile-primary: @bg;
   --background-mobile-secondary: @base;
   --background-modifier-selected: @bg;
-  --background-modifier-accent: @dark_fill;
+  --background-modifier-accent: @base;
   --background-modifier-hover: #333333;
   --background-mentioned: fade(@warning, 5%);
   --background-mentioned-hover: fade(@warning, 8%);
-  --background-message-hover: fade(@dark_fill, 30%);
+  --background-message-hover: fade(@base, 30%);
   --background-help-warning: fade(@warning, 10%);
   --background-help-info: fade(@accent, 10%);
   --scrollbar-thin-thumb: @scrollbar_slider_color;
@@ -46,7 +43,7 @@
   --channeltextarea-background: @base;
   --logo-primary: @accent;
   --focus-primary: @accent;
-  --activity-card-background: @dark_fill;
+  --activity-card-background: @base;
   --textbox-markdown-syntax: @accent;
   --radio-group-dot-foreground: @accent;
   --search-popout-option-fade: #00000000;
@@ -66,19 +63,10 @@
   --dnome-bg: @bg;
   --dnome-sidebar: @sidebar;
   --dnome-border: @border;
-  --dnome-dark-fill: @dark_fill;
   --dnome-scroll-bg: @scroll_bg;
-  --dnome-fg: @fg;
-  --dnome-scrollbar-slider-color: @scrollbar_slider_color;
   --dnome-accent: @accent;
   --dnome-accent-lighter: lighten(@accent, 10%);
-  ;
-  --dnome-link-color: @link_color;
-  --dnome-text-color: @text_color;
-  --dnome-warning: @warning;
-  --dnome-darker-base: @darker_base;
   --dnome-darker-accent: @darker_accent;
-  --dnome-faded-accent: fade(@accent, 40%);
   --dnome-error: @error;
   --dnome-error-soft: rgba(204, 0, 0, 0.2);
   --dnome-list-item-hover: #333333;

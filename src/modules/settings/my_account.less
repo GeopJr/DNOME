@@ -1,0 +1,43 @@
+div[class*="standardSidebarView-"] {
+    div[class*="contentRegion-"] {
+        div[class*="contentColumn-"] {
+            >div>div>div[class*="children-"] {
+                >div[class*="accountProfileCard-"] {
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="userInfo-"] {
+                        button {
+                            border-radius: var(--dnome-border-small);
+
+                            &:hover {
+                                background-color: var(--dnome-accent-lighter) !important;
+                            }
+                        }
+                    }
+
+                    >div[class*="background-"] {
+                        >div[class*="fieldList-"] {
+                            background-color: var(--dnome-list-item-hover);
+
+                            button[class*="fieldButton-"] {
+                                border-radius: var(--dnome-border-small);
+
+                                background-color: transparent;
+
+                                &:hover {
+                                    background-color: var(--dnome-popup-hover);
+                                }
+
+                                &:active {
+                                    background-color: var(--dnome-popup-selected);
+                                }
+                            }
+                        }
+
+                        background-color: var(--dnome-list-item-hover);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,29 @@
-@import "modules/DNOME-dark.less"; // Dark color variables
-@import "modules/DNOME-light.less"; // Light color variables
-@import "modules/DNOME-base.less"; // Base items like text fields and backgrounds
-@import "modules/DNOME-components.less"; // Components like user popups and dialogs
-@import "modules/DNOME-extra.less"; // Mentions, buttons, radio etc
-@import "modules/DNOME-nitro.less"; // Remove nitro related dark patterns
-@import "modules/DNOME-libadwaita.less"; // Libadwaita
+// DNOME version (can be seen in Discord settings).
+@version: "3.0.0-dev";
 
+// The way Discord loads channels in the sidebar
+// depends on the channel tab height, making it
+// constantly change its size on guilds with
+// many channels. Turn this to true if you are
+// experiencing it.
+@fix_scrollbar_bug: false;
+
+// Whether to disable the fancy attribution
+// in settings. It will instead add a DNOME
+// version entry above the others matching
+// their style.
+// If you are distributing DNOME with it
+// disabled, consider:
+// https://geopjr.dev/donate
+@attribution: true;
+
+// The CSS variables for light and dark mode.
+@import "modules/variables/index.less";
+
+// Removes dark marketing patterns on Discord.
+// e.g. Buttons having a shine animation or
+// a gift button in the message bar.
+@import "modules/nitro.less";
+
+// Entrypoint
 @import "modules/index.less";
-

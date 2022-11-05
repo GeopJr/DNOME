@@ -1,0 +1,35 @@
+div[class*="standardSidebarView-"] {
+    div[class*="emojiSettings-"] {
+        >div {
+            div[class*="emojiRow-"] {
+                box-shadow: none;
+                border-radius: var(--dnome-border-medium);
+                padding-left: 20px;
+                margin-left: -20px;
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover);
+                }
+
+                div[class*="inputWrapper-"] {
+                    >input[class*="emojiInput-"] {
+                        background-color: var(--dnome-searchbox);
+                        border-radius: var(--dnome-border-medium);
+                    }
+                }
+
+
+                div[class*="emojiRemove-"] {
+                    right: -15px;
+                    background-color: var(--dnome-base);
+                    box-shadow: none;
+                    border: 1px solid var(--dnome-border);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,15 @@
+& when (@attribution) {
+    @import "attribution.less";
+}
+
+& when (not (@attribution)) {
+    @import "just_version.less";
+}
+
+@import "discover/index.less";
 @import "main/index.less";
+@import "popups/index.less";
+@import "settings/index.less";
+
+@import "global.less";
+@import "light_theme_overrides.less";

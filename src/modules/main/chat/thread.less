@@ -1,0 +1,65 @@
+// Threads in chat.
+// Both creating and opening one.
+div[class*="resizeHandle-"] {
+    background-color: var(--dnome-border);
+    // A bit thick but 1px is difficult to
+    // grab.
+    width: 3px;
+}
+
+// Remove their radius at the top.
+div[class*="chat-"][class*="threadSidebarOpen-"] {
+    border-radius: 0px;
+}
+
+// It's a bit difficult to differentiate between a
+// thread container and the main one.
+// So this selector checks if the container
+// is next to a resize handle.
+div[class*="resizeHandle-"]+div[class*="container-"] {
+    // This line imports message_bar inline,
+    // not needed right now but you never know if
+    // Discord decides to change the message class
+    // names in thread.
+    // @import (less) "message_bar.less";
+    border-radius: 0px;
+
+    >section>section[class*="container-"][class*="themed-"] {
+        background-color: var(--dnome-base);
+    }
+
+    div[class*="chat-"]:not([class*="threadSidebarOpen-"]) {
+        // The header at the top.
+        &:before {
+            box-shadow: none;
+            border-bottom: 1px solid var(--dnome-border);
+        }
+
+        form {
+            border-top: 1px solid var(--dnome-border);
+            background-color: var(--dnome-base);
+        }
+
+        >div[class*="messagesWrapper-"] {
+            >form[class*="form-"] {
+                >div[class*="scroller-"] {
+                    >div[class*="scrollerInner-"] {
+                        div[class*="formSection-"] {
+                            div[class*="inputWrapper-"] {
+                                >input[class*="inputDefault-"] {
+                                    background-color: var(--dnome-searchbox);
+                                    border-radius: var(--dnome-border-medium);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >div[class*="submitContainer-"] {
+                    background-color: var(--dnome-base);
+                    border-top: 1px solid var(--dnome-border);
+                }
+            }
+        }
+    }
+}

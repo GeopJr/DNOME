@@ -1,0 +1,30 @@
+// The universal search modal that
+// shows up when you click the
+// button/search bar at the top of
+// the sidebar in the Friends page.
+div[class*="layerContainer-"] {
+    >div[class*="layer-"] {
+        >div[class*="focusLock-"] {
+            div[class*="quickswitcher-"] {
+                border-radius: var(--dnome-border-big);
+
+                >input[class*="input-"] {
+                    border-radius: var(--dnome-border-small);
+                    background-color: var(--dnome-searchbox);
+                }
+
+                div[class*="result-"][role="option"] {
+                    border-radius: var(--dnome-border-medium);
+
+                    &:hover {
+                        background-color: var(--dnome-list-item-hover);
+                    }
+
+                    &[aria-selected="true"] {
+                        background-color: var(--dnome-list-item-selected);
+                    }
+                }
+            }
+        }
+    }
+}

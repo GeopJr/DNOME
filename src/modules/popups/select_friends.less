@@ -1,0 +1,27 @@
+// When creating group DMs.
+div[class*="layerContainer-"] {
+    >div[id*="popout_"] {
+        >div[class*="focusLock-"] {
+            >div[class*="popout-"] {
+                div[role="listbox"] {
+                    background-color: var(--dnome-base);
+                    border-radius: var(--dnome-border-big);
+
+                    >div[class*="friendWrapper-"][role="option"] {
+                        >div[class*="friend-"] {
+                            border-radius: var(--dnome-border-medium);
+
+                            &[class*="friendSelected"] {
+                                background-color: var(--dnome-list-item-selected);
+
+                                &:hover {
+                                    background-color: var(--dnome-list-item-hover-selected);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+div[class*="layerContainer-"] {
+    >div[id*="popout_"] {
+
+        // search header
+        div[class*="queryContainer-"][class*="focused-"] {
+            background-color: transparent;
+            outline: none;
+            border: none;
+
+            border-radius: var(--dnome-border-medium);
+            padding: 10px;
+            margin: 10px;
+            &:hover {
+                background-color: var(--dnome-popup-hover);
+            }
+        }
+
+        div[group="SEARCH_OPTIONS"][class*="option-"],
+        li[class*="option"][role="option"],
+        div[class*="option"][role="option"] {
+            padding-top: 3.7px;
+            padding-bottom: 3.7px;
+            border-radius: var(--dnome-border-small);
+
+            &:hover {
+                background-color: var(--dnome-popup-hover);
+
+                &::after {
+                    background-color: transparent;
+                }
+
+                &::before {
+                    background-color: transparent;
+                }
+            }
+
+            >svg {
+                top: unset;
+            }
+        }
+
+        ul[role="group"] {
+            &[aria-labelledby="SEARCH_OPTIONS-header"] {
+                &::before {
+                    border-top: none;
+                }
+            }
+
+            &[aria-labelledby="HISTORY-header"] {
+                &::before {
+                    border-color: var(--dnome-border);
+                }
+            }
+        }
+    }
+}
