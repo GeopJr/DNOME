@@ -19,7 +19,7 @@ jobs:
           node-version: '18.x'
       - name: Install Less
         run: npm install -g less
-      - name: Install the clean css plugin
+      - name: Install the csso
         run: npm install -g csso-cli
       - name: Compile Less
         run: lessc ./src/DNOME.less ./dist/DNOME.css

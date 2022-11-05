@@ -68,8 +68,8 @@ CSS preprocessors help with that through nested CSS making maintaining your them
 
 ```less
 div[class*="base-"] {
-    div[class*="content-"] {
-        div[class*="sidebar-"] {
+    > div[class*="content-"] {
+        > div[class*="sidebar-"] {
             color: red;
         }
     }

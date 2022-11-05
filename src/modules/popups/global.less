@@ -118,7 +118,7 @@ div[class*="layerContainer-"] {
 
     >div {
         >div[class*="focusLock-"] {
-            >div[class*="root-"] {
+            >div[class*="root-"]:not([class*="carouselModal-"]) {
                 background-color: var(--dnome-base);
                 border-radius: var(--dnome-border-big);
 
@@ -278,7 +278,7 @@ div[class*="layerContainer-"] {
     }
 }
 
-div[role="dialog"]>div[class*="root-"] {
+div[role="dialog"]>div[class*="root-"]:not([class*="carouselModal-"]) {
     background-color: var(--background-primary);
 
     >form>div[class*="footer"] {
