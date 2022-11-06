@@ -100,6 +100,11 @@ div[class*="layerContainer-"] {
                             div[class*="labelContainer-"],
                             div[class*="item-"]:not([class*="labelContainer-"]) {
                                 border-radius: var(--dnome-border-small);
+                                display: flex;
+
+                                >div[class*="statusItem-"] {
+                                    align-self: center;
+                                }
 
                                 &:hover,
                                 &[class*="focused-"] {
