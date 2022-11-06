@@ -13,8 +13,8 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
       - name: Install Less
@@ -37,7 +37,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -am "chore: compile latest changes"
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@552c074ed701137ebd2bf098e70c394ca293e87f
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
