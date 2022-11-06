@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="branding" width="128" src="https://i.imgur.com/jE8QoK2.png">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128"><defs><linearGradient id="a" x1="0" x2="0" y1="0" y2="256" gradientTransform="scale(.5)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1c71d8"/><stop offset="100%" stop-color="#2ec27e"/></linearGradient><filter id="c" width="1" height="1" x="0" y="0"><feColorMatrix in="SourceGraphic" values="0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0"/></filter><svg id="b" width="16" height="16" viewBox="0 0 16 16"><path fill="#222" d="M13.5 1.99a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5H7.12l-3.12 3v-3H2.5c-1.5 0-2.5-1.31-2.5-2.5v-6a2.5 2.5 0 0 1 2.5-2.5zm0 0"/></svg></defs><rect width="128" height="128" fill="url(#a)" ry="64"/><use xlink:href="#b" filter="url(#c)" transform="matrix(4 0 0 4 32 32)"/></svg>
 </p>
 <h1 align="center">DNOME</h1>
 <h4 align="center">Adwaita-inspired Discord Theme</h4>
@@ -13,7 +13,7 @@
 
 ## Info
 
-This is a Discord theme inspired by GNOME's default theme, Adwaita, in an attempt to make Discord look like it's part of the OS.
+This is a Discord theme inspired by GNOME's default theme, Adwaita, in an attempt to make Discord look like it's part of the environment.
 
 The theme is written in Less and supports both light and dark mode. There's a few config options in [./src/DNOME.less](./src/DNOME.less). If you are looking to recolor it, you can do so by modifying the Less/CSS variables found in [./src/modules/variables/](./src/modules/variables/).
 
@@ -23,14 +23,31 @@ The theme might be missing styles on elements that I don't have access to (Nitro
 
 ## Screenshots
 
-<p align="center">
-    <img alt="screenshot of main text area" width="768" src="https://i.imgur.com/8RDVBpS.png"><br />
-    <img alt="screenshot of profile modal" width="768" src="https://i.imgur.com/HR6B8uZ.png"><br />
-    <img alt="screenshot of guild explorer" width="768" src="https://i.imgur.com/ymGaAz2.png"><br />
-    <img alt="screenshot of playing profile modal" width="768" src="https://i.imgur.com/TVLrSo9.png"><br />
-    <img alt="screenshot of settings" width="768" src="https://i.imgur.com/t87AJuc.png"><br />
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/vQ2ecGv.png">
-</p>
+> Note: might be outdated or not match the current version of Discord.
+
+<details>
+  <summary>Show All</summary>
+  
+  <p align="center">
+    <img alt="screenshot of main text area" width="768" src="https://i.imgur.com/rminT0B.png"><br />
+    <img alt="screenshot of profile modal" width="768" src="https://i.imgur.com/GQMxEnv.png"><br />
+    <img alt="screenshot of guild explorer" width="768" src="https://i.imgur.com/XYySTGK.png"><br />
+    <img alt="screenshot of playing profile modal" width="768" src="https://i.imgur.com/W5nZNig.png"><br />
+    <img alt="screenshot of settings" width="768" src="https://i.imgur.com/v3ECLGN.png"><br />
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/NAPbclF.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/fiMljXZ.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/sLrsV2v.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/eP0RPXf.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/AkMm7wl.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/11rk1c7.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/KOGRtVr.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/CAz4DJH.png">
+    <img alt="screenshot of message" width="256" src="https://i.imgur.com/ggJoB4n.png">
+  </p>
+
+  > Note: these are just some of the compoenents - not everything.
+
+</details>
 
 #
 
@@ -40,8 +57,8 @@ You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [Beauitful
 
 There are 3 options for obtaining the theme:
 
-1. [DNOME-latest.css](https://github.com/GeopJr/DNOME/blob/dev/DNOME-latest.css), which imports the latest compiled version.
-2. [dist/DNOME.css](https://github.com/GeopJr/DNOME/blob/dev/dist/DNOME.css), which is the latest compiled version.
+1. [DNOME-latest.css](./DNOME-latest.css), which imports the latest compiled version.
+2. [dist/DNOME.css](./dist/DNOME.css), which is the latest compiled version.
 3. [Compile it yourself](#Compiling).
 
 > Some client mods require certain changes. The theme is in its simpliest form.
@@ -54,7 +71,7 @@ There are 3 options for obtaining the theme:
 
 BetterDiscord requires a non-CSS META tag and a specific suffix on the filename. There are 2 options for installing the theme:
 
-1. Download [DNOME.theme.css](https://github.com/GeopJr/DNOME/blob/dev/extra/DNOME.theme.css) and place it in your `themes/` folder.
+1. Download [./DNOME.theme.css](./DNOME.theme.css) and place it in your `themes/` folder.
 2. Copy paste the contents of the desired file in the `Custom CSS` section in settings.
 
 #

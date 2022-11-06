@@ -76,6 +76,8 @@ div[class*="base-"] {
 }
 ```
 
+> Note: Only omit the dash at the end when you are  targetting multiple classes that have the same prefix like: colorDefault-, colorError- => *="color"
+
 ## Inspecting Discord's elements
 
 On the stable client, web tools are not available. To re-enable them, you have to quit Discord, open Discord's `settings.json` (search online for its location on your platform and/or package format) and add `"DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true` to it.
