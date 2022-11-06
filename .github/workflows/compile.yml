@@ -24,7 +24,12 @@ jobs:
       - name: Compile Less
         run: lessc ./src/DNOME.less ./dist/DNOME.css
       - name: Optimize CSS
-        run: csso ./dist/DNOME.css -o ./dist/DNOME.css --comments none --stat
+        run: |
+          csso ./dist/DNOME.css -o ./dist/DNOME.css --comments none --stat
+          
+          # csso downcases some pseudo content
+          # escaped characters
+          sed -i 's/\\a/\\A/g' ./dist/DNOME.css
       - name: Commit files
         run: |
           git add -f ./dist/DNOME.css
