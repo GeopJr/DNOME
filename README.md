@@ -1,5 +1,5 @@
 <p align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128"><defs><linearGradient id="a" x1="0" x2="0" y1="0" y2="256" gradientTransform="scale(.5)" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1c71d8"/><stop offset="100%" stop-color="#2ec27e"/></linearGradient><filter id="c" width="1" height="1" x="0" y="0"><feColorMatrix in="SourceGraphic" values="0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0"/></filter><svg id="b" width="16" height="16" viewBox="0 0 16 16"><path fill="#222" d="M13.5 1.99a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5H7.12l-3.12 3v-3H2.5c-1.5 0-2.5-1.31-2.5-2.5v-6a2.5 2.5 0 0 1 2.5-2.5zm0 0"/></svg></defs><rect width="128" height="128" fill="url(#a)" ry="64"/><use xlink:href="#b" filter="url(#c)" transform="matrix(4 0 0 4 32 32)"/></svg>
+  <img alt="a circle logo with an emblem of a speech bubble and a background of a gradient of blue and green" width="129" src="./logo.svg">
 </p>
 <h1 align="center">DNOME</h1>
 <h4 align="center">Adwaita-inspired Discord Theme</h4>
@@ -29,20 +29,21 @@ The theme might be missing styles on elements that I don't have access to (Nitro
   <summary>Show All</summary>
   
   <p align="center">
-    <img alt="screenshot of main text area" width="768" src="https://i.imgur.com/rminT0B.png"><br />
-    <img alt="screenshot of profile modal" width="768" src="https://i.imgur.com/GQMxEnv.png"><br />
-    <img alt="screenshot of guild explorer" width="768" src="https://i.imgur.com/XYySTGK.png"><br />
-    <img alt="screenshot of playing profile modal" width="768" src="https://i.imgur.com/W5nZNig.png"><br />
-    <img alt="screenshot of settings" width="768" src="https://i.imgur.com/v3ECLGN.png"><br />
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/NAPbclF.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/fiMljXZ.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/sLrsV2v.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/eP0RPXf.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/AkMm7wl.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/11rk1c7.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/KOGRtVr.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/CAz4DJH.png">
-    <img alt="screenshot of message" width="256" src="https://i.imgur.com/ggJoB4n.png">
+    <img alt="screenshot of the friends page" width="768" src="https://i.imgur.com/rminT0B.png"><br />
+    <img alt="screenshot of a text channel with a new messages banner" width="768" src="https://i.imgur.com/GQMxEnv.png"><br />
+    <img alt="screenshot of guild settings, safety setup showing radio buttons" width="768" src="https://i.imgur.com/XYySTGK.png"><br />
+    <img alt="screenshot of a text channel with a thread open" width="768" src="https://i.imgur.com/W5nZNig.png"><br />
+    <img alt="screenshot of the global search or spotlight" width="768" src="https://i.imgur.com/v3ECLGN.png"><br />
+    <img alt="screenshot of inbox popup" width="256" src="https://i.imgur.com/NAPbclF.png">
+    <img alt="screenshot of search popup" width="256" src="https://i.imgur.com/fiMljXZ.png">
+    <img alt="screenshot of context menu on a message" width="256" src="https://i.imgur.com/sLrsV2v.png">
+    <img alt="screenshot of guild settings popup" width="256" src="https://i.imgur.com/eP0RPXf.png">
+    <img alt="screenshot of search results" width="256" src="https://i.imgur.com/AkMm7wl.png">
+    <img alt="screenshot of create a server modal" width="256" src="https://i.imgur.com/11rk1c7.png">
+    <img alt="screenshot of user profile popup" width="256" src="https://i.imgur.com/KOGRtVr.png">
+    <img alt="screenshot of gif picker" width="256" src="https://i.imgur.com/CAz4DJH.png">
+    <img alt="screenshot of inbox unread mentions popup" width="256" src="https://i.imgur.com/ggJoB4n.png">
+    <img alt="screenshot of replying to message bar accessory" width="256" src="https://i.imgur.com/50jfu08.png">
   </p>
 
   > Note: these are just some of the compoenents - not everything.
