@@ -19,10 +19,14 @@ div[class*="chat-"] {
 
             // Hide text input if chatting is disabled
             &[class*="channelTextAreaDisabled-"] {
+                background-color: var(--dnome-base);
+
                 >div[class*="scrollableContainer"] {
-                    // background-color: var(--dnome-base);
-                    // opacity: 1;
-                    display: none;
+                    // Chat changes position for for
+                    // a second when you send a message
+                    // because Discord sets the bar as
+                    // disabled. Disabled for now.
+                    // display: none;
                 }
             }
 
