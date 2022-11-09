@@ -15,6 +15,59 @@ div[class*="sidebar-"] {
 
     // The channel tabs.
     #channels {
+        & when (not (@fix_scrollbar_bug)) {
+            svg[class*="spine-"] {
+                display: none;
+            }
+
+            svg[class*="spine-"]+ul[role="group"] {
+                >li[role="listitem"][class*="containerDefault-"] {
+                    >div[class*="iconVisibility-"] {
+                        >div[class*="content-"] {
+                            &::before {
+                                content: "";
+                                background-color: var(--channels-default);
+                                height: 60%;
+                                border-top-left-radius: var(--dnome-border-small);
+                                border-bottom-left-radius: var(--dnome-border-small);
+                                width: 2px;
+                                position: absolute;
+                                left: -10px;
+                            }
+                        }
+
+                        &:hover {
+                            >div[class*="content-"] {
+                                background-color: var(--dnome-list-item-hover);
+
+                                &::before {
+                                    content: "";
+                                    background-color: var(--interactive-hover);
+                                }
+                            }
+                        }
+
+                        &[class*="modeSelected-"] {
+                            &:hover {
+                                >div[class*="content-"] {
+                                    background-color: var(--dnome-list-item-hover-selected);
+                                }
+                            }
+
+                            >div[class*="content-"] {
+                                background-color: var(--dnome-list-item-selected);
+
+                                &::before {
+                                    content: "";
+                                    background-color: var(--dnome-accent);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         li[class*="containerDefault-"] {
             &[class*="selected-"] {
                 div[class*="iconVisibility-"]:not([class*="clickable-"]) {
