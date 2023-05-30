@@ -3,7 +3,7 @@ div[class*="standardSidebarView-"] {
         div[class*="contentColumn-"] {
             div[class*="profileCustomizationSection-"] {
 
-                * {
+                *:not([class*="birthdayFeatureBorder-"]) {
                     border-bottom: none;
                 }
 
@@ -31,6 +31,15 @@ div[class*="standardSidebarView-"] {
                 border-radius: var(--dnome-border-big);
 
                 >div[class*="userPopoutInner-"] {
+                    &::before {
+                        border-radius: calc(var(--dnome-border-big) - 4px);
+                    }
+
+                    > svg[class*="bannerSVGWrapper-"] {
+                        border-top-left-radius: calc(var(--dnome-border-big) - 4px);
+                        border-top-right-radius: calc(var(--dnome-border-big) - 4px);
+                    }
+
                     button[class*="button"] {
                         background-color: var(--dnome-popup-hover);
 
