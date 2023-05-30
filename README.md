@@ -83,6 +83,19 @@ BetterDiscord requires a non-CSS META tag and a specific suffix on the filename.
 - `$ lessc ./src/DNOME.less ./dist/DNOME.css`
 - Done
 
+### GTK Themes
+
+You can use colors from your current GTK theme by running:
+
+- `$ ruby grab_theme_colors.rb`
+or
+- `$ make gtk`
+
+and then compiling DNOME again.
+
+> *Warning*
+> Manually set your Discord theme in settings to the one matching your GTK theme (Dark/Light). DNOME doesn't override everything on Discord but rather enhance it.
+
 #
 
 ## Sponsors
