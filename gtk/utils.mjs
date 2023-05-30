@@ -23,9 +23,9 @@ export function generate_less (gtk_less_variables) {
     let res = [
         generate_less_variable("hover_modifier", "tint(@bg, 15%)"),
         generate_less_variable("hover_modifier-light", "shade(@bg-light, 15%)"),
-        generate_less_variable("item_selected_hover", "tint(@bg, 25%)"),
+        generate_less_variable("item_selected_hover", "tint(@bg, 20%)"),
         generate_less_variable("item_selected_hover-light", "shade(@bg-light, 25%)"),
-        generate_less_variable("item_selected", "tint(@bg, 30%)"),
+        generate_less_variable("item_selected", "tint(@bg, 25%)"),
         generate_less_variable("item_selected-light", "shade(@bg-light, 30%)")
     ]
 
