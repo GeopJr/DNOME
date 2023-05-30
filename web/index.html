@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3584e4">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#3584E4">
+  <title>DNOME</title>
+  <meta name="title" content="DNOME">
+  <meta name="description" content="Web compiler for DNOME">
+  <link rel="canonical" href="https://dnome.geopjr.dev/">
+  <meta name="og:title" content="DNOME">
+  <meta name="og:description" content="Web compiler for DNOME">
+  <meta name="og:url" content="https://dnome.geopjr.dev/">
+  <meta name="og:type" content="website">
+  <meta name="og:image:type" content="image/png">
+  <meta name="og:image" content="https://dnome.geopjr.dev/icon.png">
+</head>
+
+<body>
+  <main>
+    <h1>DNOME-Builder</h1>
+    <article>
+      <h2>GTK</h2>
+      <p>You can find your GTK theme under <code>~/.config/gtk-4.0/gtk.css</code>.<br />Leave the entry empty to not use
+        the custom GTK theme feature.</p>
+      <textarea id="gtk" placeholder="@define_color..."></textarea>
+    </article>
+    <article>
+      <h2>Fin</h2>
+      <button id="compile-btn">Compile</button>
+      <p id="progress"></p>
+      <textarea id="result"></textarea>
+    </article>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

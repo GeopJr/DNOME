@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Cantarell";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("node_modules/cantarell/cantarell.woff2") format("woff2");
+}
+
+:root {
+  font-family: "Cantarell", Inter, sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --w-bg: rgb(36, 36, 36);
+  --w-o: 1px rgba(255, 255, 255, 0.07) solid;
+  --b-bg: rgb(53, 132, 228);
+  --b-bg-h: #4990E7;
+  --b-bg-d: #2C5484;
+  --b-fg-d: #77818E;
+  --t-bg: rgba(255, 255, 255, 0.1);
+  --t-o: 2px rgba(120, 174, 237, 0.5) solid;
+  --h-bg: rgb(48, 48, 48);
+}
+
+#result {
+  display: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--w-bg);
+  border-radius: 12px;
+  outline: var(--w-o);
+  outline-offset: -1px;
+  padding-bottom: 1rem;
+}
+
+main>article {
+  padding: 0 1rem;
+}
+
+#compile-btn {
+  border-radius: 9999px;
+  background-color: var(--b-bg);
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 32px;
+  font-size: 14.666666666px;
+  font-weight: 700;
+}
+
+#compile-btn:hover:not(:disabled) {
+  background-color: var(--b-bg-h);
+}
+
+#compile-btn:disabled {
+  background-color: var(--b-bg-d);
+  color: var(--b-fg-d);
+}
+
+textarea {
+  border-radius: 12px;
+  border: none;
+  padding: 10px 9px;
+  background-color: var(--t-bg);
+  height: 128px;
+  width: 256px;
+}
+
+textarea:focus-visible {
+  outline: var(--t-o);
+  outline-offset: -2px;
+}
+
+h1 {
+  font-size: medium;
+  line-height: 1;
+  height: 47px;
+  background-color: var(--h-bg);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+    --w-bg: rgb(250, 250, 250);
+    --b-bg: #3584E4;
+    --b-bg-d: #97BFEF;
+    --b-fg-d: #FDFDFD;
+    --t-bg: rgba(0, 0, 0, 0.08);
+    --t-o: 2px rgba(28, 113, 216, 0.5) solid;
+    --h-bg: rgb(235, 235, 235);
+  }
+}
