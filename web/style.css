@@ -63,6 +63,7 @@ main>article {
 }
 
 #compile-btn {
+  margin-top: 1rem;
   border-radius: 9999px;
   background-color: var(--b-bg);
   color: white;
