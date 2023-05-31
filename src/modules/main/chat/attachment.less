@@ -20,33 +20,10 @@ div[class*="chat-"] {
             background-color: var(--dnome-base);
             border: 2px solid var(--interactive-muted);
         }
-
-        // GIFs.
-        div[class*="imageContent-"] {
-            >div[class*="imageContainer-"] {
-                >div[class*="imageWrapper-"] {
-                    border-radius: var(--dnome-border-medium);
-                    border: 2px solid var(--dnome-accent);
-                }
-            }
-        }
     }
 
     div[class*="messageAttachment-"] {
-        // Images.
-        >div[class*="imageContent-"] {
-            >div[class*="imageContainer-"] {
-                >div[class*="imageWrapper-"] {
-                    border-radius: var(--dnome-border-medium);
-                    border: 2px solid var(--dnome-accent);
-                }
-            }
-        }
-
         >div[class*="embedWrapper-"]:not([class*="imageContent-"]) {
-            border-radius: var(--dnome-border-medium);
-            border: 2px solid var(--dnome-accent);
-
             // Text file.
             >div[class*="textContainer-"] {
                 border-top-left-radius: var(--dnome-border-medium);

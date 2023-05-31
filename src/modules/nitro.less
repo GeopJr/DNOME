@@ -49,6 +49,11 @@ div[class*="premiumFeatureBorder-"] {
 
 // Removes accent color on tab.
 div[class*="premiumTab-"] {
+  > div[class*="premiumLabel-"] {
+    > svg {
+      display: none;
+    }
+  }
   >div[class*="selectedBackground-"] {
     background-color: var(--dnome-list-item-selected);
     border-radius: 6px;
@@ -118,4 +123,29 @@ div[class*="sidebar-"] {
 // shine animation.
 div[class*="shineContainer"] {
   display: none;
+}
+
+:root {
+  --premium-tier-2-pink-for-gradients: inherit;
+  --premium-tier-2-purple-for-gradients: inherit;
+  --premium-tier-2-pink-for-gradients-2: inherit;
+}
+
+[class*="birthdayFeatureBorder-"] {
+  border-color: @accent;
+  background: transparent;
+  [class*="birthdayBackground-"] {
+    background: transparent;
+  }
+}
+
+[class*="limitedTimeBadge-"] {
+  background-color: var(--dnome-popup-hover) !important;
+  background: var(--dnome-popup-hover);
+}
+
+[class*="isBurstReactionPicker-"] {
+  border: none;
+  box-shadow: var(--elevation-high);
+  -webkit-box-shadow: var(--elevation-high) !important;
 }
