@@ -51,6 +51,7 @@ body {
 }
 
 main {
+  box-shadow: 0 0 12px -5px #000;
   background-color: var(--w-bg);
   border-radius: 12px;
   outline: var(--w-o);
