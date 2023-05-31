@@ -4,16 +4,17 @@ on:
   push:
     branches:
       - main
-      - master
-      - dev
+  workflow_dispatch:
 
 jobs:
+  if: "!contains(github.event.head_commit.message, '[skip-ci]')"
+  runs-on: ubuntu-latest
   compile:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: main
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
@@ -30,9 +31,24 @@ jobs:
           # csso downcases some pseudo content
           # escaped characters
           sed -i 's/\\a/\\A/g' ./dist/DNOME.css
+      - uses: actions/upload-artifact@v3
+        with:
+          name: DNOME
+          path: ./dist/DNOME.css
+  push:
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: dist
+      - run: rm -f DNOME.css
+      - uses: actions/download-artifact@v3
+        with:
+          name: DNOME
       - name: Commit files
         run: |
-          git add -f ./dist/DNOME.css
+          mv **/DNOME.css ./DNOME.css
+          git add -f ./DNOME.css
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -am "chore: compile latest changes"
@@ -40,4 +56,4 @@ jobs:
         uses: ad-m/github-push-action@552c074ed701137ebd2bf098e70c394ca293e87f
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: dist
