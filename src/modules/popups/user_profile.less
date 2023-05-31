@@ -81,6 +81,15 @@ div[class*="layerContainer-"] {
                 border-radius: var(--dnome-border-big);
 
                 >div[class*="userPopoutInner-"] {
+                    &::before {
+                        border-radius: calc(var(--dnome-border-big) - 4px);
+                    }
+
+                    > svg[class*="bannerSVGWrapper-"] {
+                        border-top-left-radius: calc(var(--dnome-border-big) - 4px);
+                        border-top-right-radius: calc(var(--dnome-border-big) - 4px);
+                    }
+
                     div[class*="item-"] {
                         border-radius: var(--dnome-border-small);
 
