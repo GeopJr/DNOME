@@ -9,8 +9,6 @@
     <a href="https://github.com/GeopJr/DNOME/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-BSD--2--Clause-000000.svg?style=for-the-badge&labelColor=f8eae3" alt="BSD-2-Clause" /></a>
 </p>
 
-# 
-
 ## Info
 
 This is a Discord theme inspired by GNOME's default theme, Adwaita, in an attempt to make Discord look like it's part of the environment.
@@ -18,8 +16,6 @@ This is a Discord theme inspired by GNOME's default theme, Adwaita, in an attemp
 The theme is written in Less and supports both light and dark mode. There's a few config options in [./src/DNOME.less](./src/DNOME.less). If you are looking to recolor it, you can do so by modifying the Less/CSS variables found in [./src/modules/variables/](./src/modules/variables/).
 
 The theme might be missing styles on elements that I don't have access to (Nitro) or are new (app directory) or changed class names. Please open an issue if you find any.
-
-#
 
 ## Screenshots
 
@@ -50,8 +46,6 @@ The theme might be missing styles on elements that I don't have access to (Nitro
 
 </details>
 
-#
-
 ## Installing
 
 You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [BeauitfulDiscord](https://github.com/leovoel/BeautifulDiscord), [BetterDiscord](https://github.com/rauenzi/BetterDiscordApp), [Powercord](https://powercord.dev/) & any other CSS injector available.
@@ -59,13 +53,13 @@ You can inject it using [Crycord](https://github.com/GeopJr/Crycord), [Beauitful
 There are 3 options for obtaining the theme:
 
 1. [DNOME-latest.css](./DNOME-latest.css), which imports the latest compiled version.
-2. [dist/DNOME.css](./dist/DNOME.css), which is the latest compiled version.
+2. [dist/DNOME.css](https://github.com/GeopJr/DNOME/blob/dist/DNOME.css), which is the latest compiled version.
 3. [Compile it yourself](#Compiling).
 
-> Some client mods require certain changes. The theme is in its simpliest form.
-
+> Some client mods require special metadata. The theme is in its simplest form.
+>
 > However, if you feel something needs extra instructions, open an issue and I'll list it below.
-
+>
 > Keep in mind that many plugins and elements from them might not be styled.
 
 ### For BetterDiscord
@@ -75,28 +69,41 @@ BetterDiscord requires a non-CSS META tag and a specific suffix on the filename.
 1. Download [./DNOME.theme.css](./DNOME.theme.css) and place it in your `themes/` folder.
 2. Copy paste the contents of the desired file in the `Custom CSS` section in settings.
 
-#
-
 ## Compiling
 
+## Web
+
+You can compile DNOME from your browser!
+
+Visit https://dnome.queer.software/ and follow the instructions.
+
+## Manually
+
 - Install [Less](https://lesscss.org/)
-- `$ lessc ./src/DNOME.less ./dist/DNOME.css`
-- Done
+- Run one of the following commands:
+
+```
+$ make less
+or
+$ lessc ./src/DNOME.less ./dist/DNOME.css
+```
+- Done, the theme should be available at `./dist/DNOME.css`
 
 ### GTK Themes
 
 You can use colors from your current GTK theme by running:
 
-- `$ ruby grab_theme_colors.rb`
+```
+$ make gtk
 or
-- `$ make gtk`
+$ node gtk/grab_theme_colors.mjs
+```
 
 and then compiling DNOME again.
 
-> *Warning*
+> **Warning**
 > Manually set your Discord theme in settings to the one matching your GTK theme (Dark/Light). DNOME doesn't override everything on Discord but rather enhance it.
 
-#
 
 ## Sponsors
 
@@ -106,7 +113,6 @@ and then compiling DNOME again.
 
 </div>
 
-#
 
 ## Contributing
 
