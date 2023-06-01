@@ -9,7 +9,7 @@ const DEFINE_REGEX = /@define-color ([a-zA-Z0-9_-]+) (.+);/gim
  * @param {boolean} [same_for_light=false] 
  * @returns {string}
  */
-export function generate_less_variable (name, value, same_for_light = false) {
+export function generate_less_variable(name, value, same_for_light = false) {
     let res = `@${name}: ${value};`
     if (same_for_light) res += `\n@${name}-light: ${value};`
     return res
@@ -19,7 +19,7 @@ export function generate_less_variable (name, value, same_for_light = false) {
  * @param {Object.<string, string>} gtk_less_variables 
  * @returns {string[]}
  */
-export function generate_less (gtk_less_variables) {
+export function generate_less(gtk_less_variables) {
     let res = [
         generate_less_variable("hover_modifier", "tint(@bg, 15%)"),
         generate_less_variable("hover_modifier-light", "shade(@bg-light, 15%)"),
@@ -71,7 +71,7 @@ export function generate_less (gtk_less_variables) {
  * @param {string[]} less_variables 
  * @returns {string}
  */
-export function generate_file_content (gtk_less_variables, less_content) {
+export function generate_file_content(gtk_less_variables, less_content) {
     return `${TEMPLATE_COMMENT}
 
 ${gtk_less_variables.join("\n")}
@@ -81,16 +81,63 @@ ${less_content.join("\n")}
 }
 
 /**
+ * @param {Object.<string, string>} gtk_variables 
+ * @param {string} variable_name 
+ * @param {number} turn 
+ * @returns {string?}
+ */
+function recursive_get_gtk_var_value(gtk_variables, variable_name, turn = 0) {
+    let res = null
+
+    if (turn > 5) return res
+
+    if (variable_name.startsWith("@")) {
+        let new_var_name = `@gtk_${variable_name.substring(1)}`
+        if (new_var_name in gtk_variables) {
+            res = gtk_variables[new_var_name].startsWith("@") ? recursive_get_gtk_var_value(gtk_variables, gtk_variables[new_var_name], turn + 1) : gtk_variables[new_var_name]
+        }
+    }
+
+    return res
+}
+
+/**
+ * @param {Object.<string, string>} gtk_variables
+ * @returns {Object.<string, string>}
+ */
+function clean_gtk_variables(gtk_variables) {
+    let res = {}
+
+    for (const [key, value] of Object.entries(gtk_variables)) {
+        if (!value.startsWith("@")) {
+            res[key] = value
+            continue
+        }
+
+        let new_val = recursive_get_gtk_var_value(gtk_variables, value)
+        if (new_val) res[key] = new_val
+    }
+
+    return res
+}
+
+/**
  * @param {string} gtk_theme
  * @returns {Object.<string, string>}
  */
-export function get_gtk_colors (gtk_theme) {
+export function get_gtk_colors(gtk_theme) {
     let res = {}
 
     for (const value of gtk_theme.matchAll(DEFINE_REGEX)) {
+        let hashtags = value[2].split("(").length
+        let parenthesis = value[2].split("#").length
+        if (parenthesis > 2 || hashtags > 2 || (parenthesis + hashtags > 3)) continue
+
         res[`@gtk_${value[1]}`] = value[2]
     }
-    
+
+    res = clean_gtk_variables(res)
+
     return res
 }
 
@@ -98,6 +145,6 @@ export function get_gtk_colors (gtk_theme) {
  * @param {Object.<string, string>} gtk_variables 
  * @returns {string[]}
  */
-export function gtk_variables_to_less (gtk_variables) {
-    return Object.entries(gtk_variables).map (x => `${x[0]}: ${x[1]};`);
+export function gtk_variables_to_less(gtk_variables) {
+    return Object.entries(gtk_variables).map(x => `${x[0]}: ${x[1]};`)
 }
