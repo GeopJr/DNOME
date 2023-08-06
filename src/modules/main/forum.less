@@ -1,0 +1,64 @@
+// Forums
+div[data-list-id*="forum-channel-list-"][class*="list-"][class*="scrollerBase-"] {
+    div[class*="headerRow-"] {
+        >div[class*="mainCard-"] {
+            border-radius: var(--dnome-border-small);
+            background-color: var(--dnome-searchbox);
+
+            textarea::placeholder {
+                color: var(--text-muted);
+            }
+        }
+    }
+
+    li[class*="card-"] {
+        >div[class*="mainCard-"] {
+            background-color: var(--dnome-base);
+            border-radius: var(--dnome-border-big);
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    }
+
+    div[class*="tagsContainer-"] {
+        div[class*="pill-"], button[class*="sortDropdown-"] {
+            background-color: var(--dnome-base);
+            border-radius: var(--dnome-border-small);
+
+            &:hover {
+                background-color: var(--dnome-list-item-hover);
+            }
+
+            &[class*="selected-"] {
+                border: none;
+                background-color: var(--dnome-list-item-selected);
+
+                &:hover {
+                    background-color: var(--dnome-list-item-hover-selected);
+                }
+            }
+        }
+    }
+}
+
+div[class*="layerContainer-"] {
+    div[class*="tagContainer-"] {
+        >div[class*="pill-"] {
+            border-radius: var(--dnome-border-small);
+
+            &[class*="selected-"] {
+                border: none;
+                background-color: var(--dnome-accent);
+            }
+        }
+    }
+    #sort-and-view {
+        border-radius: var(--dnome-border-big);
+    }
+}
