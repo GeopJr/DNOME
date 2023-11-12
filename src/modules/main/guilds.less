@@ -8,11 +8,11 @@ div[data-list-item-id*="guildsnav___"] {
     }
 
     // Discord logo button at the top.
-    >div[class*="childWrapper-"] {
+    >div[class*="childWrapper_"] {
         background-color: var(--dnome-list-item-hover);
     }
 
-    &[class*="folder-"] {
+    &[class*="folder_"] {
         &:hover {
             background-color: var(--dnome-list-item-selected);
         }
@@ -26,7 +26,7 @@ div[data-list-item-id*="guildsnav___"] {
 
         &:hover,
         &:active,
-        &[class*="selected-"] {
+        &[class*="selected_"] {
             color: white;
         }
 
@@ -37,14 +37,14 @@ div[data-list-item-id*="guildsnav___"] {
 }
 
 // Mentions badge
-div[class*="lowerBadge-"] {
-    >div[class*="numberBadge-"] {
+div[class*="lowerBadge_"] {
+    >div[class*="numberBadge_"] {
         background-color: var(--dnome-accent) !important;
     }
 }
 
 // Folders
-div[class*="folder-"][data-list-item-id*="guildsnav___"],
+div[class*="folder_"][data-list-item-id*="guildsnav___"],
 span[class*="expandedFolderBackground"] {
     background-color: var(--dnome-list-item-hover);
 

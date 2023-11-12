@@ -21,9 +21,9 @@ This makes it a bit harder to select the element you need.
 For example consider the following:
 
 ```html
-<div class="base-2jDfDU">
-    <div class="content-1SgpWY">
-        <div class="sidebar-1tnWFu">
+<div class="base__2jDfDU">
+    <div class="content__1SgpWY">
+        <div class="sidebar_1tnWFu">
         </div>
     </div>
 </div>
@@ -32,7 +32,7 @@ For example consider the following:
 If the class names were static, you could do:
 
 ```css
-.sidebar-1tnWFu {
+.sidebar_1tnWFu {
     color: red;
 }
 ```
@@ -40,7 +40,7 @@ If the class names were static, you could do:
 but since they aren't, you have to use wildcard selectors:
 
 ```css
-div[class*="sidebar-"] {
+div[class*="sidebar_"] {
     color: red;
 }
 ```
@@ -48,18 +48,18 @@ div[class*="sidebar-"] {
 However, there's a problem with that - it's too easy to target element you don't want to:
 
 ```html
-<div class="base-2jDfDU">
-    <div class="content-1SgpWY">
-        <div class="sidebar-1tnWFu"></div>
+<div class="base__2jDfDU">
+    <div class="content__1SgpWY">
+        <div class="sidebar_1tnWFu"></div>
     </div>
-    <div class="sidebar-1jsabYE"></div>
+    <div class="sidebar_1jsabYE"></div>
 </div>
 ```
 
 the previous selector would target both. You need to instead "re-create" the DOM using child combinators:
 
 ```css
-div[class*="base-"] > div[class*="content-"] > div[class*="sidebar-"] {
+div[class*="base_"] > div[class*="content_"] > div[class*="sidebar_"] {
     color: red;
 }
 ```
@@ -67,16 +67,16 @@ div[class*="base-"] > div[class*="content-"] > div[class*="sidebar-"] {
 CSS preprocessors help with that through nested CSS making maintaining your theme slightly easier:
 
 ```less
-div[class*="base-"] {
-    > div[class*="content-"] {
-        > div[class*="sidebar-"] {
+div[class*="base_"] {
+    > div[class*="content_"] {
+        > div[class*="sidebar_"] {
             color: red;
         }
     }
 }
 ```
 
-> Note: Only omit the dash at the end when you are  targetting multiple classes that have the same prefix like: colorDefault-, colorError- => *="color"
+> Note: Only omit the dash at the end when you are targetting multiple classes that have the same prefix like: colorDefault_, colorError_ => \*="color"
 
 ## Inspecting Discord's elements
 
@@ -86,7 +86,7 @@ Next time you open Discord you'll be able to press Ctrl + Shift + I to open web 
 
 To select an element that dissapears when it loses focus you need to use breakpoints.
 
-For example, to select the search bar popup, you need to right click `<div class="layerContainer-2v_Sit">` (near the bottom) (you can see it getting children every time you open the search popup and removing them when it loses focus) and select `Break on > subtree modifications`.
+For example, to select the search bar popup, you need to right click `<div class="layerContainer_d5a653">` (near the bottom) (you can see it getting children every time you open the search popup and removing them when it loses focus) and select `Break on > subtree modifications`.
 
 Now you have to trigger a subtree modification by triggering the popup (click on the search bar). The script will now stop. The popup isn't there yet so you need to skip a tep by clicking the icon next to the play button at the top. It should now show up.
 

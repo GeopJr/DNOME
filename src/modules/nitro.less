@@ -16,15 +16,15 @@ div[aria-controls="GUILD_PREMIUM-tab"] {
     background-color: var(--background-modifier-selected) !important;
   }
 
-  >div>svg[class*="icon-"] {
+  >div>svg[class*="icon_"] {
     display: none !important;
   }
 }
 
 // Removes the gift button
 // from the message bar.
-div[class*="buttons-"] {
-  >button[class*="colorBrand-"]:not([class*="expression-"]) {
+div[class*="buttons_"] {
+  >button[class*="colorBrand_"]:not([class*="expression_"]) {
     display: none;
   }
 }
@@ -33,28 +33,28 @@ div[class*="buttons-"] {
 // used sometimes around nitro
 // buttons and headers.
 svg[class*="sparkleStar"],
-svg[class*="sparkle-"] {
+svg[class*="sparkle_"] {
   display: none;
 }
 
 // Removes purple borders around
 // Nitro features.
-div[class*="premiumFeatureBorder-"] {
+div[class*="premiumFeatureBorder_"] {
   background: transparent;
 
-  >div[class*="background-"] {
+  >div[class*="background_"] {
     background: transparent;
   }
 }
 
 // Removes accent color on tab.
-div[class*="premiumTab-"] {
-  > div[class*="premiumLabel-"] {
+div[class*="premiumTab_"] {
+  > div[class*="premiumLabel_"] {
     > svg {
       display: none;
     }
   }
-  >div[class*="selectedBackground-"] {
+  >div[class*="selectedBackground_"] {
     background-color: var(--dnome-list-item-selected);
     border-radius: 6px;
 
@@ -68,10 +68,10 @@ div[class*="premiumTab-"] {
 // since we remove the special tab colors,
 // the nitro icon is still white.
 html[class*="theme-light"] {
-  div[class*="sidebarRegion-"] {
+  div[class*="sidebarRegion_"] {
     &:not([class*="theme-dark"]) {
-      div[class*="premiumTab-"] {
-        &[class*="selected-"] {
+      div[class*="premiumTab_"] {
+        &[class*="selected_"] {
           color: black;
 
           svg,
@@ -90,13 +90,13 @@ html[class*="theme-light"] {
 
 // Removes the "special invite backgrounds"
 // promo on invite creation popup.
-div[class*="inviteBannerUpsell-"] {
+div[class*="inviteBannerUpsell_"] {
   display: none;
 }
 
 // Removes icon next to tab
 // disabled for now
-// div[class*="serverBoostTabItem-"] {
+// div[class*="serverBoostTabItem_"] {
 //   svg {
 //     display: none;
 //   }
@@ -105,11 +105,11 @@ div[class*="inviteBannerUpsell-"] {
 // Removes the nitro tab below Friends
 // as there's a nitro tab
 // literally everywhere.
-div[class*="sidebar-"] {
-  >nav[class*="privateChannels-"] {
-    >div[class*="scroller-"] {
+div[class*="sidebar_"] {
+  >nav[class*="privateChannels_"] {
+    >div[class*="scroller_"] {
       >ul[role="list"] {
-        >li[class*="channel-"] {
+        >li[class*="channel_"] {
           >div>a[href="/store"] {
             display: none;
           }
@@ -131,25 +131,25 @@ div[class*="shineContainer"] {
   --premium-tier-2-pink-for-gradients-2: inherit;
 }
 
-[class*="birthdayFeatureBorder-"] {
+[class*="birthdayFeatureBorder_"] {
   border-color: @accent;
   background: transparent;
-  [class*="birthdayBackground-"] {
+  [class*="birthdayBackground_"] {
     background: transparent;
   }
 }
 
-[class*="limitedTimeBadge-"] {
+[class*="limitedTimeBadge_"] {
   background-color: var(--dnome-popup-hover) !important;
   background: var(--dnome-popup-hover);
 }
 
-[class*="isBurstReactionPicker-"] {
+[class*="isBurstReactionPicker_"] {
   border: none;
   box-shadow: var(--elevation-high);
   -webkit-box-shadow: var(--elevation-high) !important;
 }
 
-[class*="burstGlow-"] {
+[class*="burstGlow_"] {
   display: none;
 }

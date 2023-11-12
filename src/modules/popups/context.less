@@ -1,9 +1,9 @@
 // Context menus (right-click).
-div[class*="layerContainer-"] {
-    div[class*="menu-"][role="menu"] {
-        >div[class*="scroller-"] {
-            >div[class*="wrapper-"][role="group"] {
-                >div[id*="message-quickreact-"][role="menuitem"] {
+div[class*="layerContainer_"] {
+    div[class*="menu_"][role="menu"] {
+        >div[class*="scroller_"] {
+            >div[class*="wrapper_"][role="group"] {
+                >div[id*="message-quickreact_"][role="menuitem"] {
                     >div[class*="button"] {
                         background-color: transparent;
 
@@ -18,13 +18,13 @@ div[class*="layerContainer-"] {
                 }
             }
 
-            >div[role="group"]:not([class*="wrapper-"]) {
+            >div[role="group"]:not([class*="wrapper_"]) {
 
-                >div[class*="item-"],
-                >div>div[class*="item-"] {
+                >div[class*="item_"],
+                >div>div[class*="item_"] {
 
                     // Invite button
-                    &[class*="colorBrand-"]:not([id="guild-header-popout-invite-people"]) {
+                    &[class*="colorBrand_"]:not([id="guild-header-popout-invite-people"]) {
                         color: var(--interactive-normal);
 
                         &:hover {
@@ -32,17 +32,17 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    &:not([id*="account-divider-"]) {
+                    &:not([id*="account-divider_"]) {
                         height: 41px;
                         border-radius: var(--dnome-border-medium);
                     }
                 }
 
-                div[class*="submenuPaddingContainer-"] {
-                    >div[class*="submenu-"] {
+                div[class*="submenuPaddingContainer_"] {
+                    >div[class*="submenu_"] {
                         border-radius: var(--dnome-border-big);
 
-                        >div>div[class*="item-"] {
+                        >div>div[class*="item_"] {
                             min-height: 41px;
                             border-radius: var(--dnome-border-medium);
                         }
@@ -50,20 +50,20 @@ div[class*="layerContainer-"] {
                 }
             }
 
-            >div[class*="separator-"][role="separator"] {
+            >div[class*="separator_"][role="separator"] {
                 display: none;
             }
         }
     }
 
-    div[class*="labelContainer-"][class*="item-"] {
+    div[class*="labelContainer_"][class*="item_"] {
         border-radius: var(--dnome-border-medium);
 
         &[role="menuitem"] {
             min-height: 41px;
         }
 
-        &[class*="focused-"] {
+        &[class*="focused_"] {
             background-color: var(--dnome-popup-hover);
         }
     }

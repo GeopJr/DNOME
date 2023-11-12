@@ -21,7 +21,7 @@ div[class*="checkbox"] {
 }
 
 // Tooltips
-div[class*="tooltip-"] {
+div[class*="tooltip_"] {
     border-radius: var(--dnome-border-medium);
 }
 
@@ -31,27 +31,27 @@ div[class*="colorBrand"] {
 }
 
 // All sidebars.
-div[class*="sidebar-"] {
+div[class*="sidebar_"] {
     border-right: 1px solid var(--dnome-border);
     border-left: 1px solid var(--dnome-border);
 }
 
-div[class*="standardSidebarView-"] {
-    div[class*="sidebarRegion-"] {
+div[class*="standardSidebarView_"] {
+    div[class*="sidebarRegion_"] {
         border-right: 1px solid var(--dnome-border);
     }
 
-    div[class*="contentRegion-"] {
-        div[class*="contentColumn-"] {
-            div[class*="section-"] {
-                >div[class*="card-"] {
+    div[class*="contentRegion_"] {
+        div[class*="contentColumn_"] {
+            div[class*="section_"] {
+                >div[class*="card_"] {
                     background-color: var(--dnome-base);
                     border-radius: var(--dnome-border-medium);
                 }
             }
 
-            div[class*="applicationPermissions-"] {
-                >div[class*="card-"] {
+            div[class*="applicationPermissions_"] {
+                >div[class*="card_"] {
                     border-radius: var(--dnome-border-medium);
                     background-color: var(--dnome-base);
 
@@ -64,7 +64,7 @@ div[class*="standardSidebarView-"] {
                         background-color: transparent;
                     }
 
-                    div[class*="entryActions-"] {
+                    div[class*="entryActions_"] {
                         >div[role="radiogroup"] {
                             border-radius: var(--dnome-border-medium);
 
@@ -80,37 +80,37 @@ div[class*="standardSidebarView-"] {
                 }
             }
 
-            div[class*="container-"][class*="warning-"] {
+            div[class*="container_"][class*="warning_"] {
                 border-radius: var(--dnome-border-medium);
             }
 
-            div[class*="inputWrapper-"] {
-                >input[class*="inputDefault-"] {
+            div[class*="inputWrapper_"] {
+                >input[class*="inputDefault_"] {
                     background-color: var(--dnome-searchbox);
                     border-radius: var(--dnome-border-medium);
                 }
 
-                >div[class*="inputMaxLength-"] {
-                    >textarea[class*="inputDefault-"] {
+                >div[class*="inputMaxLength_"] {
+                    >textarea[class*="inputDefault_"] {
                         background-color: var(--dnome-searchbox);
                         border-radius: var(--dnome-border-medium);
                     }
                 }
             }
 
-            div[class*="formNotice-"] {
+            div[class*="formNotice_"] {
                 border-color: var(--dnome-border);
                 border-radius: var(--dnome-border-medium);
             }
 
             div[role="radiogroup"] {
-                >div[class*="item-"] {
-                    >div[class*="radioBar-"] {
+                >div[class*="item_"] {
+                    >div[class*="radioBar_"] {
                         border-radius: var(--dnome-border-medium);
                         border: 1px solid var(--radio-bar-accent-color);
                     }
 
-                    &[class*="itemFilled-"] {
+                    &[class*="itemFilled_"] {
                         background-color: transparent;
                         border-radius: var(--dnome-border-medium);
 
@@ -130,15 +130,15 @@ div[class*="standardSidebarView-"] {
                 }
             }
 
-            div[class*="select-"] {
+            div[class*="select_"] {
                 background-color: var(--dnome-searchbox);
                 border-radius: var(--dnome-border-medium);
             }
 
-            button[class*="button-"][class*="lookFilled-"] {
+            button[class*="button_"][class*="lookFilled_"] {
                 border-radius: var(--dnome-border-small);
 
-                >div[class*="upsellButton-"] {
+                >div[class*="upsellButton_"] {
                     color: white;
                 }
 
@@ -159,16 +159,16 @@ div[class*="standardSidebarView-"] {
                 }
             }
 
-            button[class*="button-"] {
+            button[class*="button_"] {
                 border-radius: var(--dnome-border-small);
 
-                &[class*="lookFilled-"] {
+                &[class*="lookFilled_"] {
                     &:hover {
                         background-color: var(--dnome-accent-lighter) !important;
                     }
                 }
 
-                &[class*="lookOutlined-"][class*="colorRed"] {
+                &[class*="lookOutlined_"][class*="colorRed"] {
                     border-color: var(--dnome-error);
 
                     &:hover {
@@ -198,7 +198,7 @@ div[class*="standardSidebarView-"] {
 }
 
 // Buttons that are outlined instead of filled.
-button[class*="button-"][class*="lookOutlined-"] {
+button[class*="button_"][class*="lookOutlined_"] {
     &:hover {
         background-color: var(--dnome-accent);
 

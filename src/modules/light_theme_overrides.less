@@ -1,9 +1,9 @@
 // Some overrides ONLY for the light theme.
 // (Mostly text color).
 html[class*="theme-light"] {
-    div[class*="defaultKeybindShortcutGroup-"] {
-        >div[class*="keybindShortcut-"] {
-            >span[class*="key-"] {
+    div[class*="defaultKeybindShortcutGroup_"] {
+        >div[class*="keybindShortcut_"] {
+            >span[class*="key_"] {
                 color: black;
 
                 svg,
@@ -16,9 +16,9 @@ html[class*="theme-light"] {
     }
 
 
-    div[class*="submenuPaddingContainer-"] {
-        >div[class*="submenu-"] {
-            *[class*="focused-"] {
+    div[class*="submenuPaddingContainer_"] {
+        >div[class*="submenu_"] {
+            *[class*="focused_"] {
                 color: black;
 
                 svg,
@@ -27,7 +27,7 @@ html[class*="theme-light"] {
                     color: black;
                 }
 
-                div[class*="subtext-"] {
+                div[class*="subtext_"] {
                     color: black;
                 }
             }
@@ -35,28 +35,28 @@ html[class*="theme-light"] {
     }
 
     #channel-context-channel-notifications {
-        div[class*="subtext-"] {
+        div[class*="subtext_"] {
             color: black;
         }
     }
 
-    div[class*="layerContainer-"] {
-        div[class*="labelContainer-"][class*="item-"] {
-            &[class*="focused-"] {
+    div[class*="layerContainer_"] {
+        div[class*="labelContainer_"][class*="item_"] {
+            &[class*="focused_"] {
                 color: black;
             }
         }
 
 
-        div[class*="menu-"][role="menu"] {
-            >div[class*="scroller-"] {
-                >div[role="group"]:not([class*="wrapper-"]) {
+        div[class*="menu_"][role="menu"] {
+            >div[class*="scroller_"] {
+                >div[role="group"]:not([class*="wrapper_"]) {
 
-                    >div[class*="item-"],
-                    >div>div[class*="item-"] {
+                    >div[class*="item_"],
+                    >div>div[class*="item_"] {
 
                         // Invite button
-                        &[class*="colorBrand-"]:not([id="guild-header-popout-invite-people"]) {
+                        &[class*="colorBrand_"]:not([id="guild-header-popout-invite-people"]) {
                             color: var(--interactive-normal);
 
                             &:hover {

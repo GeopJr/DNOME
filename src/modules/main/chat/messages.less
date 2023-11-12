@@ -2,9 +2,9 @@
 // (And probably threads).
 
 // Blocked (or highlighted) messages.
-div[class*="groupStart-"] {
-    li[class*="messageListItem-"] {
-        >div[class*="message-"] {
+div[class*="groupStart_"] {
+    li[class*="messageListItem_"] {
+        >div[class*="message_"] {
             background-color: var(--dnome-error-soft);
 
             &:hover {
@@ -12,21 +12,21 @@ div[class*="groupStart-"] {
                 outline: 1px dashed var(--dnome-error);
             }
 
-            >div[class*="buttonContainer-"] {
-                >div[class*="buttons-"] {
-                    >div[class*="wrapper-"] {
+            >div[class*="buttonContainer_"] {
+                >div[class*="buttons_"] {
+                    >div[class*="wrapper_"] {
                         background-color: var(--dnome-base);
                         border-radius: var(--dnome-border-medium);
                         border: 1px solid var(--dnome-border);
                         box-shadow: none;
 
-                        >div[class*="button-"] {
+                        >div[class*="button_"] {
                             &:hover {
                                 background-color: var(--dnome-list-item-hover);
                             }
                         }
 
-                        >div[class*="button-"][class*="selected-"] {
+                        >div[class*="button_"][class*="selected_"] {
                             background-color: var(--dnome-list-item-selected);
 
                             &:hover {
@@ -41,22 +41,22 @@ div[class*="groupStart-"] {
 }
 
 // Normal messages.
-li[id*="chat-messages-"][class*="messageListItem-"] {
-    >div[class*="message-"] {
+li[id*="chat-messages_"][class*="messageListItem_"] {
+    >div[class*="message_"] {
         &:hover {
             background-color: var(--dnome-base);
             outline: 1px solid var(--dnome-border);
         }
 
         // Embeds.
-        article[class*="embedWrapper-"] {
+        article[class*="embedWrapper_"] {
             border: 2px solid;
             border-radius: var(--dnome-border-medium);
             background-color: var(--dnome-base);
         }
 
         // Edit message.
-        div[class*="channelTextArea-"] {
+        div[class*="channelTextArea_"] {
             >div[class*="scrollableContainer"] {
                 background-color: var(--dnome-searchbox);
             }
@@ -64,21 +64,21 @@ li[id*="chat-messages-"][class*="messageListItem-"] {
 
         // Buttons that show up on the right when
         // you hover over a message.
-        >div[class*="buttonContainer-"] {
-            >div[class*="buttons-"] {
-                >div[class*="wrapper-"] {
+        >div[class*="buttonContainer_"] {
+            >div[class*="buttons_"] {
+                >div[class*="wrapper_"] {
                     background-color: var(--dnome-base);
                     border-radius: var(--dnome-border-medium);
                     border: 1px solid var(--dnome-border);
                     box-shadow: none;
 
-                    >div[class*="button-"] {
+                    >div[class*="button_"] {
                         &:hover {
                             background-color: var(--dnome-list-item-hover);
                         }
                     }
 
-                    >div[class*="button-"][class*="selected-"] {
+                    >div[class*="button_"][class*="selected_"] {
                         background-color: var(--dnome-list-item-selected);
 
                         &:hover {

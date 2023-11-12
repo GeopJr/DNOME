@@ -1,8 +1,8 @@
 // The center part of the Friends page.
-main[class*="container-"] {
+main[class*="container_"] {
 
     // The body aka not the tabs at the top.
-    div[class*="tabBody-"] {
+    div[class*="tabBody_"] {
 
         // Remove box-shadow and instead use
         // border.
@@ -11,17 +11,17 @@ main[class*="container-"] {
             border-bottom: 1px solid var(--dnome-border);
         }
 
-        >div[class*="peopleColumn-"] {
-            >div[class*="searchBar-"] {
+        >div[class*="peopleColumn_"] {
+            >div[class*="searchBar_"] {
                 background-color: var(--dnome-searchbox);
                 border-radius: var(--dnome-border-medium);
                 height: 41px;
                 margin: 16px 20px 8px 30px;
             }
 
-            >div[class*="peopleList-"] {
-                >div[class*="content-"] {
-                    >div[class*="peopleListItem-"] {
+            >div[class*="peopleList_"] {
+                >div[class*="content_"] {
+                    >div[class*="peopleListItem_"] {
                         border-radius: var(--dnome-border-medium);
                         border: none;
 
@@ -32,9 +32,9 @@ main[class*="container-"] {
                         // &:active {
                         //     background-color: var(--dnome-list-item-selected);
                         // }
-                        >div[class*="listItemContents-"] {
-                            >div[class*="actions-"] {
-                                >div[class*="actionButton-"] {
+                        >div[class*="listItemContents_"] {
+                            >div[class*="actions_"] {
+                                >div[class*="actionButton_"] {
                                     background-color: transparent;
 
                                     &:hover {
@@ -43,7 +43,7 @@ main[class*="container-"] {
                                 }
                             }
 
-                            >div[class*="actionButton-"] {
+                            >div[class*="actionButton_"] {
                                 background-color: transparent;
 
                                 &:hover {
@@ -52,7 +52,7 @@ main[class*="container-"] {
                             }
                         }
 
-                        &[class*="active-"] {
+                        &[class*="active_"] {
                             background-color: var(--dnome-list-item-selected);
                         }
                     }
@@ -67,13 +67,13 @@ main[class*="container-"] {
 
         // We need to make the buttons bigger
         // so we make it take the full height.
-        >div[class*="children-"] {
+        >div[class*="children_"] {
             height: 100%;
 
             // However the buttons section will be
             // its 70% (instead of setting each one
             // to the desireable height).
-            >div[class*="tabBar-"][role*="tablist"] {
+            >div[class*="tabBar_"][role*="tablist"] {
                 height: 70%;
 
                 >div[class*="item"] {
@@ -83,7 +83,7 @@ main[class*="container-"] {
                         background-color: var(--dnome-list-item-hover);
                     }
 
-                    &[class*="selected-"] {
+                    &[class*="selected_"] {
                         background-color: var(--dnome-list-item-selected);
 
                         &:hover {
@@ -93,14 +93,14 @@ main[class*="container-"] {
 
                     // The add friend button is accent
                     // colored.
-                    &[class*="addFriend-"] {
+                    &[class*="addFriend_"] {
                         background-color: var(--dnome-accent);
 
                         &:hover {
                             background-color: var(--dnome-accent-lighter);
                         }
 
-                        &[class*="selected-"] {
+                        &[class*="selected_"] {
                             background-color: var(--dnome-list-item-selected);
                             color: unset;
 

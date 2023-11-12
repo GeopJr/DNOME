@@ -3,27 +3,27 @@
 
 // Usually from the members sidebar.
 // Opens on the left side.
-div[class*="animatorLeft-"] {
-    div[class*="userPopoutOuter-"] {
+div[class*="animatorLeft_"] {
+    div[class*="userPopoutOuter_"] {
         border-radius: var(--dnome-border-big);
 
-        >div[class*="userPopoutInner-"] {
-            > svg[class*="bannerSVGWrapper-"] {
+        >div[class*="userPopoutInner_"] {
+            > svg[class*="bannerSVGWrapper_"] {
                 border-top-left-radius: calc(var(--dnome-border-big) - 4px);
                 border-top-right-radius: calc(var(--dnome-border-big) - 4px);
             }
 
-            >div[class*="userPopoutOverlayBackground-"] {
+            >div[class*="userPopoutOverlayBackground_"] {
                 border-radius: var(--dnome-border-big);
 
-                div[class*="roles-"] {
+                div[class*="roles_"] {
 
-                    >div[class*="role-"],
-                    >button[class*="role-"] {
+                    >div[class*="role_"],
+                    >button[class*="role_"] {
                         background-color: transparent;
                         border-radius: var(--dnome-border-medium);
 
-                        &[class*="addButton-"] {
+                        &[class*="addButton_"] {
                             border-radius: 100%;
                         }
 
@@ -42,19 +42,19 @@ div[class*="animatorLeft-"] {
 // side when you click on your own
 // profile at the bottom of the
 // main sidebar.
-div[class*="layerContainer-"] {
-    >div[class*="layer-"] {
-        >div[class*="focusLock-"] {
+div[class*="layerContainer_"] {
+    >div[class*="layer_"] {
+        >div[class*="focusLock_"] {
             >div[class*="root"] {
                 border-radius: var(--dnome-border-big);
 
-                >div[class*="userProfileModalOuter-"] {
+                >div[class*="userProfileModalOuter_"] {
                     border-radius: var(--dnome-border-big);
 
-                    >div[class*="userProfileModalInner-"] {
+                    >div[class*="userProfileModalInner_"] {
                         border-radius: var(--dnome-border-big);
 
-                        div[class*="relationshipButtons-"] {
+                        div[class*="relationshipButtons_"] {
                             >button {
                                 background-color: var(--dnome-accent);
                                 border-radius: var(--dnome-border-medium);
@@ -66,7 +66,7 @@ div[class*="layerContainer-"] {
                             }
                         }
 
-                        >div[class*="userProfileModalOverlayBackground-"] {
+                        >div[class*="userProfileModalOverlayBackground_"] {
                             border-radius: var(--dnome-border-big);
                         }
                     }
@@ -76,24 +76,24 @@ div[class*="layerContainer-"] {
     }
 
     >div[id*="popout_"] {
-        div[class*="accountProfilePopoutWrapper-"] {
-            div[class*="userPopoutOuter-"] {
+        div[class*="accountProfilePopoutWrapper_"] {
+            div[class*="userPopoutOuter_"] {
                 border-radius: var(--dnome-border-big);
 
-                >div[class*="userPopoutInner-"] {
+                >div[class*="userPopoutInner_"] {
                     &::before {
                         border-radius: calc(var(--dnome-border-big) - 4px);
                     }
 
-                    > svg[class*="bannerSVGWrapper-"] {
+                    > svg[class*="bannerSVGWrapper_"] {
                         border-top-left-radius: calc(var(--dnome-border-big) - 4px);
                         border-top-right-radius: calc(var(--dnome-border-big) - 4px);
                     }
 
-                    div[class*="item-"] {
+                    div[class*="item_"] {
                         border-radius: var(--dnome-border-small);
 
-                        &[class*="menuItemFocused-"] {
+                        &[class*="menuItemFocused_"] {
                             background-color: var(--dnome-popup-hover);
                         }
 
@@ -102,26 +102,26 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    div[class*="submenuPaddingContainer-"] {
-                        >div[class*="submenu-"] {
+                    div[class*="submenuPaddingContainer_"] {
+                        >div[class*="submenu_"] {
                             background-color: var(--background-floating);
                             border-radius: var(--dnome-border-big);
 
-                            div[class*="separator-"] {
+                            div[class*="separator_"] {
                                 border-color: var(--dnome-border);
                             }
 
-                            div[class*="labelContainer-"],
-                            div[class*="item-"]:not([class*="labelContainer-"]) {
+                            div[class*="labelContainer_"],
+                            div[class*="item_"]:not([class*="labelContainer_"]) {
                                 border-radius: var(--dnome-border-small);
                                 display: flex;
 
-                                >div[class*="statusItem-"] {
+                                >div[class*="statusItem_"] {
                                     align-self: center;
                                 }
 
                                 &:hover,
-                                &[class*="focused-"] {
+                                &[class*="focused_"] {
                                     background-color: var(--dnome-popup-hover);
                                 }
 

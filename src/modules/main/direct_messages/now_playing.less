@@ -1,11 +1,11 @@
 // The "Active Now" section on the right.
-main[class*="container-"] {
-    div[class*="nowPlayingColumn-"] {
-        >aside>div[class*="scroller-"] {
+main[class*="container_"] {
+    div[class*="nowPlayingColumn_"] {
+        >aside>div[class*="scroller_"] {
             border-left: 1px solid var(--dnome-border);
         }
 
-        div[class*="itemCard-"] {
+        div[class*="itemCard_"] {
             background-color: var(--dnome-base);
             border: none;
             border-radius: var(--dnome-border-medium);
@@ -13,7 +13,7 @@ main[class*="container-"] {
             &:hover {
                 background-color: var(--dnome-list-item-hover) !important;
 
-                >div>div[class*="body-"]>section {
+                >div>div[class*="body_"]>section {
                     background-color: var(--dnome-list-item-hover);
 
                     &:hover {
@@ -26,7 +26,7 @@ main[class*="container-"] {
                 background-color: var(--dnome-list-item-selected);
             }
 
-            >div>div[class*="body-"]>section {
+            >div>div[class*="body_"]>section {
                 background-color: var(--dnome-base);
             }
         }

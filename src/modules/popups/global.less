@@ -1,30 +1,30 @@
 // Styles used by *all* modals or popups.
-div[class*="layerContainer-"] {
+div[class*="layerContainer_"] {
     div[class*="layer"] {
-        div[class*="elevationBorderHigh-"] {
+        div[class*="elevationBorderHigh_"] {
             border-radius: var(--dnome-border-medium);
         }
     }
 
-    >div[class*="layer-"] {
-        >div[class*="wrapper-"] {
-            >div[class*="focusLock-"] {
-                >div[class*="modal-"] {
-                    div[class*="select-"] {
+    >div[class*="layer_"] {
+        >div[class*="wrapper_"] {
+            >div[class*="focusLock_"] {
+                >div[class*="modal_"] {
+                    div[class*="select_"] {
                         background-color: var(--dnome-searchbox);
                         border-radius: var(--dnome-border-medium);
                     }
 
-                    >div[class*="footer-"] {
+                    >div[class*="footer_"] {
                         border-bottom-left-radius: var(--dnome-border-big);
                         border-bottom-right-radius: var(--dnome-border-big);
                     }
 
-                    div[class*="headerContainer-"] {
+                    div[class*="headerContainer_"] {
 
-                        >div[class*="header-"] {
+                        >div[class*="header_"] {
 
-                            >div[class*="searchBar-"] {
+                            >div[class*="searchBar_"] {
                                 background-color: var(--dnome-searchbox);
                                 border-radius: var(--dnome-border-medium);
                             }
@@ -37,18 +37,18 @@ div[class*="layerContainer-"] {
     }
 
     >div[id*="popout_"] {
-        div[class*="upsellButtonsContainer-"] {
+        div[class*="upsellButtonsContainer_"] {
             button[type="button"] {
                 border-radius: var(--dnome-border-small);
             }
         }
 
-        >div[class*="animatorBottom-"] {
-            >div[class*="container-"] {
+        >div[class*="animatorBottom_"] {
+            >div[class*="container_"] {
                 background-color: var(--background-floating);
 
-                div[class*="list-"] {
-                    li[class*="item-"] {
+                div[class*="list_"] {
+                    li[class*="item_"] {
                         border-radius: var(--dnome-border-medium);
 
                         &:hover {
@@ -64,11 +64,11 @@ div[class*="layerContainer-"] {
             }
         }
 
-        >div[role="listbox"][class*="popout-"] {
+        >div[role="listbox"][class*="popout_"] {
             background-color: var(--dnome-base);
             border-radius: var(--dnome-border-big);
 
-            >div[class*="option-"] {
+            >div[class*="option_"] {
                 &:hover {
                     background-color: var(--dnome-list-item-hover);
                 }
@@ -84,8 +84,8 @@ div[class*="layerContainer-"] {
         }
 
         // dropdown
-        >div>div>li[class*="option-"] {
-            &[class*="focused-"] {
+        >div>div>li[class*="option_"] {
+            &[class*="focused_"] {
                 background-color: var(--dnome-list-item-selected);
 
                 &:hover {
@@ -99,12 +99,12 @@ div[class*="layerContainer-"] {
         }
 
         div[role="group"] {
-            >div[class*="item-"]:not([id*="account-divider-"]) {
+            >div[class*="item_"]:not([id*="account-divider_"]) {
                 border-radius: var(--dnome-border-small);
                 height: 41px;
 
                 &:hover,
-                &[class*="focused-"] {
+                &[class*="focused_"] {
                     background-color: var(--dnome-popup-hover);
                 }
 
@@ -117,12 +117,12 @@ div[class*="layerContainer-"] {
     }
 
     >div {
-        >div[class*="focusLock-"] {
-            >div[class*="root-"]:not([class*="carouselModal-"]) {
+        >div[class*="focusLock_"] {
+            >div[class*="root_"]:not([class*="carouselModal_"]) {
                 background-color: var(--dnome-base);
                 border-radius: var(--dnome-border-big);
 
-                div[class*="overviewSidebar-"] {
+                div[class*="overviewSidebar_"] {
                     border-top-left-radius: var(--dnome-border-big);
                     border-bottom-left-radius: var(--dnome-border-big);
                 }
@@ -133,12 +133,12 @@ div[class*="layerContainer-"] {
                 }
 
 
-                input[class*="inputDefault-"] {
+                input[class*="inputDefault_"] {
                     background-color: var(--dnome-searchbox);
                     border-radius: var(--dnome-border-medium);
                 }
 
-                div[class*="footer-"] {
+                div[class*="footer_"] {
                     border-bottom-left-radius: var(--dnome-border-big);
                     border-bottom-right-radius: var(--dnome-border-big);
                 }
@@ -150,13 +150,13 @@ div[class*="layerContainer-"] {
                         display: none;
                     }
 
-                    div[class*="select-"] {
+                    div[class*="select_"] {
                         background-color: var(--dnome-searchbox);
                         border-radius: var(--dnome-border-medium);
                     }
 
                     div[role="radiogroup"] {
-                        >div[class*="item-"] {
+                        >div[class*="item_"] {
                             border-radius: var(--dnome-border-medium);
 
                             &:hover {
@@ -173,7 +173,7 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    div[class*="banReasonOtherClickable-"] {
+                    div[class*="banReasonOtherClickable_"] {
                         border-radius: var(--dnome-border-medium);
 
                         &:hover {
@@ -185,14 +185,14 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    div[class*="inputMaxLength-"] {
-                        >textarea[class*="inputDefault-"] {
+                    div[class*="inputMaxLength_"] {
+                        >textarea[class*="inputDefault_"] {
                             background-color: var(--dnome-searchbox);
                             border-radius: var(--dnome-border-medium);
                         }
                     }
 
-                    >div[class*="message-"] {
+                    >div[class*="message_"] {
                         background-color: var(--dnome-list-item-hover);
                         border-radius: var(--dnome-border-big);
                         box-shadow: none;
@@ -207,13 +207,13 @@ div[class*="layerContainer-"] {
                     }
                 }
 
-                div[class*="footer-"] {
+                div[class*="footer_"] {
                     box-shadow: none;
                     border-top: 1px solid var(--dnome-border);
                     border-bottom-left-radius: var(--dnome-border-big);
                     border-bottom-right-radius: var(--dnome-border-big);
 
-                    >div[class*="footer-"] {
+                    >div[class*="footer_"] {
                         border: none;
                     }
 
@@ -226,7 +226,7 @@ div[class*="layerContainer-"] {
                         }
                     }
 
-                    >button[type="button"][class*="secondaryButton-"] {
+                    >button[type="button"][class*="secondaryButton_"] {
                         border-radius: var(--dnome-border-small);
                         background-color: transparent;
 
@@ -237,15 +237,15 @@ div[class*="layerContainer-"] {
                 }
             }
 
-            >div[class*="modal-"],
-            >div[class*="popout-"] {
+            >div[class*="modal_"],
+            >div[class*="popout_"] {
                 border-radius: var(--dnome-border-big);
             }
 
-            >div[class*="popout-"] {
+            >div[class*="popout_"] {
                 background-color: var(--dnome-base);
 
-                div[class*="searchBarComponent-"] {
+                div[class*="searchBarComponent_"] {
                     background-color: var(--dnome-searchbox);
                     border-radius: var(--dnome-border-small);
 
@@ -255,11 +255,11 @@ div[class*="layerContainer-"] {
                     }
                 }
 
-                >div[class*="footerSeparator-"] {
+                >div[class*="footerSeparator_"] {
                     display: none;
                 }
 
-                >div[class*="footer-"] {
+                >div[class*="footer_"] {
                     border-top: 1px solid var(--dnome-border);
                     border-radius: var(--dnome-border-big);
                     border-top-left-radius: 0;
@@ -278,7 +278,7 @@ div[class*="layerContainer-"] {
     }
 }
 
-div[role="dialog"]>div[class*="root-"]:not([class*="carouselModal-"]) {
+div[role="dialog"]>div[class*="root_"]:not([class*="carouselModal_"]) {
     background-color: var(--background-primary);
 
     >form>div[class*="footer"] {

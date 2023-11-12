@@ -3,8 +3,8 @@
 // the text you are typing in
 // the message bar.
 // Bold, italic, underline etc.
-div[class*="layerContainer-"] {
-    >div[class*="toolbar-"][id="slate-toolbar"] {
+div[class*="layerContainer_"] {
+    >div[class*="toolbar_"][id="slate-toolbar"] {
         background-color: var(--background-floating);
         border-radius: var(--dnome-border-medium);
 
@@ -24,12 +24,12 @@ div[class*="layerContainer-"] {
             }
 
             &:active,
-            &[class*="active-"]:not([class*="inactive-"]) {
+            &[class*="active_"]:not([class*="inactive_"]) {
                 background-color: var(--dnome-popup-selected);
             }
         }
 
-        >div[class*="divider-"] {
+        >div[class*="divider_"] {
             display: none;
         }
 
