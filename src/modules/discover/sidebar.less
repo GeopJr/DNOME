@@ -1,7 +1,7 @@
 // The discover page sidebar.
-div[class*="sidebar-"] {
-    >div>div[class*="categoryItem-"] {
-        >div[class*="itemInner-"] {
+div[class*="sidebar_"] {
+    >div>div[class*="categoryItem_"] {
+        >div[class*="itemInner_"] {
             border-radius: var(--dnome-border-small);
 
             &:hover {
@@ -9,8 +9,9 @@ div[class*="sidebar-"] {
             }
         }
 
-        &[class*="selectedCategoryItem-"] {
-            >div[class*="itemInner-"] {
+        &[class*="selectedCategoryItem_"] {
+            >div[class*="itemInner_"] {
+                color: var(--text-normal);
                 background-color: var(--dnome-list-item-selected);
 
                 &:hover {

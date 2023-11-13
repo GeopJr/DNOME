@@ -1,6 +1,6 @@
 // Threads in chat.
 // Both creating and opening one.
-div[class*="resizeHandle-"] {
+div[class*="resizeHandle_"] {
     background-color: var(--dnome-border);
     // A bit thick but 1px is difficult to
     // grab.
@@ -8,7 +8,7 @@ div[class*="resizeHandle-"] {
 }
 
 // Remove their radius at the top.
-div[class*="chat-"][class*="threadSidebarOpen-"] {
+div[class*="chat_"][class*="threadSidebarOpen_"] {
     border-radius: 0px;
 }
 
@@ -16,7 +16,7 @@ div[class*="chat-"][class*="threadSidebarOpen-"] {
 // thread container and the main one.
 // So this selector checks if the container
 // is next to a resize handle.
-div[class*="resizeHandle-"]+div[class*="container-"] {
+div[class*="resizeHandle_"]+div[class*="container_"] {
     // This line imports message_bar inline,
     // not needed right now but you never know if
     // Discord decides to change the message class
@@ -24,11 +24,11 @@ div[class*="resizeHandle-"]+div[class*="container-"] {
     // @import (less) "message_bar.less";
     border-radius: 0px;
 
-    >section>section[class*="container-"][class*="themed-"] {
+    >section>section[class*="container_"][class*="themed_"] {
         background-color: var(--dnome-base);
     }
 
-    div[class*="chat-"]:not([class*="threadSidebarOpen-"]) {
+    div[class*="chat_"]:not([class*="threadSidebarOpen_"]) {
         // The header at the top.
         &:before {
             box-shadow: none;
@@ -40,13 +40,13 @@ div[class*="resizeHandle-"]+div[class*="container-"] {
             background-color: var(--dnome-base);
         }
 
-        >div[class*="messagesWrapper-"] {
-            >form[class*="form-"] {
-                >div[class*="scroller-"] {
-                    >div[class*="scrollerInner-"] {
-                        div[class*="formSection-"] {
-                            div[class*="inputWrapper-"] {
-                                >input[class*="inputDefault-"] {
+        >div[class*="messagesWrapper_"] {
+            >form[class*="form_"] {
+                >div[class*="scroller_"] {
+                    >div[class*="scrollerInner_"] {
+                        div[class*="formSection_"] {
+                            div[class*="inputWrapper_"] {
+                                >input[class*="inputDefault_"] {
                                     background-color: var(--dnome-searchbox);
                                     border-radius: var(--dnome-border-medium);
                                 }
@@ -55,7 +55,7 @@ div[class*="resizeHandle-"]+div[class*="container-"] {
                     }
                 }
 
-                >div[class*="submitContainer-"] {
+                >div[class*="submitContainer_"] {
                     background-color: var(--dnome-base);
                     border-top: 1px solid var(--dnome-border);
                 }

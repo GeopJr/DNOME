@@ -1,24 +1,24 @@
 // The input you type message in at the bottom
 // of the main panel.
-div[class*="chat-"] {
+div[class*="chat_"] {
     main>form {
         border-top: 1px solid var(--dnome-border);
         background-color: var(--dnome-base);
     }
 
-    form[class*="form-"] {
+    form[class*="form_"] {
 
-        div[class*="submitContainer-"]>div[class*="channelTextArea-"],
-        >div[class*="channelTextArea-"] {
-            >div[class*="channelTextAreaInner-"] {
-                &[class*="channelTextAreaInnerError-"] {
+        div[class*="submitContainer_"]>div[class*="channelTextArea_"],
+        >div[class*="channelTextArea_"] {
+            >div[class*="channelTextAreaInner_"] {
+                &[class*="channelTextAreaInnerError_"] {
                     border: none;
                 }
 
             }
 
             // Hide text input if chatting is disabled
-            &[class*="channelTextAreaDisabled-"] {
+            &[class*="channelTextAreaDisabled_"] {
                 background-color: var(--dnome-base);
 
                 >div[class*="scrollableContainer"] {
@@ -31,12 +31,12 @@ div[class*="chat-"] {
             }
 
             // The "replying to" bar.
-            >div[class*="attachedBars-"] {
+            >div[class*="attachedBars_"] {
                 background: transparent;
                 border-radius: var(--dnome-border-medium);
                 margin-top: -18px;
 
-                div[class*="replyBar-"] {
+                div[class*="replyBar_"] {
                     border-radius: var(--dnome-border-medium);
 
                     background: var(--dnome-accent);
@@ -49,28 +49,28 @@ div[class*="chat-"] {
                 }
             }
 
-            >div[class*="scrollableContainer-"] {
-                >div[class*="divider-"] {
+            >div[class*="scrollableContainer_"] {
+                >div[class*="divider_"] {
                     display: none;
                 }
 
                 // The attachment overview before
                 // sending.
-                >ul[class*="channelAttachmentArea-"] {
+                >ul[class*="channelAttachmentArea_"] {
                     >li[role="listitem"] {
                         background-color: var(--dnome-list-item-hover);
                         border-radius: var(--dnome-border-medium);
 
                         // The small toolbar at the top right of an
                         // attachment in the attachment overview.
-                        div[class*="actionBarContainer-"] {
-                            >div[class*="actionBar-"] {
-                                >div[class*="wrapper-"] {
+                        div[class*="actionBarContainer_"] {
+                            >div[class*="actionBar_"] {
+                                >div[class*="wrapper_"] {
                                     background-color: var(--dnome-list-item-hover);
                                     border: 1px solid var(--dnome-border);
                                     border-radius: var(--dnome-border-medium);
 
-                                    >div[class*="button-"] {
+                                    >div[class*="button_"] {
                                         &:hover {
                                             background-color: var(--dnome-list-item-selected);
                                         }
@@ -90,7 +90,7 @@ div[class*="chat-"] {
 
     // Drag n Drop.
     div[id*="message-content-Uploader"] {
-        >div[class*="attachment-"] {
+        >div[class*="attachment_"] {
             border-radius: var(--dnome-border-medium);
             background-color: var(--dnome-base);
         }
@@ -98,12 +98,12 @@ div[class*="chat-"] {
 
     // The autocomplete panel
     // when you type @ or : or #.
-    div[class*="autocomplete-"] {
+    div[class*="autocomplete_"] {
         background-color: var(--dnome-base);
         border-radius: var(--dnome-border-medium);
 
-        div[class*="clickable-"] {
-            >div[class*="base-"] {
+        div[class*="clickable_"] {
+            >div[class*="base_"] {
                 border-radius: var(--dnome-border-small);
 
                 &:hover {

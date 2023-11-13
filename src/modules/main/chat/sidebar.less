@@ -1,14 +1,14 @@
 // The channels sidebar.
-div[class*="sidebar-"] {
-    header[class*="header-"] {
+div[class*="sidebar_"] {
+    header[class*="header_"] {
         border-bottom: 1px solid var(--dnome-border);
         box-shadow: none;
     }
 
     // Remove the border if there's a banner
     // so its unified with the header.
-    div[class*="hasBanner-"] {
-        >header[class*="header-"] {
+    div[class*="hasBanner_"] {
+        >header[class*="header_"] {
             border-bottom: none;
         }
     }
@@ -16,14 +16,14 @@ div[class*="sidebar-"] {
     // The channel tabs.
     #channels {
         & when (not (@fix_scrollbar_bug)) {
-            svg[class*="spine-"] {
+            svg[class*="spine_"] {
                 display: none;
             }
 
-            svg[class*="spine-"]+ul[role="group"] {
-                >li[role="listitem"][class*="containerDefault-"] {
-                    >div[class*="iconVisibility-"] {
-                        >div[class*="content-"] {
+            svg[class*="spine_"]+ul[role="group"] {
+                >li[role="listitem"][class*="containerDefault_"] {
+                    >div[class*="iconVisibility_"] {
+                        >div[class*="content_"] {
                             &::before {
                                 content: "";
                                 background-color: var(--channels-default);
@@ -37,7 +37,7 @@ div[class*="sidebar-"] {
                         }
 
                         &:hover {
-                            >div[class*="content-"] {
+                            >div[class*="content_"] {
                                 background-color: var(--dnome-list-item-hover);
 
                                 &::before {
@@ -47,14 +47,14 @@ div[class*="sidebar-"] {
                             }
                         }
 
-                        &[class*="modeSelected-"] {
+                        &[class*="modeSelected_"] {
                             &:hover {
-                                >div[class*="content-"] {
+                                >div[class*="content_"] {
                                     background-color: var(--dnome-list-item-hover-selected);
                                 }
                             }
 
-                            >div[class*="content-"] {
+                            >div[class*="content_"] {
                                 background-color: var(--dnome-list-item-selected);
 
                                 &::before {
@@ -68,10 +68,10 @@ div[class*="sidebar-"] {
             }
         }
 
-        li[class*="containerDefault-"] {
-            &[class*="selected-"] {
-                div[class*="iconVisibility-"]:not([class*="clickable-"]) {
-                    a[class*="link-"], div[class*="content-"] {
+        li[class*="containerDefault_"] {
+            &[class*="selected_"] {
+                div[class*="iconVisibility_"]:not([class*="clickable_"]) {
+                    a[class*="link_"], div[class*="content_"] {
                         background-color: var(--dnome-list-item-selected);
 
                         &:hover {
@@ -81,8 +81,8 @@ div[class*="sidebar-"] {
                 }
             }
 
-            div[class*="iconVisibility-"]:not([class*="clickable-"]) {
-                div[class*="content-"] {
+            div[class*="iconVisibility_"]:not([class*="clickable_"]) {
+                div[class*="content_"] {
                     & when (not (@fix_scrollbar_bug)) {
                         height: 41px;
                     }
@@ -98,10 +98,10 @@ div[class*="sidebar-"] {
     }
 
     // The account panel at the bottom.
-    >section[class*="panels-"] {
+    >section[class*="panels_"] {
         border-top: 1px solid var(--dnome-border);
 
-        >div>div[class*="avatarWrapper-"] {
+        >div>div[class*="avatarWrapper_"] {
             &:hover {
                 background-color: var(--dnome-list-item-hover);
             }
