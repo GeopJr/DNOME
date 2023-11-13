@@ -1,3 +1,5 @@
+.PHONY: gtk less
+
 gtk:
 	node gtk/grab_theme_colors.mjs
 
