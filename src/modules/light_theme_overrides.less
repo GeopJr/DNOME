@@ -1,6 +1,14 @@
 // Some overrides ONLY for the light theme.
 // (Mostly text color).
 html[class*="theme-light"] {
+
+    #profile-customization-tab,
+    #discord-nitro-tab {
+        >div>div[class*="mainColumn_"] {
+            filter: invert(); // color is set on the element
+        }
+    }
+
     div[class*="defaultKeybindShortcutGroup_"] {
         >div[class*="keybindShortcut_"] {
             >span[class*="key_"] {

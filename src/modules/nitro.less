@@ -49,11 +49,12 @@ div[class*="premiumFeatureBorder_"] {
 
 // Removes accent color on tab.
 div[class*="premiumTab_"] {
-  > div[class*="premiumLabel_"] {
-    > svg {
+  >div[class*="premiumLabel_"] {
+    >svg {
       display: none;
     }
   }
+
   >div[class*="selectedBackground_"] {
     background-color: var(--dnome-list-item-selected);
     border-radius: 6px;
@@ -134,6 +135,7 @@ div[class*="shineContainer"] {
 [class*="birthdayFeatureBorder_"] {
   border-color: @accent;
   background: transparent;
+
   [class*="birthdayBackground_"] {
     background: transparent;
   }
@@ -152,4 +154,23 @@ div[class*="shineContainer"] {
 
 [class*="burstGlow_"] {
   display: none;
+}
+
+// Shop banner
+#profile-customization-tab,
+#discord-nitro-tab>div {
+  >div[class*="container_"][class*="containerDefaultMargin_"] {
+    background: var(--dnome-base);
+    padding-left: 24px;
+    gap: 1rem;
+
+    >div[class*="artContainer_"] {
+      display: none;
+    }
+  }
+}
+
+// Branded color on some buttons
+div[class*="tierCardButtonCTA_"] {
+  color: unset;
 }
