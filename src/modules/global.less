@@ -181,9 +181,14 @@ div[class*="standardSidebarView_"] {
 }
 
 // Buttons that are filled but not "primary".
-[class*="lookFilled"][class*="color"]:not([class*="colorPrimary"]) {
+[class*="lookFilled"][class*="color"]:not([class*="colorPrimary"], [class*="colorRed"]) {
     background-color: var(--dnome-accent) !important;
     border-radius: var(--dnome-border-medium);
+    color: white !important;
+
+    div[class*="ctaButtonText_"] {
+        color: unset;
+    }
 
     &:hover {
         background-color: var(--dnome-accent-lighter) !important;
@@ -192,7 +197,8 @@ div[class*="standardSidebarView_"] {
 
 [class*="lookFilled"] {
     border-radius: var(--dnome-border-medium);
-    &[class*="colorWhite"] > div {
+
+    &[class*="colorWhite"]>div {
         color: white;
     }
 }
