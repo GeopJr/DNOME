@@ -76,7 +76,7 @@ div[class*="base_"] {
 }
 ```
 
-> Note: Only omit the dash at the end when you are targetting multiple classes that have the same prefix like: colorDefault_, colorError_ => \*="color"
+> Note: Only omit the dash at the end when you are targetting multiple classes that have the same prefix like: colorDefault_, colorError_ => *="color"
 
 ## Inspecting Discord's elements
 
@@ -88,6 +88,6 @@ To select an element that dissapears when it loses focus you need to use breakpo
 
 For example, to select the search bar popup, you need to right click `<div class="layerContainer_d5a653">` (near the bottom) (you can see it getting children every time you open the search popup and removing them when it loses focus) and select `Break on > subtree modifications`.
 
-Now you have to trigger a subtree modification by triggering the popup (click on the search bar). The script will now stop. The popup isn't there yet so you need to skip a tep by clicking the icon next to the play button at the top. It should now show up.
+Now you have to trigger a subtree modification by triggering the popup (click on the search bar). The script will now stop. The popup isn't there yet so you need to skip a step by clicking the icon next to the play button at the top. It should now show up.
 
 You can now freely select it, see its classes and modify your style.
