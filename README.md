@@ -75,7 +75,7 @@ BetterDiscord requires a non-CSS META tag and a specific suffix on the filename.
 
 You can compile DNOME from your browser!
 
-Visit https://dnome.queer.software/ and follow the instructions.
+Visit https://dnome.geopjr.dev/ and follow the instructions.
 
 ## Manually
 
