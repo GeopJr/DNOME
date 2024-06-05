@@ -14,8 +14,13 @@ div[class*="toolbar_"]:not([id="slate-toolbar"]) { // NOT the message format too
                 }
             }
 
+            &:not([class*="focused_"]) {
+                >div[class*="searchBar_"] {
+                    border: 2px solid transparent;
+                }
+            }
+
             >div[class*="searchBar_"] {
-                height: 100%;
                 align-items: center;
 
                 >div[class*="DraftEditor-root"] {
@@ -27,12 +32,7 @@ div[class*="toolbar_"]:not([id="slate-toolbar"]) { // NOT the message format too
                     }
 
                     >div[class*="DraftEditor-editorContainer"] {
-                        height: 100%;
-
                         >div[class*="public-DraftEditor-content"] {
-                            padding-bottom: 0;
-                            height: 100%;
-
                             div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"] {
                                 span[class*="search"] {
                                     background-color: transparent;
