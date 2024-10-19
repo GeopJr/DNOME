@@ -127,3 +127,28 @@ h1 {
     --h-bg: rgb(235, 235, 235);
   }
 }
+
+.accents {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--radio-accent);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 100%;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px var(--w-bg), 0 0 0 6px var(--radio-accent);
+}

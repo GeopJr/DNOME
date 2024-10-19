@@ -23,18 +23,26 @@ jobs:
       - name: Install the csso
         run: npm install -g csso-cli
       - name: Compile Less
-        run: lessc ./src/DNOME.less ./dist/DNOME.css
+        run: |
+          lessc ./src/DNOME.less ./dist/DNOME.css
+          for accent in blue green orange pink purple red slate teal yellow; do
+            echo "@accent_name: \"$accent\";" > ./src/override_accent.less
+            lessc ./src/DNOME.less ./dist/DNOME-$accent.css
+          done
+          rm -f ./src/override_accent.less
       - name: Optimize CSS
         run: |
           csso ./dist/DNOME.css -o ./dist/DNOME.css --comments none --stat
+          for accent in blue green orange pink purple red slate teal yellow; do
+            csso ./dist/DNOME-$accent.css -o ./dist/DNOME-$accent.css --comments none --stat
+          done
           
           # csso downcases some pseudo content
           # escaped characters
-          sed -i 's/\\a/\\A/g' ./dist/DNOME.css
+          sed -i 's/\\a/\\A/g' ./dist/*.css
       - uses: actions/upload-artifact@v3
         with:
-          name: DNOME
-          path: ./dist/DNOME.css
+          path: ./dist/
   push:
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     needs: [ compile ]
@@ -46,10 +54,12 @@ jobs:
           ref: dist
       - uses: actions/download-artifact@v3
         with:
-          name: DNOME
+          path: ./dnome/
       - name: Commit files
         run: |
-          git add -f ./DNOME.css
+          mv ./dnome/**/*.css ./
+          rm -rf ./dnome/
+          git add -f './*.css'
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -am "chore: compile latest changes"

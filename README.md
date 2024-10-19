@@ -71,13 +71,13 @@ BetterDiscord requires a non-CSS META tag and a specific suffix on the filename.
 
 ## Compiling
 
-## Web
+### Web
 
 You can compile DNOME from your browser!
 
 Visit https://dnome.geopjr.dev/ and follow the instructions.
 
-## Manually
+### Manually
 
 - Install [Less](https://lesscss.org/)
 - Run one of the following commands:
@@ -89,7 +89,7 @@ $ lessc ./src/DNOME.less ./dist/DNOME.css
 ```
 - Done, the theme should be available at `./dist/DNOME.css`
 
-### GTK Themes
+#### GTK Themes
 
 You can use colors from your current GTK theme by running:
 
@@ -104,6 +104,22 @@ and then compiling DNOME again.
 > **Warning**
 > Manually set your Discord theme in settings to the one matching your GTK theme (Dark/Light). DNOME doesn't override everything on Discord but rather enhance it.
 
+## Colors
+
+You can change the accent color to match one of the Adwaita named ones.
+
+### Manually
+
+- Change the `@accent_name` variable in [./src/DNOME.less](./src/DNOME.less) to the one you want
+- Recompile
+
+### Pre-Compiled
+
+They have been pre-compiled alongside the main stylesheet under [`dist`](https://github.com/GeopJr/DNOME/tree/dist).
+
+### Web
+
+Visit https://dnome.geopjr.dev/ and follow the instructions.
 
 ## Sponsors
 
