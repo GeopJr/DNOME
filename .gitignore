@@ -1,2 +1,3 @@
-dist/DNOME.css
+dist/
 src/modules/variables/gtk.less
+src/override_accent.less

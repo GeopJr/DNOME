@@ -24,8 +24,18 @@ div[aria-controls="GUILD_PREMIUM-tab"] {
 // Removes the gift button
 // from the message bar.
 div[class*="channelBottomBarArea_"] div[class*="buttons_"] {
-  >button[class*="colorBrand_"]:not([class*="expression_"]) {
-    display: none;
+  button[class*="colorBrand_"]:not([class*="expression_"]) {
+
+    &[aria-label*="gift"],
+    &[aria-label*="Gift"] {
+      display: none;
+    }
+
+    @supports selector(:has(*)) {
+      &:has(div[class*="giftIconButton_"]) {
+        display: none;
+      }
+    }
   }
 }
 

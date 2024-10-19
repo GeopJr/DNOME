@@ -1,5 +1,7 @@
+@accent_name: "blue"; // blue, green, orange, pink, purple, red, slate, teal, yellow
+
 // DNOME version (can be seen in Discord settings).
-@version: "3.3.2";
+@version: "3.4.0";
 
 // The way Discord loads channels in the sidebar
 // depends on the channel tab height, making it
@@ -17,6 +19,7 @@
 // https://geopjr.dev/donate
 @attribution: true;
 
+@import (optional) "override_accent.less";
 // The CSS variables for light and dark mode.
 @import "modules/variables/index.less";
 

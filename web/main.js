@@ -9,11 +9,16 @@ const result = document.getElementById("result")
 const gtk = document.getElementById("gtk")
 
 compile_btn.onclick = () => {
+  let accent_name = "blue"
+  const checked_accent = document.querySelector('input[name="accent"]:checked')
+  if (checked_accent) accent_name = checked_accent.value
+
   compile_btn.disabled = true
   result.style.display = "none"
   progress.innerText = "Compiling..."
   let less_input = "@import \"DNOME.less\";"
 
+  less_input += `@accent_name: "${accent_name}";`
   if (gtk.value != "") {
     const gtk_variables = Utils.get_gtk_colors(gtk.value)
     const less = Utils.generate_less(gtk_variables)
