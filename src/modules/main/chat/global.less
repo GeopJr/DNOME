@@ -1,5 +1,4 @@
 div[class*="chat_"] {
-
     // New messages bar at the top.
     div[class*="newMessagesBar"],
     div[class*="jumpToPresentBar_"] {
@@ -20,6 +19,10 @@ div[class*="chat_"] {
     }
 
     >div[class*="content_"] {
+        >div[class*="container_"] {
+            border: none !important;
+        }
+
         div[class*="divider_"] {
             border-color: var(--dnome-border);
             margin-left: 0rem;
