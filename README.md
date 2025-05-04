@@ -1,3 +1,6 @@
+> [!WARNING]
+> Archived due to lack of interest and requiring constant maintenance. Alternative: https://github.com/ricewind012/discord-gnome-theme
+
 <p align="center">
   <img alt="a circle logo with an emblem of a speech bubble and a background of a gradient of blue and green" width="129" src="./logo.svg">
 </p>
